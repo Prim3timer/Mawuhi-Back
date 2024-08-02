@@ -5,7 +5,7 @@ const allowedOrigins = [
     'http://localhost:3500',
     // 'https://www.dandrepairshop.com',
     'https://technotes-zbnt.onrender.com',
-    'https://mawuhi-back.onrender.com'
+    'https://mawuhi.onrender.com'
 
 ]
 
