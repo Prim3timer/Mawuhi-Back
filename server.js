@@ -7,7 +7,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const corsOptions = require('./config/corsOptions')
 const errorHandler = require('./middleware/errorHandler');
-const verifyJWT = require('./middleware/verifyJWT')
+const verifyJWT = require('./middleware/verifyJwT')
 const authRoutes = require('./routes/authRoutes')
 const cookieParser = require('cookie-parser');
 
