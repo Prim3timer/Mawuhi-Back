@@ -1,0 +1,59 @@
+20240721	17:16:41	de0e30f9-fcb9-4608-8440-b147bdb78dcb	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240721	18:04:58	9d688850-3d67-4dec-9648-76761b7d9c5d	Error: read ECONNRESET
+20240721	18:17:15	22df4769-721a-4e1e-87f9-6663d3d24219	Error: read ECONNRESET
+20240721	18:17:45	44a0def8-b76e-4264-8937-707e1f0cbd65	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240721	18:18:22	cac75e6b-0a5c-4181-82c6-7295c974f4dc	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240721	18:18:52	9a8c491d-bd76-451e-a245-461790bf6a99	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240721	18:19:11	cc41a835-008d-41a3-88ee-3ba1398ea4bf	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240721	18:19:11	03edc153-d097-460a-8d24-6a943d39921f	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240721	18:19:12	7b5fcfa4-ca7e-4d0f-907a-a898a667e281	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240721	21:47:33	3d74ce64-3abd-4599-9929-a884af5d100d	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240722	08:55:34	803b0b73-ccdf-4b2b-9d08-717f2eaacaeb	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240722	10:03:59	ed0f24ff-488f-4d9b-a300-6a46a041a22b	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240722	10:04:03	7872a384-1142-4243-9d92-9fb18bd6e57a	Error: read ECONNRESET
+20240722	10:04:10	0a994c1f-7134-4888-ada7-d8b94ea29402	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240722	10:04:10	d8d54185-dc73-4204-a277-a82cef83190c	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240722	10:04:15	838106b1-7bb3-4cf7-b304-9a4b20c98c19	Error: read ECONNRESET
+20240722	10:04:30	d0de4c50-e7a4-47f0-afcb-a093d404acb8	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240722	10:04:30	81873235-900d-45de-8daf-bf434536b7e9	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240722	10:04:37	0aede748-a10c-4c2b-b024-ea99069ac9f3	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240722	10:04:38	1bb99008-1c0a-4cd6-b8bf-4c68e3e9672d	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240723	22:59:51	0eb283a1-1c23-45f4-922a-f798533cfc3d	Error: Not allowed by CORS
+20240723	22:59:51	998a462e-636e-4811-81c7-05d15d270dfe	Error: Not allowed by CORS
+20240723	23:00:21	0f342272-5893-42eb-afe7-6052fbe1a0c7	Error: Not allowed by CORS
+20240723	23:00:21	1668c784-bbe3-4c05-81fb-92e8261aa5c3	Error: Not allowed by CORS
+20240723	23:00:21	1f13df9e-f06f-4298-ae86-2219ed3530b7	Error: Not allowed by CORS
+20240725	11:28:01	1119c94c-0f15-4f58-b37f-1f98977ed7b5	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240725	11:29:57	6f02fff8-a0a0-47a6-a7eb-5577b5ba26ae	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240725	11:31:28	2be55073-697e-43f4-99cc-6540993f548a	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240725	11:34:38	44f42b68-f271-473e-a89b-9d46fbf07003	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240725	11:34:58	51310b5e-40df-4530-886a-1abd4221dc89	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240726	12:17:26	257875c3-2a31-46b1-b88a-58b061662367	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240726	12:17:26	fc0268e5-a934-46d8-9db9-ac386c5ad423	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240726	12:17:46	629d3861-44f0-4603-8b83-5e6fe6ecfddf	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240726	12:17:46	3eb80840-7a54-43e3-a8c5-3dc7287b9022	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240727	22:42:47	11640734-fcc0-47c0-94c6-a428a6f29913	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240728	02:44:00	82381eb1-dc39-4c34-96e7-15ee1ebf559d	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240728	02:44:20	ad9cce29-3678-4a3c-90de-d6e71586ce35	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240728	02:44:55	3d1aeb46-1e9c-4a62-87ca-9f1f5896b4af	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240728	02:45:25	c6117144-f728-43d0-97ed-16d8953a00c7	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240728	02:45:29	92223332-1a8b-4607-acd0-0a682a00252d	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240728	02:45:34	4b323fef-2558-4aca-a5ec-6864f8d4cf33	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240728	11:03:11	4d85e197-4618-4a5d-9920-a69e66119c74	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240728	11:04:12	d04b2659-1dbb-476c-b0ea-26d9516dc050	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240729	10:02:11	7a0f8075-c3d0-4000-90a0-1df983c2159d	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+20240730	20:29:32	de3c6bd1-45be-4b31-a9e1-b4e3d7e2b07f	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240730	23:15:10	da504241-a4a7-4765-ae9d-db980d5a7bdb	Error: Not allowed by CORS
+20240730	23:15:10	d66adce6-bf30-4845-9a53-af4df603cf95	Error: Not allowed by CORS
+20240730	23:15:10	22182b66-db5d-4dd6-9716-0c5845f4e583	Error: Not allowed by CORS
+20240730	23:25:34	cbc4dfe7-d992-4293-8b2b-8e823dd7502c	Error: Not allowed by CORS
+20240730	23:25:34	c833eff4-205d-4f51-9120-b72bf83e26ec	Error: Not allowed by CORS
+20240730	23:25:34	4c7ad636-49eb-4865-b85d-fb4c0cc8ae60	Error: Not allowed by CORS
+20240730	23:25:37	882a09a1-8787-445c-842b-2952df82151f	Error: Not allowed by CORS
+20240730	23:25:37	cebc5a4d-e227-41b1-ae52-616881120abd	Error: Not allowed by CORS
+20240730	23:25:37	d2ab6e16-06b6-4e1c-91e0-4111d0115397	Error: Not allowed by CORS
+20240731	12:02:18	6789f2c9-17d2-4fb5-80a5-2f90ccacf641	Error: Not allowed by CORS
+20240731	12:02:18	6f98b562-7bcc-4ad5-be36-27e1f233a488	Error: Not allowed by CORS
+20240731	12:02:18	f157607e-aae7-4d17-af09-f7e05597997a	Error: Not allowed by CORS
+20240801	00:43:47	b53fb2ad-055e-42f0-9ed5-3efb88d7300e	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240801	00:44:07	5b655095-1999-4752-87cc-0e09f344392b	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
