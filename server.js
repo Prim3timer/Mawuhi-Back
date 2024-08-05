@@ -11,6 +11,7 @@ const verifyJWT = require('./middleware/verifyJwT')
 const authRoutes = require('./routes/authRoutes')
 const cookieParser = require('cookie-parser');
 
+
 // console.log(process.env.NODE_ENV)
 
 const PORT = process.env.PORT || 3500
@@ -19,6 +20,8 @@ connectDB()
 app.use(cors(corsOptions))
 
 app.use(express.json())
+
+app.use(cookieParser());
 
 app.use('/', express.static(path.join(__dirname, 'public')))
 

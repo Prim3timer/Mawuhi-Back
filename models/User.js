@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
         require: true
     },
     roles: {
-        Employee: {
+        User: {
             type: Number,
             default: 2001
         }, Editor: Number,

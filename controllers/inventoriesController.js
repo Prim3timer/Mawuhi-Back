@@ -100,7 +100,7 @@ let updateInventory = async (req, res) =>{
          {
         name: req.body.name,
         qty: req.body.qty,
-        date:  format(now, 'MM/dd/yyyy')
+        date:  format(now, 'yyyy MM dd\tHH:mm:ss')
 
     })
 //    await currentInventory.save()
