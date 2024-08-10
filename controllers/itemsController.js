@@ -19,8 +19,8 @@ const createNewItem = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
-    // Check for duplicate username
-    const duplicate = await Item.findOne({ name }).collation({ locale: 'en', strength: 2 }).lean().exec()
+    // Check for duplicate username 
+    const duplicate = await Item.findOne({ name, unitMeasure}).collation({ locale: 'en', strength: 2 }).lean().exec()
 
 
 
@@ -77,7 +77,7 @@ const updateItem = asyncHandler(async (req, res) => {
 })
 
 const deleteItem = asyncHandler(async (req, res) => {
-    const { id } = req.body
+    const { id } = req.params
 
     // Confirm data
     if (!id) {

@@ -7,13 +7,13 @@ const itemSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        unitMeasure: {
-            type: String,
-            required: true
-        },
         price: {
             type: Number,
             requred: true
+        },
+        unitMeasure: {
+            type: String,
+            required: true
         },
         piecesUnit: {
             type: String

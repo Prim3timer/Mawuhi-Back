@@ -57,3 +57,6 @@
 20240731	12:02:18	f157607e-aae7-4d17-af09-f7e05597997a	Error: Not allowed by CORS
 20240801	00:43:47	b53fb2ad-055e-42f0-9ed5-3efb88d7300e	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
 20240801	00:44:07	5b655095-1999-4752-87cc-0e09f344392b	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+20240807	07:33:39	16eff6e3-33f9-4185-b5d4-2ec64467f9d7	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240807	07:33:58	c89fc5bf-2c1f-486b-b037-37c74d7e3966	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240808	12:55:03	f7f5c3a0-9e9f-4e66-8b7c-97d5ccf40b59	ValidationError: Item validation failed: price: Cast to Number failed for value "lbs" (type string) at path "price"

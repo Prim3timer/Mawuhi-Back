@@ -7,6 +7,8 @@ router.route('/')
 .get(itemsController.getAllItems)
 .post(itemsController.createNewItem)
 .patch(itemsController.updateItem)
-.delete(itemsController.deleteItem)
+
+router.route('/delete/:id').delete(itemsController.deleteItem)
+// .delete(itemsController.deleteItem)
 
 module.exports = router
