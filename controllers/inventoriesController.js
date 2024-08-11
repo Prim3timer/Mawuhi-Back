@@ -17,7 +17,7 @@ getAnInventory = async (req, res)=> {
 }
 
 const createNewInventory= asyncHandler(async (req, res) => {
-    var { name, qty } = req.body
+    var { name, qty} = req.body
 
     // Confirm data
     if (!name || !qty) {

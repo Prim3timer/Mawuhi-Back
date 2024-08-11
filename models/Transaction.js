@@ -12,6 +12,10 @@ const transactionSchema = new mongoose.Schema({
             type: Boolean,
             default: false
         },
+        grandTotal: {
+            type: Number,
+            required: true
+        },
         date: {type: Date,
           required: true
         }

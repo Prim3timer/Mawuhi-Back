@@ -21,7 +21,7 @@ const getSales = asyncHandler(async (req, res)=> {
 
 
 const createNewTransaction = asyncHandler(async (req, res) => {
-    var {goods, date,completed} = req.body
+    var {goods, date,completed, grandTotal} = req.body
 
 
     // Confirm data
@@ -40,7 +40,8 @@ const createNewTransaction = asyncHandler(async (req, res) => {
     date = formatedDate
     const transactionObject = {goods,
         completed,
-        date
+        date, 
+        grandTotal: grandTotal
     }
 
     // Create and store new item 
