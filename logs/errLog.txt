@@ -60,3 +60,6 @@
 20240807	07:33:39	16eff6e3-33f9-4185-b5d4-2ec64467f9d7	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
 20240807	07:33:58	c89fc5bf-2c1f-486b-b037-37c74d7e3966	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
 20240808	12:55:03	f7f5c3a0-9e9f-4e66-8b7c-97d5ccf40b59	ValidationError: Item validation failed: price: Cast to Number failed for value "lbs" (type string) at path "price"
+20240812	04:38:02	087bfc9d-9ba2-4e77-a6fd-8a33e83b69af	ReferenceError: id is not defined
+20240812	04:38:39	3e1bb1c3-b190-4337-a3d4-1e27214a719a	ReferenceError: id is not defined
+20240812	04:46:17	7f0b5937-af1b-43dc-b793-b07d79c1df76	TypeError: currentItem.save is not a function

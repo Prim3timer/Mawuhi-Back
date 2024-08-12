@@ -33,6 +33,7 @@ const createNewItem = asyncHandler(async (req, res) => {
 
     // Create and store new item 
     const item = await Item.create(itemObject)
+    console.log(Item)
 
     if (item) { //created 
         res.status(201).json({ message: `New item ${name} created` })
@@ -46,34 +47,19 @@ const createNewItem = asyncHandler(async (req, res) => {
 const updateItem = asyncHandler(async (req, res) => {
     const {name, unitMeasure, description, price} = req.body
 
-    // Confirm data
-    // if (!id || !name || !unitMeasure) {
-    //     return res.status(400).json({ message: 'All fields are required' })
-    // }
+    const id = req.params.id
+     const currentItem = await Item.updateOne({
+        _id: id}, 
+         {
+        name,
+        unitMeasure,
+        description,
+        price
+    })
 
-    // Confirm item exists to update
-    const item = await Item.findById(id).exec()
 
-    if (!item) {
-        return res.status(400).json({ message: 'Item not found' })
-    }
 
-    // Check for duplicate name
-    const duplicate = await Item.findOne({ name }).lean().exec()
-
-    // Allow renaming of the original item
-    if (duplicate && duplicate?._id.toString() !== id) {
-        return res.status(409).json({ message: 'Duplicate item name' })
-    }
-
-    item.name = name
-    item.description = description
-    item.price = price
-    item.unitMeasure = unitMeasure
-
-    const updatedItem = await item.save()
-
-    res.json(`'${updatedItem.name}' updated`)
+    res.json(`'${currentItem.name}' updated`)
 })
 
 const deleteItem = asyncHandler(async (req, res) => {
@@ -98,11 +84,18 @@ const deleteItem = asyncHandler(async (req, res) => {
     res.json(reply)
 })
 
+getAnItem = async (req, res)=> {
+    const {id} = req.params
+    const item = await Item.findById({_id: id})
+    res.send(item)
+}
+
 
 module.exports = {
     getAllItems,
     createNewItem,
     updateItem,
-    deleteItem
+    deleteItem,
+    getAnItem
 }
 
