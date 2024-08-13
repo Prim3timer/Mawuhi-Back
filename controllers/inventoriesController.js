@@ -108,7 +108,7 @@ let updateInventory = async (req, res) =>{
 }
 
 const deleteInventory = asyncHandler(async (req, res) => {
-    const { id } = req.body
+    const { id } = req.params
 
     // Confirm data
     if (!id) {
