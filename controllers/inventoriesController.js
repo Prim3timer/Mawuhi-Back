@@ -4,9 +4,9 @@ const {format} = require('date-fns');
 
 getAllInventory = asyncHandler( async(req, res) => {
     const inventory = await Inventory.find().lean()
-    if (!inventory?.length) {
-        return res.status(400).json({ message: 'Nothing in stock' })
-    }
+    // if (!inventory?.length) {
+    //     return res.status(400).json({ message: 'Nothing in stock' })
+    // }
     res.json(inventory)
 })
 

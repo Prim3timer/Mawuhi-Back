@@ -8,12 +8,13 @@ const getAllItems = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'No items found' })
     }
 
-    res.json(items)
+    res.json({items})
 })
 
 const createNewItem = asyncHandler(async (req, res) => {
     const { name, unitMeasure, price, piecesUnit  } = req.body
     const items = await Item.find()
+    console.log(items)
     // Confirm data
     if (!name || !unitMeasure || !price) {
         return res.status(400).json({ message: 'All fields are required' })

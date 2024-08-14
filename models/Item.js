@@ -1,9 +1,15 @@
 const mongoose = require('mongoose')
 const AutoIncrement = require('mongoose-sequence')(mongoose)
 
-const itemSchema = new mongoose.Schema(
+const Schema = mongoose.Schema
+
+const itemSchema = new Schema(
     {
         name: {
+            type: String,
+            required: true
+        },
+        unitMeasure: {
             type: String,
             required: true
         },
@@ -11,14 +17,10 @@ const itemSchema = new mongoose.Schema(
             type: Number,
             requred: true
         },
-        unitMeasure: {
-            type: String,
-            required: true
-        },
         piecesUnit: {
             type: String
         }
-    },
+    }
 )
 
 module.exports = mongoose.model('Item', itemSchema)
