@@ -16,9 +16,6 @@ const itemSchema = new Schema(
         price: {
             type: Number,
             requred: true
-        },
-        piecesUnit: {
-            type: String
         }
     }
 )
