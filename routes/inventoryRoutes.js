@@ -11,6 +11,7 @@ router.route('/:id')
 .get(inventoryController.getAnInventory)
 .put(inventoryController.updateInventory)
 router.route('/:id').delete(inventoryController.deleteInventory)
+router.route('/').patch(inventoryController.updateInventoryyy)
 
 
 module.exports = router

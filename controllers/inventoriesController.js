@@ -66,30 +66,25 @@ const updatedInventory = asyncHandler(async (req, res) => {
 })
 
 let updateInventoryyy = async (req, res) =>{
-    const id = req.params.id
-    const now = new Date()
 
-    // if (!req.body.name || req.body.qty) {
-    //     return res.status(400).json({ message: 'All fields are required' })
-    // }
-
-    // Does the user exist to update?
-    const inventory = await Inventory.findById({_id: id}).exec()
-    console.log(inventory)
-
-    if (!inventory) {
-        return res.status(400).json({ message: 'inventory not found' })
-    } 
-     const currentInventory = await Inventory.updateOne({
-        _id: id}, 
-         {
-        name: req.body.name,    
-        qty: req.body.qty,
-        date: format(now, 'mm/dd/yyyy')
-
-    })
-//    await currentExcercise.save()
-    res.json(currentInventory)
+    try {
+        const name = req.body.name
+        const now = new Date()
+      
+        const currentInventory = await Inventory.findOneAndUpdate({
+          name: name}, 
+           {
+          name: req.body.name,
+          qty: req.body.qty,
+          date:  format(now, 'yyyy-MM-dd\tHH:mm:ss')
+      
+      }, {new: true})
+      //    await currentInventory.save()
+      res.json(currentInventory)
+    } catch (error) {
+        res.status(500).json({error: 'something went wrong'})
+    }
+ 
 }
 
 let updateInventory = async (req, res) =>{
@@ -136,6 +131,7 @@ module.exports = {
     createNewInventory,
     updateInventory,
     deleteInventory,
-    getAnInventory
+    getAnInventory,
+    updateInventoryyy 
 
 }
