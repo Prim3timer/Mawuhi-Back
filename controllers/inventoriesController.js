@@ -25,7 +25,8 @@ const createNewInventory= asyncHandler(async (req, res) => {
     }
 
     const now = new Date()
-    date = format(now, 'MM/dd/yyyy')
+    // date = format(now, 'MM/dd/yyyy')
+    date = format(now, 'dd/MM/yyyy\tHH:mm:ss')
     const inventoryObject = { name, qty, date }
 
     // Create and store new item 
@@ -60,6 +61,7 @@ const updatedInventory = asyncHandler(async (req, res) => {
     inventory.qty = req.body.qty
     inventory.date = format(now, 'mm/dd/yyyy')
 
+
     const updatedInventory = await inventory.save()
 
     res.json({ message: `${updatedInventory.name} updated` })
@@ -76,10 +78,10 @@ let updateInventoryyy = async (req, res) =>{
            {
           name: req.body.name,
           qty: req.body.qty,
-          date:  format(now, 'yyyy-MM-dd\tHH:mm:ss')
+          date:  format(now, 'dd/MM/yyyy\tHH:mm:ss')
       
       }, {new: true})
-      //    await currentInventory.save()
+         await currentInventory.save()
       res.json(currentInventory)
     } catch (error) {
         res.status(500).json({error: 'something went wrong'})
@@ -95,7 +97,7 @@ let updateInventory = async (req, res) =>{
          {
         name: req.body.name,
         qty: req.body.qty,
-        date:  format(now, 'yyyy MM dd\tHH:mm:ss')
+        date:  format(now, 'dd/MM/yyyy\tHH:mm:ss')
 
     })
 //    await currentInventory.save()

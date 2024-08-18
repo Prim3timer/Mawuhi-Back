@@ -63,3 +63,13 @@
 20240812	04:38:02	087bfc9d-9ba2-4e77-a6fd-8a33e83b69af	ReferenceError: id is not defined
 20240812	04:38:39	3e1bb1c3-b190-4337-a3d4-1e27214a719a	ReferenceError: id is not defined
 20240812	04:46:17	7f0b5937-af1b-43dc-b793-b07d79c1df76	TypeError: currentItem.save is not a function
+20240817	17:16:22	b6a3aea8-b834-46c7-895f-e0f06531afd3	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240817	17:16:42	1bd9fe6f-2398-444e-8565-0e20bb07d0d9	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240817	17:16:47	00b3b317-173a-4c61-bcf3-6bbd13403741	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240817	17:16:48	563318fb-4a1d-4c58-920e-e60913fa4bd0	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240817	18:08:01	ce5a91b8-d332-4faa-ad44-a91c47f33dfc	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240817	18:08:21	95177e9f-8620-4e91-b3cd-693e028bd3e8	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240817	18:08:47	e070665e-68b8-4639-859e-8d377d9591b1	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240817	18:09:07	cb11439f-b206-4d7d-813c-4c2c64707f4c	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240817	18:10:02	41abb086-524d-4880-bd7e-d72e9202df24	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240818	02:18:35	f7c542a6-3d48-4f04-86e7-abc7aeef5bc9	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net

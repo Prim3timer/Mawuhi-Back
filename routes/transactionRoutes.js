@@ -9,6 +9,6 @@ router.route('/')
 .post(transactionsController.createNewTransaction)
 
 
-router.route('/sales').get(transactionsController.getSales)
+// router.route('/sales').get(transactionsController.getSales)
 
 module.exports = router
