@@ -55,9 +55,34 @@ const createNewTransaction = asyncHandler(async (req, res) => {
 })
 
 
+const deleteTransaction = asyncHandler(async (req, res) => {
+    const { id } = req.params
+
+    // Confirm data
+    if (!id) {
+        return res.status(400).json({ message: 'Note ID required' })
+    }
+
+    // Confirm note exists to delete 
+    const item = await Transaction.findById(id).exec()
+
+    if (!item) {
+        return res.status(400).json({ message: 'Transaction not found' })
+    }
+
+    const result = await item.deleteOne()
+
+    const reply = `Transaction '${item.name}' with ID ${item._id} deleted`
+
+    res.json(reply)
+})
+
+
+
 
 module.exports = {
     getAllTransactions,
     createNewTransaction,
-    getSales
+    getSales,
+    deleteTransaction
 }

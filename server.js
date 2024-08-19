@@ -35,7 +35,7 @@ app.use('/users', require('./routes/userRoutes'))
 app.use(verifyJWT);
 
 
-    app.all('*', (req, res)=> {
+    app.all('*', (req, res)=> { 
         res.status(404)
         if (req.accepts('html')){
             res.sendFile(path.join(__dirname, 'views', '404.html'))
