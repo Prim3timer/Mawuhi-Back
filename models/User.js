@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const { Employee } = require('../config/roles_list')
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -6,7 +7,7 @@ const userSchema = new mongoose.Schema({
         require: true
     },
     roles: {
-        User: {
+        Employee: {
             type: Number,
             default: 2001
         }, Editor: Number,
