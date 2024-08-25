@@ -14,6 +14,10 @@ router.route('/:id')
 .get(itemsController.getAnItem)
 router.route('/:id')
 .patch(itemsController.updateItem)
-// .delete(itemsController.deleteItem)
+router.route('/inventory/:id')
+.patch(itemsController.updateInventoryyy)
+router.route('/dynam')
+.put(itemsController.updateInventoryy)
+
 
 module.exports = router

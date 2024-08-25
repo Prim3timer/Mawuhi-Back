@@ -16,7 +16,12 @@ const itemSchema = new Schema(
         price: {
             type: Number,
             requred: true
-        }
+        },
+        qty: {
+            type: Number,
+            required: true
+        },
+        date: {type: String, required: true}
     }
 )
 

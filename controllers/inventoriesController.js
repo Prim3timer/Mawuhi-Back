@@ -1,9 +1,10 @@
 const Inventory = require('../models/Inventory')
+const Item = require('../models/Item')
 const asyncHandler = require('express-async-handler')
 const {format} = require('date-fns');
 
 getAllInventory = asyncHandler( async(req, res) => {
-    const inventory = await Inventory.find().lean()
+    const inventory = await Item.find().lean()
     // if (!inventory?.length) {
     //     return res.status(400).json({ message: 'Nothing in stock' })
     // }
@@ -26,7 +27,7 @@ const createNewInventory= asyncHandler(async (req, res) => {
 
     const now = new Date()
     // date = format(now, 'MM/dd/yyyy')
-    date = format(now, 'dd/MM/yyyy\tHH:mm:ss')
+    const date = format(now, 'dd/MM/yyyy\tHH:mm:ss')
     const inventoryObject = { name, qty, date }
 
     // Create and store new item 

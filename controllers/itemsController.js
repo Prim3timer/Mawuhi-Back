@@ -1,5 +1,6 @@
 const Item = require('../models/Item')
 const asyncHandler = require('express-async-handler')
+const {format} = require('date-fns');
 
 const getAllItems = asyncHandler(async (req, res) => {
     const items = await Item.find().lean()
@@ -12,9 +13,12 @@ const getAllItems = asyncHandler(async (req, res) => {
 })
 
 const createNewItem = asyncHandler(async (req, res) => {
-    const { name, unitMeasure, price, piecesUnit  } = req.body
+    const { name, unitMeasure, price  } = req.body
     const items = await Item.find()
     console.log(items)
+    const qty = 0
+    const now = new Date()
+    const date = format(now, 'dd/MM/yyyy\tHH:mm:ss')
     // Confirm data
     if (!name || !unitMeasure || !price) {
         return res.status(400).json({ message: 'All fields are required' })
@@ -30,7 +34,7 @@ const createNewItem = asyncHandler(async (req, res) => {
     }
 
 
-    const itemObject = {name, unitMeasure, price, piecesUnit }
+    const itemObject = {name, unitMeasure, price, qty, date }
 
     // Create and store new item 
     const item = await Item.create(itemObject)
@@ -46,15 +50,14 @@ const createNewItem = asyncHandler(async (req, res) => {
 
 
 const updateItem = asyncHandler(async (req, res) => {
-    const {name, unitMeasure, description, price} = req.body
+    const {name, unitMeasure, price} = req.body
 
     const id = req.params.id
-     const currentItem = await Item.updateOne({
+     const currentItem = await Item.findOneAndUpdate({
         _id: id}, 
          {
         name,
         unitMeasure,
-        description,
         price
     })
 
@@ -62,6 +65,49 @@ const updateItem = asyncHandler(async (req, res) => {
 
     res.json(`'${currentItem.name}' updated`)
 })
+
+
+let updateInventoryyy = async (req, res) =>{
+    const {id} = req.params
+    try {
+        const name = req.body.name
+        const now = new Date()
+      
+        const currentInventory = await Item.findOneAndUpdate({
+          _id: id   }, 
+           {
+          name: req.body.name,
+          qty: req.body.qty,
+          date:  format(now, 'dd/MM/yyyy\tHH:mm:ss')
+      
+      }, {new: true})
+         await currentInventory.save()
+      res.json(currentInventory)
+    } catch (error) {
+        res.status(500).json({error: 'something went wrong'})
+    }
+ 
+}
+let updateInventoryy = async (req, res) =>{
+    try {
+        const name = req.body.name
+        const now = new Date()
+      
+        const currentInventory = await Item.findOneAndUpdate({
+          name: name}, 
+           {
+          name: req.body.name,
+          qty: req.body.qty,
+          date:  format(now, 'dd/MM/yyyy\tHH:mm:ss')
+      
+      }, {new: true})
+         await currentInventory.save()
+      res.json(currentInventory)
+    } catch (error) {
+        res.status(500).json({error: 'something went wrong'})
+    }
+ 
+}
 
 const deleteItem = asyncHandler(async (req, res) => {
     const { id } = req.params
@@ -97,6 +143,8 @@ module.exports = {
     createNewItem,
     updateItem,
     deleteItem,
-    getAnItem
+    getAnItem,
+    updateInventoryyy,
+    updateInventoryy
 }
 

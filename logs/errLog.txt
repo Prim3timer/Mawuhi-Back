@@ -74,3 +74,24 @@
 20240817	18:10:02	41abb086-524d-4880-bd7e-d72e9202df24	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
 20240818	02:18:35	f7c542a6-3d48-4f04-86e7-abc7aeef5bc9	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
 20240821	13:04:07	3c958a3d-1404-42a6-894d-340a290983d9	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+20240825	13:48:17	f7c9f2cd-9809-4285-84db-1373e0cb1d4c	ReferenceError: format is not defined
+20240825	13:50:20	4fbb39d6-cf11-4673-a1ec-c64dbb36a22e	ReferenceError: format is not defined
+20240825	14:30:50	89d75311-e37e-4c55-905a-25b6b98b1b68	CastError: Cast to ObjectId failed for value "inventory" (type string) at path "_id" for model "Item"
+20240825	14:31:07	dc6d1274-e8a7-416a-8ff8-75b84bc6e333	CastError: Cast to ObjectId failed for value "inventory" (type string) at path "_id" for model "Item"
+20240825	14:36:39	7fb5149b-1716-49be-ba77-48c9e7099ecd	CastError: Cast to ObjectId failed for value "inventory" (type string) at path "_id" for model "Item"
+20240825	14:37:24	214fe2cd-3da0-4e79-860c-e15c75166058	CastError: Cast to ObjectId failed for value "inventory" (type string) at path "_id" for model "Item"
+20240825	14:41:06	d5c1d374-0d45-48b7-bdc8-0d02276e067c	CastError: Cast to ObjectId failed for value "inventory" (type string) at path "_id" for model "Item"
+20240825	14:44:35	b8c5b5ec-d324-40ed-b247-6c8926c627a5	CastError: Cast to ObjectId failed for value "invent" (type string) at path "_id" for model "Item"
+20240825	14:46:24	0d30472f-f09e-4dc6-9cda-7c586e2f680a	CastError: Cast to ObjectId failed for value "invent" (type string) at path "_id" for model "Item"
+20240825	14:49:06	fbd3addc-ce1e-4102-8cba-9c9d9823649e	CastError: Cast to ObjectId failed for value "invent" (type string) at path "_id" for model "Item"
+20240825	14:50:38	2a15a82c-d5d3-4e7c-b123-f00a0baa4bb7	CastError: Cast to ObjectId failed for value "invent" (type string) at path "_id" for model "Item"
+20240825	14:51:26	f9d0a21f-0a0d-49e2-a177-e1b5a875cd70	CastError: Cast to ObjectId failed for value "invent" (type string) at path "_id" for model "Item"
+20240825	14:53:27	8f343a5e-31a0-4592-9122-acf9100598d4	CastError: Cast to ObjectId failed for value "dynam" (type string) at path "_id" for model "Item"
+20240825	14:56:23	07037e45-680e-4a0a-af26-7f70cce4d299	CastError: Cast to ObjectId failed for value "dynam" (type string) at path "_id" for model "Item"
+20240825	14:58:52	078b78f9-e065-4ea8-a72d-42f60540eb50	CastError: Cast to ObjectId failed for value "dynam" (type string) at path "_id" for model "Item"
+20240825	15:00:51	151254db-897b-4e7c-a2ce-2f9346780626	CastError: Cast to ObjectId failed for value "dynam" (type string) at path "_id" for model "Item"
+20240825	15:01:55	d825bc4f-2e13-4b49-9a7c-de9238ab0ef2	CastError: Cast to ObjectId failed for value "dynam" (type string) at path "_id" for model "Item"
+20240825	15:03:00	6d401d1a-d931-41a9-878b-b0e61e89e534	CastError: Cast to ObjectId failed for value "dynam" (type string) at path "_id" for model "Item"
+20240825	15:09:31	a480abc7-b5ea-4249-8da5-2ba05d2ed768	CastError: Cast to ObjectId failed for value "dynam" (type string) at path "_id" for model "Item"
+20240825	15:10:19	a1191ba0-6d04-4e95-9f10-93a363b38d30	CastError: Cast to ObjectId failed for value "dynam" (type string) at path "_id" for model "Item"
+20240825	15:11:01	6d7167dd-7044-4725-8c22-26dac92c9699	CastError: Cast to ObjectId failed for value "dynam" (type string) at path "_id" for model "Item"
