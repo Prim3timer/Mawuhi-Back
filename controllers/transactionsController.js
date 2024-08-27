@@ -21,7 +21,7 @@ const getSales = asyncHandler(async (req, res)=> {
 
 
 const createNewTransaction = asyncHandler(async (req, res) => {
-    var {goods, date,completed, grandTotal} = req.body
+    var {goods, completed, grandTotal} = req.body
 
 
     // Confirm data
@@ -36,8 +36,7 @@ const createNewTransaction = asyncHandler(async (req, res) => {
     // }
     const currentDay = new Date()
 
-    const formatedDate = format(currentDay, 'yyyy MM dd\tHH:mm:ss')
-    date = formatedDate
+    const date = format(currentDay, 'dd/MM/yyyy\tHH:mm:ss')
     const transactionObject = {goods,
         completed,
         date, 
