@@ -96,3 +96,5 @@
 20240825	15:10:19	a1191ba0-6d04-4e95-9f10-93a363b38d30	CastError: Cast to ObjectId failed for value "dynam" (type string) at path "_id" for model "Item"
 20240825	15:11:01	6d7167dd-7044-4725-8c22-26dac92c9699	CastError: Cast to ObjectId failed for value "dynam" (type string) at path "_id" for model "Item"
 20240826	12:33:40	2520f007-5ce1-4893-88ba-7cd3e7326ac5	ValidationError: Transaction validation failed: date: Cast to date failed for value "26/08/2024\t12:33:40" (type string) at path "date"
+20240827	10:57:54	f9ad433d-ee63-4cb0-832e-613b784c8ff8	Error: Not allowed by CORS
+20240827	10:57:54	9d87a232-66f4-4f83-aadf-04efed8609f2	Error: Not allowed by CORS
