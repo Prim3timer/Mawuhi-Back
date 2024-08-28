@@ -34,13 +34,13 @@ const createNewTransaction = asyncHandler(async (req, res) => {
     // if (duplicate) {
     //     return res.status(409).json({ message: 'Duplicate item' })
     // }
-    const currentDay = new Date()
+    // const currentDay = new Date()
 
-    const formatedDate = format(currentDay, 'yyyy MM dd\tHH:mm:ss')
-    date = formatedDate
+    // const formatedDate = format(currentDay, 'yyyy MM dd\tHH:mm:ss')
+    // date = formatedDate
     const transactionObject = {goods,
         completed,
-        date: format(date, 'yyyy MM dd\tHH:mm:ss'), 
+        date, 
         grandTotal: grandTotal
     }
 
