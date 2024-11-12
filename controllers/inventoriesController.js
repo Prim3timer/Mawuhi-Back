@@ -10,7 +10,7 @@ getAllInventory = asyncHandler( async(req, res) => {
     // }
     res.json(inventory)
 })
-
+ 
 getAnInventory = async (req, res)=> {
     const {id} = req.params
     const inventory = await Inventory.findById({_id: id})
@@ -69,16 +69,17 @@ const updatedInventory = asyncHandler(async (req, res) => {
 })
 
 let updateInventoryyy = async (req, res) =>{
-
     try {
+        const id = req.params.id
         const name = req.body.name
+        const qty =  req.body.qty
         const now = new Date()
       
         const currentInventory = await Inventory.findOneAndUpdate({
-          name: name}, 
+            _id: id}, 
            {
           name: req.body.name,
-          qty: req.body.qty,
+          qty,
           date:  format(now, 'dd/MM/yyyy\tHH:mm:ss')
       
       }, {new: true})
