@@ -4,7 +4,7 @@ const allowedOrigins = [
     'http://localhost:3002',
     'https://mawuhi.onrender.com',
     'https://prim3timer.github.io/Retailer',
-    'https://prim3timer.github.io/test'
+    // 'https://prim3timer.github.io/test'
 
 ]
 
