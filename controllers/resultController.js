@@ -1,10 +1,10 @@
-const Result = require('../models/Result')
+const Rez = require('../models/Rez')
 const asyncHandler = require('express-async-handler')
 const {format, yearsToDays} = require('date-fns');
 
 
 const getAllQuestions = async (req, res)=> {
-    const questions = await Result.find()
+    const questions = await Rez.find()
     if (!questions) res.status(204).json({'message': 'no questions found'})
     res.status(201).json({questions})
 } 
@@ -12,7 +12,7 @@ const getAllQuestions = async (req, res)=> {
 const generateQuestions = async (req, res)=> {
   
     try {
-        const result = await Result.create({
+        const result = await Rez.create({
             candidate: req.body.candidate,
             q_no: req.body.q_no,
             questions: req.body.questions,
@@ -29,7 +29,7 @@ const generateQuestions = async (req, res)=> {
 }
 const getAResult = async(req, res)=> {
     
-    const response = await Result.findOne({candidate: req.body.candidate})
+    const response = await Rez.findOne({candidate: req.body.candidate})
     const dateTime = `${format(new Date(), 'yyyyMMdd\tHH:mm:ss')}`;
       const logItem = `date:  ${dateTime}
       id: ${uuid()} 

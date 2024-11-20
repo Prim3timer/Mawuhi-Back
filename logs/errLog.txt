@@ -103,3 +103,4 @@
 20240827	23:57:08	9f27afa2-0be6-4569-8334-9783cdd34a47	ValidationError: Transaction validation failed: date: Path `date` is required.
 20240828	23:16:39	c6e6a6c8-3ca6-4ddd-b22d-bd1feb6795fe	ValidationError: Transaction validation failed: date: Path `date` is required.
 20240828	23:17:58	55a43916-8364-4dbe-9f49-3e4028cfab64	ValidationError: Transaction validation failed: date: Path `date` is required.
+20241120	10:27:35	5bcd77db-c596-4099-95f6-78272d6826e4	Error: Not allowed by CORS
