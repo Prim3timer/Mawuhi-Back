@@ -22,7 +22,7 @@ app.use(cors(corsOptions))
 app.use(express.json())
 
 app.use(cookieParser());    
-
+// asdsdff
 app.use('/', express.static(path.join(__dirname, 'public')))
 
 app.use('/results', require('./routes/resultRoutes'))
