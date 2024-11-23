@@ -34,12 +34,12 @@ const getAResult = async(req, res)=> {
       const logItem = `date:  ${dateTime}
       id: ${uuid()} 
        method: ${req.method} 
-       origin: ${req.headers.origin} 
        address: ${req.url}`;
-      MongoReq.create({
-          log: logItem
-      })
-    res.json(response)
+       MongoReq.create({
+           log: logItem
+        })
+        res.json(response)
+        // origin: ${req.headers.origin} 
 }
 
 
