@@ -7,6 +7,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const corsOptions = require('./config/corsOptions')
 const errorHandler = require('./middleware/errorHandler');
+const {logEvents, logger} = require('./middleware/logger')
 const verifyJWT = require('./middleware/verifyJwT')
 const authRoutes = require('./routes/authRoutes')
 const cookieParser = require('cookie-parser');
@@ -17,12 +18,14 @@ const cookieParser = require('cookie-parser');
 const PORT = process.env.PORT || 3500
 connectDB()
 
+app.use(logger)
+
 app.use(cors(corsOptions))
 
 app.use(express.json())
 
 app.use(cookieParser());    
-// asdsdff
+
 app.use('/', express.static(path.join(__dirname, 'public')))
 
 app.use('/results', require('./routes/resultRoutes'))
@@ -53,4 +56,11 @@ app.use(verifyJWT);
     mongoose.connection.once('open', ()=> {
         console.log('connected to mongoDB')
         app.listen(PORT, ()=> console.log(`Server runnning on port ${PORT}`))
+    })
+
+    mongoose.connection.on('error', (error) => {
+        console.log(error)
+        logEvents(`${error.no}: ${error.code}\t ${error.syscall}\t${error.hostname}`,
+            'mongoErrLog.log'
+        )
     })
