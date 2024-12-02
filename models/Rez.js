@@ -8,7 +8,7 @@ const resultSchema = new Schema({
     questions: {type: Array, required: true},
     attempt: {type: Array, required: true},
     answer: {type: Array, required: true },
-    date: {type: Date} 
+    date: {type: String, required: true} 
 })
 
 const Result = mongoose.model('Result', resultSchema)
