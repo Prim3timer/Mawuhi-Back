@@ -1,6 +1,7 @@
 const Item = require('../models/Item')
 const asyncHandler = require('express-async-handler')
-const {format} = require('date-fns');
+const {format, yearsToDays} = require('date-fns');
+const { default: nodemon } = require('nodemon');
 
 const getAllItems = asyncHandler(async (req, res) => {
     const items = await Item.find().lean()
@@ -15,7 +16,6 @@ const getAllItems = asyncHandler(async (req, res) => {
 const createNewItem = asyncHandler(async (req, res) => {
     const { name, unitMeasure, price  } = req.body
     const items = await Item.find()
-    console.log(items)
     const qty = 0
     const now = new Date()
     const date = format(now, 'dd/MM/yyyy\tHH:mm:ss')
@@ -38,7 +38,6 @@ const createNewItem = asyncHandler(async (req, res) => {
 
     // Create and store new item 
     const item = await Item.create(itemObject)
-    console.log(Item)
 
     if (item) { //created 
         res.status(201).json({ message: `New item ${name} created` })
@@ -148,3 +147,14 @@ module.exports = {
     updateInventoryy
 }
 
+
+// opt: 1 id Number
+// opt: 2 yes | check status (for no call back)
+// have you tried to recover your passowrd: yes
+ 
+
+// opt: 3: have you already requested a passord reset: no
+
+// a ref number will be issued: should be kept safe
+
+// ticket: inc000009127640

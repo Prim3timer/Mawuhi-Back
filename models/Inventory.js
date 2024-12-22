@@ -7,4 +7,4 @@ const inventroySchema = new mongoose.Schema({
     date: {type: String, required: true}
 })
 
-module.exports = mongoose.model("Inventory", inventroySchema)
+// module.exports = mongoose.model("Inventory", inventroySchema)
