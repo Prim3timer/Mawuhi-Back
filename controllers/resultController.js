@@ -13,7 +13,7 @@ const generateQuestions = async (req, res)=> {
   const {format, yearsToDays} = require('date-fns');
     try {
         const result = await Rez.create({
-            ade: req.body.id,
+            uni: req.body.id,
             candidate: req.body.candidate,
             q_no: req.body.q_no,
             questions: req.body.questions,
