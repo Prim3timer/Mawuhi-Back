@@ -181,3 +181,5 @@
 2024 12 14	11:16:35	7fcc9f14-db6c-4ace-baac-83c56d84f082	PATCH	/items/inventory/6734985e1c8013a3cb4d0a93	http://localhost:3000
 2024 12 14	11:16:35	8075a957-dcc7-40aa-9c02-f751dbb0e2c9	GET	/items	http://localhost:3000
 2024 12 14	11:17:31	dddac793-6c8a-40f4-bd8c-acacbec4fc70	GET	/items	http://localhost:3000
+2025 01 12	05:35:55	9a7a64b3-c965-4f64-8a99-ec434bffa017	GET	/results	http://localhost:3000
+2025 01 12	05:40:47	89bbd883-5da7-46a0-ad36-e15059e01698	GET	/results	http://localhost:3000

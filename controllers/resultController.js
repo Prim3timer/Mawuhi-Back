@@ -13,7 +13,7 @@ const generateQuestions = async (req, res)=> {
   const {format, yearsToDays} = require('date-fns');
     try {
         const result = await Rez.create({
-            uni: req.body.id,
+            ade: req.body.id,
             candidate: req.body.candidate,
             q_no: req.body.q_no,
             questions: req.body.questions,
@@ -21,8 +21,6 @@ const generateQuestions = async (req, res)=> {
             answer: req.body.answer,
             date: req.body.date
         })
-        console.log(result)
-    
         res.status(201).send(`Question Added`)
     } catch (error) {
         res.status(400).json({'message': error})
