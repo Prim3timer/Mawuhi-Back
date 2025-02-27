@@ -1,0 +1,8 @@
+2025 02 07	10:05:44	df218811-3fb5-40ed-ac9a-04e62e67aad3	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2025 02 08	12:06:05	b8f87c09-f4a4-4752-81dd-ccf361e8c6de	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2025 02 08	12:08:08	b7944019-7028-41f7-8289-174fe38d926c	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2025 02 08	13:48:09	9afea574-e78d-4e67-9416-b5f26eef1348	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2025 02 08	13:49:10	71c21651-2d85-4251-8803-f3e923155cae	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2025 02 08	13:50:33	2a34fb99-ebff-4ffe-a4ca-1b18cb45be2c	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2025 02 08	16:03:11	b966a6f1-fc44-4711-9a63-c5475981d17e	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2025 02 12	08:01:16	ba84cc9a-1350-4d69-8ba8-b87e4211c795	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net

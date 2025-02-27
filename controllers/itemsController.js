@@ -148,13 +148,3 @@ module.exports = {
 }
 
 
-// opt: 1 id Number
-// opt: 2 yes | check status (for no call back)
-// have you tried to recover your passowrd: yes
- 
-
-// opt: 3: have you already requested a passord reset: no
-
-// a ref number will be issued: should be kept safe
-
-// ticket: inc000009127640

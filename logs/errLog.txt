@@ -104,3 +104,12 @@
 20240828	23:16:39	c6e6a6c8-3ca6-4ddd-b22d-bd1feb6795fe	ValidationError: Transaction validation failed: date: Path `date` is required.
 20240828	23:17:58	55a43916-8364-4dbe-9f49-3e4028cfab64	ValidationError: Transaction validation failed: date: Path `date` is required.
 20241120	10:27:35	5bcd77db-c596-4099-95f6-78272d6826e4	Error: Not allowed by CORS
+2025 02 08	05:19:41	7be75def-b05b-42a3-a3c9-ef8ad4e998ca	CastError: Cast to ObjectId failed for value "4ca33bcc-3b17-40f5-ab59-152d653b7033" (type string) at path "_id" for model "Result"
+2025 02 08	05:30:25	4003f065-8e0d-4d73-9dc7-6e57f919b6af	CastError: Cast to ObjectId failed for value "5b1cfa0f-3b8f-4727-a027-ee9078bf31a9" (type string) at path "_id" for model "Result"
+2025 02 08	05:33:33	cacdc6ea-23ec-41b9-9d80-24337402a334	CastError: Cast to ObjectId failed for value "5b1cfa0f-3b8f-4727-a027-ee9078bf31a9" (type string) at path "_id" for model "Result"
+2025 02 08	06:17:20	a632f452-e51c-4b1a-86b5-bcdbc43b5798	ReferenceError: Cannot access 'result' before initialization
+2025 02 17	17:08:30	17e17135-17c5-4f33-a9be-625e86893829	TypeError: results.deleteOne is not a function
+2025 02 17	17:08:52	7e4b615c-a470-4809-9f18-e15670034af2	TypeError: results.delete is not a function
+2025 02 17	17:09:13	da4436fc-c2e7-4c23-89ad-d7ba8f7fe936	TypeError: results.delete is not a function
+2025 02 17	17:09:40	ffea3c21-4c93-4fee-8f19-3d971809e8bf	TypeError: results.deleteOne is not a function
+2025 02 17	17:10:06	8b971f54-2a09-4ca0-aa2c-33d88e605fde	TypeError: results.deleteOne is not a function
