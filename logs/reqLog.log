@@ -1176,3 +1176,15 @@
 2025 02 27	21:26:08	5b87f15c-b0d2-4e7e-a0f3-ccef3f4f982a	GET	/results	http://localhost:3000
 2025 02 27	21:51:43	8fa342dc-836d-4cfd-b7a5-36d64542d1ef	GET	/results	http://localhost:3000
 2025 02 27	21:54:20	6e8bcc3c-5d0c-49d9-a093-180b62990a70	GET	/results	http://localhost:3000
+2025 02 27	23:09:41	8a13cac1-a292-4903-bcda-64c3a019a372	GET	/results	http://localhost:3000
+2025 02 27	23:21:49	be479f2d-4b27-4a2f-9111-c2850cfe4c0d	GET	/results	http://localhost:3000
+2025 02 27	23:22:12	97a3a72a-f8d5-450d-84ba-b673ff5625b0	GET	/results	http://localhost:3000
+2025 02 27	23:22:37	a9ce0675-283d-44be-9e00-7d046451c165	GET	/results	http://localhost:3000
+2025 02 27	23:22:58	c690fda2-5f7a-48db-a724-6b92de1e6962	GET	/results	http://localhost:3000
+2025 02 27	23:23:15	0a42c814-562f-45f5-a39d-bc80ca5f28eb	GET	/results	http://localhost:3000
+2025 02 27	23:24:05	f0f3ad6d-655c-4047-a34c-b53b7be8adf6	OPTIONS	/results/delete/7a80abdf-0ae7-47ea-90f9-8c71b6e876fd	http://localhost:3000
+2025 02 27	23:24:05	8fcbd26d-0f0e-4ca5-aae3-589780cb353a	DELETE	/results/delete/7a80abdf-0ae7-47ea-90f9-8c71b6e876fd	http://localhost:3000
+2025 02 27	23:24:37	c06238a8-d88b-4bc0-93f3-7b1f3be7df51	OPTIONS	/results/delete/00bfa469-eb41-4ed6-8c48-6025a8d27ab0	http://localhost:3000
+2025 02 27	23:24:37	899a290f-521a-42c5-8be8-2eabcb8caf58	DELETE	/results/delete/00bfa469-eb41-4ed6-8c48-6025a8d27ab0	http://localhost:3000
+2025 02 27	23:25:05	b5769050-90ca-4360-bb45-fa9facf23cfa	OPTIONS	/results/delete/0ea7accf-cb27-425d-b507-9a564311fe63	http://localhost:3000
+2025 02 27	23:25:05	367ab966-18c4-4ce4-bb60-109cefb0ff9e	DELETE	/results/delete/0ea7accf-cb27-425d-b507-9a564311fe63	http://localhost:3000

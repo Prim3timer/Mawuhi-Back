@@ -57,7 +57,7 @@ const deleteResult = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'Item not found' })
     }
 
-    const result = await Rez.deleteOne()
+    const result = await Rez.deleteOne({ade: id})
 
     const reply = `Item '${result.name}' with ID ${result._id} deleted`
 
