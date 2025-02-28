@@ -51,7 +51,7 @@ const deleteResult = asyncHandler(async (req, res) => {
     }
 
     // Confirm note exists to delete 
-    const results = await Rez.find({uni: id})
+    const results = await Rez.find({ade: id})
 
     if (!results) {
         return res.status(400).json({ message: 'Item not found' })
