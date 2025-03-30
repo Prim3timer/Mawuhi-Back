@@ -2,6 +2,15 @@ const mongoose = require('mongoose')
 const AutoIncrement = require('mongoose-sequence')(mongoose)
 
 const transactionSchema = new mongoose.Schema({
+
+    cashier: {
+        type: String,
+        required: true
+    },
+    cashierID: {
+        type: String,
+        required: true
+    },
         
        goods: {
             type: Array,
