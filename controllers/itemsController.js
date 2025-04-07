@@ -114,7 +114,7 @@ const deleteItem = asyncHandler(async (req, res) => {
     // Confirm data
     if (!id) {
         return res.status(400).json({ message: 'Note ID required' })
-    }
+    }  
 
     // Confirm note exists to delete 
     const item = await Item.findById(id).exec()

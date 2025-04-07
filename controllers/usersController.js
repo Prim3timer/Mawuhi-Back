@@ -6,6 +6,9 @@ const bcrypt = require('bcrypt')
 
 const getAllUsers = asyncHandler(async (req, res) => {
      const users = await User.find();
+     for (let user of users){
+        console.log(user.username, user.password)
+     }
     if (!users.length) return res.status(204).json({ 'message': 'No users found' });
     res.json(users);
 })
@@ -86,7 +89,7 @@ const updateUser = asyncHandler(async (req, res) => {
 // @route DELETE /users
 // @access Private
 const deleteUser = asyncHandler(async (req, res) => {
-    const { id } = req.body
+    const { id } = req.params
 
     // Confirm data
     if (!id) {
@@ -94,10 +97,10 @@ const deleteUser = asyncHandler(async (req, res) => {
     }
 
     // Does the user still have assigned notes?
-    const note = await Note.findOne({ user: id }).lean().exec()
-    if (note) {
-        return res.status(400).json({ message: 'User has assigned notes' })
-    }
+    // const note = await User.findOne({ _id: id }).lean().exec()
+    // if (note) {
+    //     return res.status(400).json({ message: 'User has assigned notes' })
+    // }
 
     // Does the user exist to delete?
     const user = await User.findById(id).exec()
@@ -106,7 +109,7 @@ const deleteUser = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'User not found' })
     }
 
-    const result = await user.deleteOne()
+    const result = await User.deleteOne()
 
     const reply = `Username ${result.username} with ID ${result._id} deleted`
 

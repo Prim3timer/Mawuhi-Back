@@ -113,3 +113,8 @@
 2025 02 17	17:09:13	da4436fc-c2e7-4c23-89ad-d7ba8f7fe936	TypeError: results.delete is not a function
 2025 02 17	17:09:40	ffea3c21-4c93-4fee-8f19-3d971809e8bf	TypeError: results.deleteOne is not a function
 2025 02 17	17:10:06	8b971f54-2a09-4ca0-aa2c-33d88e605fde	TypeError: results.deleteOne is not a function
+2025 04 05	17:45:52	3cf45e27-54ac-45d2-9cda-414acc7fe124	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 04 05	17:57:12	fcf5c5f9-a1e4-447b-aeca-f32b668ac951	ReferenceError: _id is not defined
+2025 04 05	17:58:19	c0d401c2-c583-4fac-871c-03e310f79b00	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 04 05	18:05:08	d4456459-86f1-4e1b-8835-0eb49902beeb	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 04 05	18:07:28	5e432037-ed0d-464c-965a-a8d615288cc7	TypeError: item.deleteOne is not a function
