@@ -93,29 +93,22 @@ const deleteUser = asyncHandler(async (req, res) => {
 
     // Confirm data
     if (!id) {
-        return res.status(400).json({ message: 'User ID Required' })
+        return res.status(400).json({ message: 'Note ID required' })
     }
 
-    // Does the user still have assigned notes?
-    // const note = await User.findOne({ _id: id }).lean().exec()
-    // if (note) {
-    //     return res.status(400).json({ message: 'User has assigned notes' })
-    // }
+    // Confirm note exists to delete 
+    const results = await User.find({_id: id})
 
-    // Does the user exist to delete?
-    const user = await User.findById(id).exec()
-
-    if (!user) {
-        return res.status(400).json({ message: 'User not found' })
+    if (!results) {
+        return res.status(400).json({ message: 'Item not found' })
     }
 
-    const result = await User.deleteOne()
+    const result = await User.deleteOne({_id: id})
 
-    const reply = `Username ${result.username} with ID ${result._id} deleted`
+    const reply = `Item '${result.name}' with ID ${result._id} deleted`
 
     res.json(reply)
 })
-
 
 
 module.exports = {
