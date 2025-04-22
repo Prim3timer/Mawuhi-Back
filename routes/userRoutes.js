@@ -5,10 +5,12 @@ const usersController = require('../controllers/usersController')
 
 router.route('/')
 .get(usersController.getAllUsers)
-.post(usersController.createNewUser)    
-// .patch(usersController.updateUser)
-router.route('/delete/:id')
-    .delete(usersController.deleteUser)
+.post(usersController.createNewUser) 
 
+router.route('/:id')
+    .delete(usersController.deleteUser) 
 
-module.exports = router
+    router.route('/update/:id')
+.patch(usersController.updateUser)
+
+module.exports = router 

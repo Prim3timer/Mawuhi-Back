@@ -118,3 +118,8 @@
 2025 04 05	17:58:19	c0d401c2-c583-4fac-871c-03e310f79b00	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
 2025 04 05	18:05:08	d4456459-86f1-4e1b-8835-0eb49902beeb	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
 2025 04 05	18:07:28	5e432037-ed0d-464c-965a-a8d615288cc7	TypeError: item.deleteOne is not a function
+2025 04 22	10:49:48	279446fa-88e0-4a1b-949d-f3c1d89281a5	ReferenceError: Item is not defined
+2025 04 22	11:05:56	4e20cd21-d19d-4108-8182-755877a9e871	MongoServerError: Plan executor error during findAndModify :: caused by :: Performing an update on the path '_id' would modify the immutable field '_id'
+2025 04 22	11:15:32	84d712ae-537d-4544-aa9b-0ffab2d2a0c3	ReferenceError: currentItem is not defined
+2025 04 22	11:16:10	f378ffc6-4e4a-45f4-9aa6-ac06cbfd40e0	ReferenceError: currentItem is not defined
+2025 04 22	11:17:15	100ef6e4-3090-441f-9b8a-f5a2eaceefb4	ReferenceError: currentItem is not defined
