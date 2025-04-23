@@ -78,15 +78,23 @@ const deleteUser = asyncHandler(async (req, res) => {
 const updateUser = asyncHandler(async (req, res) => {
     const {roles, username, password, active} = req.body
 
+    
     const id = req.params.id
-    if (id){
-        const currentItem = await User.findOneAndUpdate({
-           _id: id}, 
-            {
-          roles: roles
-       })
+    const foundUser  = await User.findById(id)
+    if (foundUser){
 
-       res.json(`'${currentItem.name}' updated`)
+        if (id){
+            const currentItem = await User.findOneAndUpdate({
+               _id: id}, 
+                {
+                    username: username ? username : foundUser.username,
+              roles: roles ? roles : foundUser.roles,
+              password: password ? password : foundUser.password,
+              active: active ? active : foundUser.active
+           })
+    
+           res.json(`'${currentItem.name}' updated`)
+        }
     }
 
 
