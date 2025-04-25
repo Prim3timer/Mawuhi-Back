@@ -3782,3 +3782,4 @@
 2025 04 24	23:07:19	a8c0313b-cc2b-4ac7-a56a-db56a7bdb638	PATCH	/users/update/67f5e99a3ac5ccaaa1cb7e5e	http://localhost:3000
 2025 04 24	23:07:54	326597d0-586e-4f4a-aa35-587c9c43701c	OPTIONS	/auth	http://localhost:3000
 2025 04 24	23:07:54	49024deb-de48-44d9-92c8-41e31b4da5b6	POST	/auth	http://localhost:3000
+2025 04 24	23:10:01	0c0ddcf9-a0f3-4468-b94c-46222f43b83d	GET	/transactions	http://localhost:3000

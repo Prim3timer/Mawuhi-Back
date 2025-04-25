@@ -87,8 +87,8 @@ const updateUser = asyncHandler(async (req, res) => {
             const currentItem = await User.findOneAndUpdate({
                _id: id}, 
                 {
-                    username: username ? username : foundUser.username,
-              roles: roles ? roles : foundUser.roles,
+                    username,
+              roles,
               password: password ? password : foundUser.password,
               active
            })
