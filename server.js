@@ -33,7 +33,6 @@ app.use('/auth', require('./routes/authRoutes'))
 app.use('/', require('./routes/root'))  
 app.use('/items', require('./routes/itemRoutes'))
 app.use('/transactions', require('./routes/transactionRoutes'))
-// app.use('/inventory', require('./routes/inventoryRoutes'))
 app.use('/register', require('./routes/registerRoutes'))
 app.use('/users', require('./routes/userRoutes'))
 app.use(verifyJWT);

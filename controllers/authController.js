@@ -8,7 +8,7 @@ const handleLogin = async (req, res) => {
 
     const foundUser = await User.findOne({ username: user }).exec();
     console.log(foundUser)
-    if (!foundUser) return res.sendStatus(401);  
+    if (!foundUser || !foundUser.active) return res.sendStatus(401);  
     // evaluate password 
     const match = await bcrypt.compare(pwd, foundUser.password);
     if (match) {
@@ -32,8 +32,6 @@ const handleLogin = async (req, res) => {
         // Saving refreshToken with current user
         foundUser.refreshToken = refreshToken;
         const result = await foundUser.save();
-        // console.log(result);
-        // console.log(roles);
 
         // Creates Secure Cookie with refresh token
         res.cookie('jwt', refreshToken, { httpOnly: true, secure: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 });

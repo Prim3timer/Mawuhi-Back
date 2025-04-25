@@ -57,7 +57,7 @@ const deleteUser = asyncHandler(async (req, res) => {
 
     // Confirm data
     if (!id) {
-        return res.status(400).json({ message: 'Note ID required' })
+        return res.status(400).json({ message: 'User ID required' })
     }
 
     // Confirm note exists to delete 
@@ -78,7 +78,7 @@ const deleteUser = asyncHandler(async (req, res) => {
 const updateUser = asyncHandler(async (req, res) => {
     const {roles, username, password, active} = req.body
 
-    
+    console.log(active)
     const id = req.params.id
     const foundUser  = await User.findById(id)
     if (foundUser){
@@ -90,8 +90,9 @@ const updateUser = asyncHandler(async (req, res) => {
                     username: username ? username : foundUser.username,
               roles: roles ? roles : foundUser.roles,
               password: password ? password : foundUser.password,
-              active: active ? active : foundUser.active
+              active
            })
+
     
            res.json(`'${currentItem.name}' updated`)
         }
