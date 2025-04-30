@@ -123,3 +123,4 @@
 2025 04 22	11:15:32	84d712ae-537d-4544-aa9b-0ffab2d2a0c3	ReferenceError: currentItem is not defined
 2025 04 22	11:16:10	f378ffc6-4e4a-45f4-9aa6-ac06cbfd40e0	ReferenceError: currentItem is not defined
 2025 04 22	11:17:15	100ef6e4-3090-441f-9b8a-f5a2eaceefb4	ReferenceError: currentItem is not defined
+2025 04 29	19:25:14	b0171a7e-11c2-405c-b0a7-e4c5719f3ff8	TypeError: bcrypt is not a function

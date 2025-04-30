@@ -82,14 +82,13 @@ const updateUser = asyncHandler(async (req, res) => {
     const id = req.params.id
     const foundUser  = await User.findById(id)
     if (foundUser){
-
         if (id){
             const currentItem = await User.findOneAndUpdate({
                _id: id}, 
                 {
                     username,
               roles,
-              password: password ? password : foundUser.password,
+              password: password ? await bcrypt.hash(password, 10) : foundUser.password,
               active
            })
 
