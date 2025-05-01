@@ -61,15 +61,15 @@ const deleteUser = asyncHandler(async (req, res) => {
     }
 
     // Confirm note exists to delete 
-    const results = await User.find({_id: id})
+    const results = await User.findByIdAndDelete(id).exec()
 
     if (!results) {
         return res.status(400).json({ message: 'Item not found' })
     }
 
-    const result = await User.deleteOne({_id: id})
+    // const result = await User.deleteOne({_id: id})
 
-    const reply = `Item '${result.name}' with ID ${result._id} deleted`
+    const reply = `Item '${results.name}' with ID ${results._id} deleted`
 
     res.json(reply)
 })
