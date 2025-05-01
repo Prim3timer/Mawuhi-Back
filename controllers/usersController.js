@@ -77,24 +77,23 @@ const deleteUser = asyncHandler(async (req, res) => {
 
 const updateUser = asyncHandler(async (req, res) => {
     const {roles, username, password, active} = req.body
-
+    
     console.log(active)
     const id = req.params.id
-    const foundUser  = await User.findById(id)
+    const foundUser  = await User.findById(id).exec()
     if (foundUser){
-        if (id){
+        
             const currentItem = await User.findOneAndUpdate({
                _id: id}, 
                 {
                     username,
               roles,
+              active,
               password: password ? await bcrypt.hash(password, 10) : foundUser.password,
-              active
            })
 
     
-           res.json(`'${currentItem.name}' updated`)
-        }
+           res.json(`${currentItem.username} Updated`)
     }
 
 

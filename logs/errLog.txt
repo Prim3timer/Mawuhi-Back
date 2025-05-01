@@ -124,3 +124,6 @@
 2025 04 22	11:16:10	f378ffc6-4e4a-45f4-9aa6-ac06cbfd40e0	ReferenceError: currentItem is not defined
 2025 04 22	11:17:15	100ef6e4-3090-441f-9b8a-f5a2eaceefb4	ReferenceError: currentItem is not defined
 2025 04 29	19:25:14	b0171a7e-11c2-405c-b0a7-e4c5719f3ff8	TypeError: bcrypt is not a function
+2025 04 30	19:07:11	b2f2f294-3aa0-45e8-a16d-7d6c83aa1bdc	CastError: Cast to ObjectId failed for value "{ id: '67f56aa21794d1012e3f8cf3' }" (type Object) at path "_id" for model "User"
+2025 04 30	19:11:08	61e99e1c-b12c-4b23-9e00-31c8725cb0ff	CastError: Cast to ObjectId failed for value "{ id: '6808dc621b901245e8d18e4a' }" (type Object) at path "_id" for model "User"
+2025 04 30	21:11:47	7cffef17-ee56-4b9b-841e-459cb9349660	ReferenceError: state is not defined
