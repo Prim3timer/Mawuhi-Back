@@ -63,10 +63,3 @@ app.use(verifyJWT);
             'mongoErrLog.log'
         )
     })
-
-
-    // Rhinohorn1#
-
-    // Adama 8aea
-
-//  Emeka 8cf3
