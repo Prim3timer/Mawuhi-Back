@@ -127,3 +127,22 @@
 2025 04 30	19:07:11	b2f2f294-3aa0-45e8-a16d-7d6c83aa1bdc	CastError: Cast to ObjectId failed for value "{ id: '67f56aa21794d1012e3f8cf3' }" (type Object) at path "_id" for model "User"
 2025 04 30	19:11:08	61e99e1c-b12c-4b23-9e00-31c8725cb0ff	CastError: Cast to ObjectId failed for value "{ id: '6808dc621b901245e8d18e4a' }" (type Object) at path "_id" for model "User"
 2025 04 30	21:11:47	7cffef17-ee56-4b9b-841e-459cb9349660	ReferenceError: state is not defined
+2025 05 02	16:50:38	c37678bb-e3c4-4b10-81da-aca5d5145c7b	TypeError: Cannot read properties of undefined (reading 'name')
+2025 05 02	16:52:41	dc1b2332-8b4f-4f42-b8a3-873a4d0156bf	TypeError: Cannot read properties of undefined (reading 'name')
+2025 05 02	16:53:02	6b74e258-98b4-4bf0-865b-50c534db7967	TypeError: Cannot read properties of undefined (reading 'name')
+2025 05 02	16:55:34	e32b8d3e-14f8-45f3-a991-980f4a585500	TypeError: Cannot read properties of undefined (reading 'name')
+2025 05 02	16:57:57	cf9e9efd-ad48-41bb-9a2d-3015a8ce3eae	TypeError: Cannot read properties of undefined (reading 'name')
+2025 05 02	16:58:47	09e91d0d-93e8-4179-9394-a4f2775c916e	TypeError: Cannot read properties of undefined (reading 'name')
+2025 05 02	17:03:52	eca98971-78bb-44b8-99cc-790b2e16c3bb	TypeError: Cannot read properties of undefined (reading 'name')
+2025 05 02	20:35:54	27b9b216-72ff-4908-bc29-31fe7221fb04	ReferenceError: cashierID is not defined
+2025 05 02	20:37:34	90db0dbb-7f2c-4a1f-a714-d68ee93de570	TypeError: Cannot read properties of undefined (reading 'isPropertyOf')
+2025 05 02	20:38:59	dfd6e5e6-b2b7-43b3-b080-cd35a851f478	TypeError: Cannot read properties of undefined (reading 'isPropertyOf')
+2025 05 02	20:44:21	31803664-4288-4b2a-8a49-2a7bb3849ba4	TypeError: "cashierID".isPropertyOf is not a function
+2025 05 02	21:22:00	8a292940-7402-4363-88b2-c8f45c0b9048	TypeError: Cannot read properties of undefined (reading 'map')
+2025 05 02	21:42:53	164ed6df-59b3-49a5-a6db-6aed0edff3a1	TypeError: response is not a function
+2025 05 02	21:43:17	5264368a-e28b-4720-885e-047be868902b	TypeError: response is not a function
+2025 05 02	21:45:50	a42062ea-fcf5-467d-9e69-546be9224202	TypeError: item.hasOwn is not a function
+2025 05 02	22:18:07	3d3cf3e4-6935-43b5-8182-9de4916252fa	ReferenceError: itme is not defined
+2025 05 02	22:20:08	6b61fa44-c5d1-4eef-9a44-50a84984b3fa	ReferenceError: index is not defined
+2025 05 02	22:55:26	23955f9b-f4c1-4ab9-a247-f9d01a16e71f	ReferenceError: availableCashie is not defined
+2025 05 03	10:36:30	804def06-10ed-4518-a051-65a0ce5529fb	ValidationError: Transaction validation failed: cashierID: Path `cashierID` is required.
