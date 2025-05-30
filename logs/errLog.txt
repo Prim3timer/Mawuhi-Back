@@ -146,3 +146,14 @@
 2025 05 02	22:20:08	6b61fa44-c5d1-4eef-9a44-50a84984b3fa	ReferenceError: index is not defined
 2025 05 02	22:55:26	23955f9b-f4c1-4ab9-a247-f9d01a16e71f	ReferenceError: availableCashie is not defined
 2025 05 03	10:36:30	804def06-10ed-4518-a051-65a0ce5529fb	ValidationError: Transaction validation failed: cashierID: Path `cashierID` is required.
+2025 05 28	11:55:54	07575a8d-c1f4-45d9-b88e-3091ad44c4a2	Error: Not allowed by CORS
+2025 05 28	11:58:11	2843c87c-e479-4ed6-a142-da2e3010adb8	Error: Not allowed by CORS
+2025 05 28	11:58:42	e7bdc370-61fa-4bfd-987c-d31e60eb0a87	Error: Not allowed by CORS
+2025 05 28	11:59:58	9ddec70f-b4ff-47d3-81f1-37f42c73e586	Error: Not allowed by CORS
+2025 05 28	12:10:02	e26edcff-dacd-477d-a04a-efa0b89efc55	Error: Not allowed by CORS
+2025 05 28	12:16:33	57145cac-14dc-43b0-981a-41ce112aa5e3	Error: Not allowed by CORS
+2025 05 28	12:16:59	946e1f56-bba5-4792-a617-de5725593fb2	Error: Not allowed by CORS
+2025 05 28	12:21:14	032fd664-f8e2-411b-b145-0d79b209cfac	Error: Not allowed by CORS
+2025 05 28	12:27:59	b3d5b18c-6ad5-4efc-b7a5-610cb0aab3d1	Error: Not allowed by CORS
+2025 05 28	12:29:25	ddcbd905-9b37-4dde-b99b-217e5958f605	Error: Not allowed by CORS
+2025 05 30	07:37:32	a94db221-1a6d-4289-ae43-c5d71df55568	Error: Not allowed by CORS

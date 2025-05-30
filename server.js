@@ -16,8 +16,9 @@ const cookieParser = require('cookie-parser');
 // console.log(process.env.NODE_ENV)
 
 const PORT = process.env.PORT || 3500
+// const stripe = require('stripe')(process.env.STIPE_PRIVATE_KEY)
 connectDB()
-
+    
 app.use(logger)
 
 app.use(cors(corsOptions))
@@ -35,6 +36,7 @@ app.use('/items', require('./routes/itemRoutes'))
 app.use('/transactions', require('./routes/transactionRoutes'))
 app.use('/register', require('./routes/registerRoutes'))
 app.use('/users', require('./routes/userRoutes'))
+app.use('/create-checkout-session', require('./routes/cartRoutes'))
 app.use(verifyJWT);
 
 

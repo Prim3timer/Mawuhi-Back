@@ -83,7 +83,7 @@ const deleteTransaction = asyncHandler(async (req, res) => {
 // const updateTrans = asyncHandler( async(req, res) => {
 
 //     const {cashierID} = req.body
-//     const response = await Transaction.find()
+    // const response = await Transaction.find()
 //     if (response){
 //         for (let i = 0; i < 44; i++){
 //          const currentTrans = await Transaction.findOneAndUpdate({
