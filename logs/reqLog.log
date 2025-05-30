@@ -5925,3 +5925,9 @@
 2025 05 30	10:41:06	00fef289-ee55-4c3f-9d1e-2ec142f27a52	GET	/items	https://mawuhi.onrender.com
 2025 05 30	10:41:07	17894f75-92dd-4cd8-9757-46baf2fb934c	OPTIONS	/create-checkout-session	https://mawuhi.onrender.com
 2025 05 30	10:41:07	f21d7737-3efd-4282-b0cc-7bd3f0ec9b15	POST	/create-checkout-session	https://mawuhi.onrender.com
+2025 05 30	12:25:42	728b4926-dec7-4869-bf63-6b5b81e69205	OPTIONS	/auth	http://localhost:3000
+2025 05 30	12:25:42	2c428af9-2067-41b5-9fe4-24a9a3641a04	POST	/auth	http://localhost:3000
+2025 05 30	12:25:45	d8aef03c-f17c-4f18-8cb1-97261971b569	GET	/items	http://localhost:3000
+2025 05 30	12:25:45	bf5a0b5e-c20b-4c3c-a69b-6aedfb21a398	GET	/items	http://localhost:3000
+2025 05 30	12:25:48	bbd69275-58b8-45fa-b8f6-7daf361ee23a	OPTIONS	/create-checkout-session	http://localhost:3000
+2025 05 30	12:25:48	7bee01f4-9686-4ee3-bcd6-f82b6b266ae5	POST	/create-checkout-session	http://localhost:3000
