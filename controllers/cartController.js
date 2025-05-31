@@ -28,7 +28,7 @@ const makePayment = async (req, res) => {
                 }
 
             }),
-            success_url: `${process.env.CLIENT_URL}`,
+            success_url: `${process.env.CLIENT_URL}/transaction`,
             cancel_url:`${process.env.CLIENT_URL}/shopping`
 
         })
