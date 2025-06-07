@@ -157,3 +157,9 @@
 2025 05 28	12:27:59	b3d5b18c-6ad5-4efc-b7a5-610cb0aab3d1	Error: Not allowed by CORS
 2025 05 28	12:29:25	ddcbd905-9b37-4dde-b99b-217e5958f605	Error: Not allowed by CORS
 2025 05 30	07:37:32	a94db221-1a6d-4289-ae43-c5d71df55568	Error: Not allowed by CORS
+2025 06 06	09:49:18	fac6038a-414c-43b3-82c7-1578e8974beb	ValidationError: Transaction validation failed: cashier: Path `cashier` is required., cashierID: Path `cashierID` is required.
+2025 06 06	09:49:40	53f2a97d-0193-424b-b3e2-2c6467a023b9	ValidationError: Transaction validation failed: cashier: Path `cashier` is required., cashierID: Path `cashierID` is required.
+2025 06 06	09:52:13	3223e3fb-ad98-4598-8a2f-3ee44c41679f	ValidationError: Transaction validation failed: cashier: Path `cashier` is required., cashierID: Path `cashierID` is required.
+2025 06 06	09:54:41	ee1b653b-258c-4889-b4d9-8c1b5652048f	ValidationError: Transaction validation failed: cashier: Path `cashier` is required., cashierID: Path `cashierID` is required.
+2025 06 06	09:55:30	f2da2954-0d61-4300-b427-fdd9c0a6dd54	ValidationError: Transaction validation failed: cashierID: Path `cashierID` is required.
+2025 06 06	09:55:51	11553d3d-8976-4475-acd1-5e55581c0c29	ValidationError: Transaction validation failed: cashierID: Path `cashierID` is required.

@@ -5,11 +5,11 @@ const transactionSchema = new mongoose.Schema({
 
     cashier: {
         type: String,
-        required: true
+        // required: true
     },
     cashierID: {
         type: String,
-        required: true
+        // required: true
     },
         
        goods: {
