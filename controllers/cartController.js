@@ -15,7 +15,7 @@ const makePayment = async (req, res) => {
             line_items: req.body.map((item)=> {
                 const storeItem = storeItems.find((things) => things._id == item.id)
                 
-                console.log(storeItem)
+                console.log(receipt)
                 return {
                     price_data:{ 
                         currency: 'usd',
@@ -24,17 +24,18 @@ const makePayment = async (req, res) => {
                         },
                         unit_amount: storeItem.price
                     },
-                    quantity: item.quantity
+                    quantity: item.quantity,
                 }
                 
             }),
+
             
             
             
-            success_url: `${process.env.CLIENT_URL}/transactions`,
+            success_url: `${process.env.CLIENT_URL}/thanks`,
             cancel_url:`${process.env.CLIENT_URL}/shopping`
             
-        })
+        })  
         // const currentInventory = await Item.findOneAndUpdate({
         //          _id: receipt._id}, 
         //            {
@@ -45,10 +46,11 @@ const makePayment = async (req, res) => {
         //       }, {new: true})
         // const storeItem = storeItems.find((things) => things._id == item.id)
 
-        // const response = await Transaction.create(receipt)
         
         // const response = Item.findById({_id})
-        res.json(session.url)
+        const {url} = session
+        res.json({url, receipt})
+   console.log(session)
     } catch (error) {
         res.status(500).json({error: error.message})
     }
