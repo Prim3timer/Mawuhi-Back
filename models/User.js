@@ -22,23 +22,8 @@ const userSchema = new mongoose.Schema({
         default: true
     },
     cart: {
-        name: {
-            type: String,
-        },
-        price: {
-            type: Number,
-        },
-        subTotal: {
-            type: Number
-        },
-        amounte: {
-            type: Number
-        },
-        grandTotal: {
-            type: Number
-        }
+        type: Array
     },
-
     refreshToken: String
 })
 

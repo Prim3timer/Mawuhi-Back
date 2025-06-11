@@ -100,13 +100,32 @@ const updateUser = asyncHandler(async (req, res) => {
 
 })
 
+// const updateCart = asyncHandler(async (req, res) => {
+//      const id = req.params.id
+// const foundUser = await User.findById(id).exec()
+// // console.log(req.body)
+// const newCart = foundUser.cart.push(req.body)
+// console.log(foundUser.cart)
+// if (foundUser){
+
+//     console.log(foundUser.cart)
+//     const currentUser = await User.findOneAndUpdate({_id: id},
+//         {
+//         cart: newCart
+//         }
+//     )
+//     res.json(`${currentUser.username} Updated`)
+// }
+// })
+
 
 
 module.exports = {
     getAllUsers,
     createNewUser,
     deleteUser,
-    updateUser
+    updateUser,
+    // updateCart
   
 }
 

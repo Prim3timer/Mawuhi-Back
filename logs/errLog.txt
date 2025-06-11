@@ -163,3 +163,27 @@
 2025 06 06	09:54:41	ee1b653b-258c-4889-b4d9-8c1b5652048f	ValidationError: Transaction validation failed: cashier: Path `cashier` is required., cashierID: Path `cashierID` is required.
 2025 06 06	09:55:30	f2da2954-0d61-4300-b427-fdd9c0a6dd54	ValidationError: Transaction validation failed: cashierID: Path `cashierID` is required.
 2025 06 06	09:55:51	11553d3d-8976-4475-acd1-5e55581c0c29	ValidationError: Transaction validation failed: cashierID: Path `cashierID` is required.
+2025 06 09	12:12:59	7ca3ab0e-a970-4a0e-87d3-feba7e74003a	ReferenceError: cart is not defined
+2025 06 09	12:14:20	effec89c-10c5-45da-a7f9-c61cfb63e514	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+2025 06 09	12:14:50	e65c0c5c-cff6-4c48-a95b-1ad6603ea090	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+2025 06 09	12:18:18	34e3e43d-821c-459b-a38a-c8e6d7cfdb09	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+2025 06 09	13:01:04	51bda4a3-f9d4-409b-88af-1e13964a7492	TypeError: Cannot read properties of null (reading 'username')
+2025 06 09	13:02:32	eae0428b-07b6-4615-bdb3-4047e9b590e1	TypeError: Cannot read properties of null (reading 'username')
+2025 06 09	13:03:27	2a5733f2-e02f-48be-90cf-d5d38562251b	ReferenceError: cart is not defined
+2025 06 09	13:10:14	953aad09-dad3-4685-b9d7-ea826d4b01e9	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+2025 06 09	21:08:06	262e8e77-62f3-4e86-a44e-fb1f2d1efaec	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+2025 06 09	21:24:56	ca8d6811-395e-4796-bc67-f83dc37e3d07	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+2025 06 09	21:25:50	1305c873-15fb-4816-b3db-2c423b57b57d	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+2025 06 09	21:52:14	d9ca2670-e766-4dbf-aa16-5180e2c90619	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+2025 06 09	21:52:56	09412cfe-dc66-455d-a8b7-530e743149fe	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+2025 06 10	12:22:56	5db943db-fbbb-42cd-9aa8-752331652656	ReferenceError: res is not defined
+2025 06 10	12:22:56	17171279-a512-4334-9fcc-cc27228534eb	ReferenceError: res is not defined
+2025 06 10	12:23:33	01be6d08-42da-4ce9-892e-fc9143f9bc0e	ReferenceError: res is not defined
+2025 06 10	12:23:33	fd8129cd-6386-4897-9b51-5cdddb5358cf	ReferenceError: res is not defined
+2025 06 11	04:26:42	7f8e9ab3-d19b-44ee-8546-a350bbab41e6	TypeError: json.status is not a function
+2025 06 11	04:26:42	de45712f-e2c2-4efc-8555-6212e5a54bed	TypeError: json.status is not a function
+2025 06 11	04:43:01	dd8ed2ac-14f1-4283-b775-2ed0e5eea98c	TypeError: json.status is not a function
+2025 06 11	04:43:02	c2aaf6e3-79ee-4a10-b742-b7b55b4e0cca	TypeError: json.status is not a function
+2025 06 11	04:43:07	d8ab58b6-30f3-4417-8e95-3a75d3a4f2e6	TypeError: json.status is not a function
+2025 06 11	04:43:08	fbe62f11-34f3-4ab1-b500-e5cbd2cc42b1	TypeError: json.status is not a function
+2025 06 11	04:43:21	b4c47609-253f-4942-8201-9d55e367067e	ValidationError: Cart validation failed: name: Path `name` is required., price: Path `price` is required.

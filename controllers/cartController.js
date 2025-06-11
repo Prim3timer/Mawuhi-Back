@@ -1,21 +1,25 @@
 const Item = require('../models/Item')
+const Cart = require('../models/Cart')
 const Transaction = require('../models/Transaction')
-
+const asyncHandler = require('express-async-handler')
+const { json } = require('express')
+// Rhinohorn1#
 const makePayment = async (req, res) => {
-    // console.log(req.body)
+    console.log(req.body)
     
     const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
     try {
         const storeItems = await Item.find()
-        const receipt = req.body.pop()
+        console.log('store items are: ', storeItems)
 
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             mode: 'payment',
             line_items: req.body.map((item)=> {
                 const storeItem = storeItems.find((things) => things._id == item.id)
+                console.log('store item is: ', storeItem)
                 
-                console.log(receipt)
+              
                 return {
                     price_data:{ 
                         currency: 'usd',
@@ -36,20 +40,9 @@ const makePayment = async (req, res) => {
             cancel_url:`${process.env.CLIENT_URL}/shopping`
             
         })  
-        // const currentInventory = await Item.findOneAndUpdate({
-        //          _id: receipt._id}, 
-        //            {
-        //           name: req.body.name,
-        //           qty: req.body.qty,
-        //           date:  format(now, 'dd/MM/yyyy\tHH:mm:ss')
-              
-        //       }, {new: true})
-        // const storeItem = storeItems.find((things) => things._id == item.id)
-
-        
-        // const response = Item.findById({_id})
+       
         const {url} = session
-        res.json({url, receipt})
+        res.json({url})
    console.log(session)
     } catch (error) {
         res.status(500).json({error: error.message})
@@ -57,13 +50,31 @@ const makePayment = async (req, res) => {
 
 }
 
-const addToCart = async () => {
+const addToCart = asyncHandler(async (req, res) => {
     const cartItem = {
+        userId: req.body.userId,
         name: req.body.name,
-        price: req.body.price,
-        qty: req.body.qty
+       id: req.body.id,
+        quantity: req.body.quantity
         
     }
-}
+    if (cartItem){
+console.log(cartItem)
+        const item = await Cart.create(cartItem)
+        if (item){
+            res.status(201).json({message: 'item added to cart'})
+        }
+    }
 
-module.exports = {makePayment}
+
+}) 
+
+const getCartItems =asyncHandler(async (req, res) => {
+    const cartItems = await Cart.find()
+    if(!cartItems?.length){
+        return json.status(400).send({message: 'no items cart items found'})
+    }
+    else res.json(cartItems)
+})
+
+module.exports = {makePayment, addToCart, getCartItems}
