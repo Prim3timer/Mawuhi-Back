@@ -80,21 +80,6 @@ const deleteTransaction = asyncHandler(async (req, res) => {
     res.json(reply)
 })
 
-// const updateTrans = asyncHandler( async(req, res) => {
-
-//     const {cashierID} = req.body
-    // const response = await Transaction.find()
-//     if (response){
-//         for (let i = 0; i < 44; i++){
-//          const currentTrans = await Transaction.findOneAndUpdate({
-//             _id: response[i]._id},
-//             {cashierID},
-//          {new: true})
-//          await currentTrans.save()
-//         }  
-//     }
-// })
-
 
 
 
@@ -103,5 +88,4 @@ module.exports = {
     createNewTransaction,
     getSales,
     deleteTransaction,
-    // updateTrans
 }

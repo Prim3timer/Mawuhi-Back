@@ -187,3 +187,5 @@
 2025 06 11	04:43:07	d8ab58b6-30f3-4417-8e95-3a75d3a4f2e6	TypeError: json.status is not a function
 2025 06 11	04:43:08	fbe62f11-34f3-4ab1-b500-e5cbd2cc42b1	TypeError: json.status is not a function
 2025 06 11	04:43:21	b4c47609-253f-4942-8201-9d55e367067e	ValidationError: Cart validation failed: name: Path `name` is required., price: Path `price` is required.
+2025 06 12	09:16:45	dd237b55-b84b-4275-9375-babcda985c65	TypeError: item.deleteOne is not a function
+2025 06 12	10:08:33	2eed838d-ae36-42a4-8d27-9a43aaa82eea	ReferenceError: auth is not defined

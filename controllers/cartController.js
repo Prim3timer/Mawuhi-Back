@@ -80,4 +80,26 @@ const getCartItems =asyncHandler(async (req, res) => {
     else res.json(cartItems)
 })
 
-module.exports = {makePayment, addToCart, getCartItems}
+
+const removeItem = asyncHandler( async (req, res) => {
+    const {id} = req.params
+    if (!id) res.status(400).json('item id required')
+
+        const item = await Cart.findById(id).exec()
+
+        if(!item) res.status(400).json('no item found')
+
+            await item.deleteOne()
+            const reply = `item romved`
+            res.json(reply)
+})
+
+const clearCart = asyncHandler(async (req, res) => {
+   const {id} = req.params
+   const response = await Cart.deleteMany({userId: id})
+   res.json(response)
+   
+
+})
+
+module.exports = {makePayment, addToCart, getCartItems, removeItem, clearCart}
