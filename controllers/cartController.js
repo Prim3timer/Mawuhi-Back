@@ -10,14 +10,14 @@ const makePayment = async (req, res) => {
     const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
     try {
         const storeItems = await Item.find()
-        console.log('store items are: ', storeItems)
+        // console.log('store items are: ', storeItems)
 
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             mode: 'payment',
             line_items: req.body.map((item)=> {
                 const storeItem = storeItems.find((things) => things._id == item.id)
-                console.log('store item is: ', storeItem)
+                // console.log('store item is: ', storeItem)
                 
               
                 return {
@@ -55,9 +55,12 @@ const addToCart = asyncHandler(async (req, res) => {
         userId: req.body.userId,
         name: req.body.name,
        id: req.body.id,
-        quantity: req.body.quantity
+        quantity: req.body.quantity,
+        price: req.body.price,
+        total: req.body.total
         
     }
+    console.log(cartItem)
     if (cartItem){
 console.log(cartItem)
         const item = await Cart.create(cartItem)
