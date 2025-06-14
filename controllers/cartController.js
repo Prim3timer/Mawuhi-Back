@@ -3,9 +3,11 @@ const Cart = require('../models/Cart')
 const Transaction = require('../models/Transaction')
 const asyncHandler = require('express-async-handler')
 const { json } = require('express')
+const express = require('express')
+const app = express()
 // Rhinohorn1#
 const makePayment = async (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     
     const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
     try {
@@ -26,7 +28,7 @@ const makePayment = async (req, res) => {
                         product_data: {
                             name: storeItem.name
                         },
-                        unit_amount: storeItem.price
+                        unit_amount: storeItem.price * 100
                     },
                     quantity: item.quantity,
                 }
@@ -43,7 +45,7 @@ const makePayment = async (req, res) => {
        
         const {url} = session
         res.json({url})
-   console.log(session)
+//    console.log(session)
     } catch (error) {
         res.status(500).json({error: error.message})
     }
@@ -60,9 +62,9 @@ const addToCart = asyncHandler(async (req, res) => {
         total: req.body.total
         
     }
-    console.log(cartItem)
+    // console.log(cartItem)
     if (cartItem){
-console.log(cartItem)
+// console.log(cartItem)
         const item = await Cart.create(cartItem)
         if (item){
             res.status(201).json({message: 'item added to cart'})
@@ -72,10 +74,10 @@ console.log(cartItem)
 
 }) 
 
-const getCartItems =asyncHandler(async (req, res) => {
+const getCartItems = asyncHandler(async (req, res) => {
     const cartItems = await Cart.find()
-    if(!cartItems?.length){
-        return json.status(400).send({message: 'no items cart items found'})
+    if(!cartItems){
+        return json.status(400).send({message: 'no  cart items found'})
     }
     else res.json(cartItems)
 })
@@ -101,5 +103,6 @@ const clearCart = asyncHandler(async (req, res) => {
    
 
 })
+
 
 module.exports = {makePayment, addToCart, getCartItems, removeItem, clearCart}

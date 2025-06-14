@@ -189,3 +189,14 @@
 2025 06 11	04:43:21	b4c47609-253f-4942-8201-9d55e367067e	ValidationError: Cart validation failed: name: Path `name` is required., price: Path `price` is required.
 2025 06 12	09:16:45	dd237b55-b84b-4275-9375-babcda985c65	TypeError: item.deleteOne is not a function
 2025 06 12	10:08:33	2eed838d-ae36-42a4-8d27-9a43aaa82eea	ReferenceError: auth is not defined
+2025 06 13	10:19:23	376274a5-20e3-4d09-bc0d-f5fb6ef89d11	TypeError: json.status is not a function
+2025 06 13	10:19:23	1c0965fa-3f3f-4a53-a3d5-06b56d32afef	TypeError: json.status is not a function
+2025 06 13	10:19:49	16832111-0161-4504-a92e-16e7c80db334	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 06 13	10:19:59	d6865360-99ca-41ca-8463-7915862ed88b	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 06 13	10:20:43	cacf6cda-28ee-48b5-829a-152406f6a5e0	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 06 13	10:21:22	47d4e0ba-3a27-40d3-89cc-34ec44c15f8f	TypeError: json.status is not a function
+2025 06 13	10:21:22	661cf90d-230c-4645-b5bf-deaabe2b5a40	TypeError: json.status is not a function
+2025 06 14	00:55:44	1a009189-78ff-477a-b18c-e4513f8f2734	TypeError: json.status is not a function
+2025 06 14	00:55:44	453568fc-93d5-4d83-94fb-2c1d257943e8	TypeError: json.status is not a function
+2025 06 14	00:56:07	5f769775-1198-4177-93fa-da73bc661e9a	TypeError: json.status is not a function
+2025 06 14	00:56:07	28c929bb-f2f3-478f-b102-60bc34b095d8	TypeError: json.status is not a function
