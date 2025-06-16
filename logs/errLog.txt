@@ -200,3 +200,5 @@
 2025 06 14	00:55:44	453568fc-93d5-4d83-94fb-2c1d257943e8	TypeError: json.status is not a function
 2025 06 14	00:56:07	5f769775-1198-4177-93fa-da73bc661e9a	TypeError: json.status is not a function
 2025 06 14	00:56:07	28c929bb-f2f3-478f-b102-60bc34b095d8	TypeError: json.status is not a function
+2025 06 14	05:06:10	3b89a2d5-c054-47a6-a2e9-026a0bd5f6a8	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 06 14	05:06:54	846cbd49-35c9-44e4-b97f-d360bb176374	ValidationError: Cart validation failed: userId: Path `userId` is required.

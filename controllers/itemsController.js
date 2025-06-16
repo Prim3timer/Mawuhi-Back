@@ -49,7 +49,7 @@ const createNewItem = asyncHandler(async (req, res) => {
 
 
 const updateItem = asyncHandler(async (req, res) => {
-    const {name, unitMeasure, price} = req.body
+    const {name, unitMeasure, price, img} = req.body
 
     const id = req.params.id
      const currentItem = await Item.findOneAndUpdate({
@@ -57,7 +57,8 @@ const updateItem = asyncHandler(async (req, res) => {
          {
         name,
         unitMeasure,
-        price
+        price,
+        img
     })
 
 

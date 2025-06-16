@@ -22,6 +22,10 @@ const itemSchema = new Schema(
             type: Number,
             required: true
         },
+        img: {
+            type: String,
+            
+        },
         date: {type: String, required: true}
     }
 )
