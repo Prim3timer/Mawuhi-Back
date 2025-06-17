@@ -38,7 +38,7 @@ const makePayment = async (req, res) => {
             
             
             
-            success_url: `${process.env.CLIENT_URL}/thanks?session_id={CHECKOUT_SESSION_ID}`,
+            success_url: `${process.env.CLIENT_URL}/thanks`,
             cancel_url:`${process.env.CLIENT_URL}/shopping`
             
         })  
@@ -51,10 +51,6 @@ const makePayment = async (req, res) => {
     }
 
 }
-const querySuccess = asyncHandler(()=> {
-    console.log(req.query.session_id)
-    res.send('successful transaction')
-})
 
 
 const addToCart = asyncHandler(async (req, res) => {
@@ -112,4 +108,4 @@ const clearCart = asyncHandler(async (req, res) => {
 
 
 
-module.exports = {makePayment, addToCart, getCartItems, removeItem, clearCart, querySuccess}
+module.exports = {makePayment, addToCart, getCartItems, removeItem, clearCart}
