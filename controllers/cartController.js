@@ -40,7 +40,7 @@ const makePayment = async (req, res) => {
             
             
             
-            success_url: `https://mawuhi.onrender.com/transactions`,
+            success_url: `http://mawuhi.onrender.com/thanks`,
             cancel_url:`${process.env.CLIENT_URL}/shopping`
             
         })  
