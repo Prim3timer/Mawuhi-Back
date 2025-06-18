@@ -34,7 +34,9 @@ const makePayment = async (req, res) => {
                 }
                 
             }),
-
+            // shipping_address_collection: {
+            //     allowed_countries: ['US', 'NG']
+            // },
             
             
             
@@ -50,6 +52,11 @@ const makePayment = async (req, res) => {
         res.status(500).json({error: error.message})
     }
 
+}
+
+const sendReceipt = (req, res ) => {
+    console.log('why thank you!')
+    console.log(req.query.session_id)
 }
 
 
@@ -108,4 +115,4 @@ const clearCart = asyncHandler(async (req, res) => {
 
 
 
-module.exports = {makePayment, addToCart, getCartItems, removeItem, clearCart}
+module.exports = {makePayment, addToCart, getCartItems, removeItem, clearCart, sendReceipt}

@@ -52,7 +52,9 @@ app.use(verifyJWT);
         }
     })
 
-
+app.get('/cart/thanks', ()=> {
+      console.log('why thank you!')
+})
 
     app.use(errorHandler);
     mongoose.connection.once('open', ()=> {
