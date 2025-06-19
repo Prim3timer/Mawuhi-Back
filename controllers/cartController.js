@@ -54,10 +54,6 @@ const makePayment = async (req, res) => {
 
 }
 
-const sendReceipt = (req, res ) => {
-    console.log('why thank you!')
-    console.log(req.query.session_id)
-}
 
 
 const addToCart = asyncHandler(async (req, res) => {
