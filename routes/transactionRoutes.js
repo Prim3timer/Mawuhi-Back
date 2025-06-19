@@ -9,6 +9,8 @@ router.route('/')
 router.route('/:id')
 .delete(transactionsController.deleteTransaction)
 
+// router.route('/').get(transactionsController.makePayment)
+
 
 
 
