@@ -39,7 +39,7 @@ const makePayment = async (req, res) => {
             //     allowed_countries: ['US', 'NG']
             // },
             
-            success_url: `https://mawuhi.onrender.com/thanks`,
+            success_url: `https://mawuhi.onrender.com/transactions`,
             cancel_url:`${process.env.CLIENT_URL}/shopping`
             
         })  
@@ -58,7 +58,7 @@ const getReceipt = (req, res ) => {
     console.log(req.query.session_id)
 }
 
-router.route('/thanks').get(getReceipt)
+router.route('/transactions').get(getReceipt)
 
 const addToCart = asyncHandler(async (req, res) => {
     const cartItem = {
