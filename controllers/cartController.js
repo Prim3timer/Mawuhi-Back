@@ -52,7 +52,7 @@ const makePayment = async (req, res) => {
 
 }
 
-const sendReceipt = (req, res ) => {
+app.get('https://mawuhi.onrender.com/thanks') = (req, res ) => {
     console.log('why thank you!')
     console.log(req.query.session_id)
 }
