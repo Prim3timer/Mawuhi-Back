@@ -38,7 +38,7 @@ const makePayment = async (req, res) => {
             //     allowed_countries: ['US', 'NG']
             // },
             
-            success_url: `https://mawuhi.onrender.com/cart/thanks`,
+            success_url: `https://mawuhi.onrender.com/thanks`,
             cancel_url:`${process.env.CLIENT_URL}/shopping`
             
         })  
