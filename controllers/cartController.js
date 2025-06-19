@@ -4,6 +4,7 @@ const Transaction = require('../models/Transaction')
 const asyncHandler = require('express-async-handler')
 const { json } = require('express')
 const express = require('express')
+const router = express.Router()
 const app = express()
 // Rhinohorn1#
 const makePayment = async (req, res) => {
@@ -52,11 +53,12 @@ const makePayment = async (req, res) => {
 
 }
 
-app.get('https://mawuhi.onrender.com/thanks') = (req, res ) => {
+const getReceipt = (req, res ) => {
     console.log('why thank you!')
     console.log(req.query.session_id)
 }
 
+router.route('/thanks').get(getReceipt)
 
 const addToCart = asyncHandler(async (req, res) => {
     const cartItem = {
@@ -113,4 +115,4 @@ const clearCart = asyncHandler(async (req, res) => {
 
 
 
-module.exports = {makePayment, addToCart, getCartItems, removeItem, clearCart, sendReceipt}
+module.exports = {makePayment, addToCart, getCartItems, removeItem, clearCart}
