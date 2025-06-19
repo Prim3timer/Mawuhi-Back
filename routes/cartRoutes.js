@@ -5,7 +5,7 @@ const router = express.Router()
 cartController = require('../controllers/cartController')
 
 
-router.route('/create-checkout-session').post(cartController.makePayment)
+// router.route('/create-checkout-session').post(cartController.makePayment)
 router.route('/addcart').post(cartController.addToCart)
 router.route('/').get(cartController.getCartItems)
 router.route('/:id').delete(cartController.removeItem)
