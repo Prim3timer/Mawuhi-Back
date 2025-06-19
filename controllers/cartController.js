@@ -111,4 +111,4 @@ const clearCart = asyncHandler(async (req, res) => {
 
 
 
-module.exports = {makePayment, addToCart, getCartItems, removeItem, clearCart, sendReceipt}
+module.exports = {makePayment, addToCart, getCartItems, removeItem, clearCart}
