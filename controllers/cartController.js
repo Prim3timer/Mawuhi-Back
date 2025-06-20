@@ -6,54 +6,62 @@ const { json } = require('express')
 const express = require('express')
 const app = express()
 // Rhinohorn1#
-// const makePayment = async (req, res) => {
-//     // console.log(req.body)
+const makePayment = async (req, res) => {
+    // console.log(req.body)
     
-//     const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
-//     try {
-//         const storeItems = await Item.find()
-//         // console.log('store items are: ', storeItems)
+    const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
+    try {
+        const storeItems = await Item.find()
+        // console.log('store items are: ', storeItems)
 
-//         const session = await stripe.checkout.sessions.create({
-//             payment_method_types: ['card'],
-//             mode: 'payment',
-//             line_items: req.body.map((item)=> {
-//                 const storeItem = storeItems.find((things) => things._id == item.id)
-//                 // console.log('store item is: ', storeItem)
+        const session = await stripe.checkout.sessions.create({
+            payment_method_types: ['card'],
+            mode: 'payment',
+            line_items: req.body.map((item)=> {
+                const storeItem = storeItems.find((things) => things._id == item.id)
+                // console.log('store item is: ', storeItem)
                 
               
-//                 return {
-//                     price_data:{ 
-//                         currency: 'usd',
-//                         product_data: {
-//                             name: storeItem.name
-//                         },
-//                         unit_amount: storeItem.price * 100
-//                     },
-//                     quantity: item.quantity,
-//                 }
+                return {
+                    price_data:{ 
+                        currency: 'usd',
+                        product_data: {
+                            name: storeItem.name
+                        },
+                        unit_amount: storeItem.price * 100
+                    },
+                    quantity: item.quantity,
+                }
                 
-//             }),
-//             // shipping_address_collection: {
-//             //     allowed_countries: ['US', 'NG']
-//             // },
+            }),
+            // shipping_address_collection: {
+            //     allowed_countries: ['US', 'NG']
+            // },
             
             
             
-//             success_url: `${process.env.CLIENT_URL}/transactions`,
-//             cancel_url:`${process.env.CLIENT_URL}/shopping`
+            success_url: `${process.env.CLIENT_URL}/cart/thanks`,
+            cancel_url:`${process.env.CLIENT_URL}/shopping`
             
-//         })  
+        })  
        
-//         const {url} = session
-//         res.json({url})
-// //    console.log(session)
-//     } catch (error) {
-//         res.status(500).json({error: error.message})
-//     }
+        const {url} = session
+        res.json({url})
+//    console.log(session)
+    } catch (error) {
+        res.status(500).json({error: error.message})
+    }
 
-// }
+}
 
+const thanksAlert = asyncHandler(async (req, res)=> {
+    const response = await Cart.find()
+
+   console.log(response.data)
+
+    console.log('Sorry not sorry')
+
+})
 
 
 const addToCart = asyncHandler(async (req, res) => {
@@ -111,4 +119,4 @@ const clearCart = asyncHandler(async (req, res) => {
 
 
 
-module.exports = {addToCart, getCartItems, removeItem, clearCart}
+module.exports = {addToCart, getCartItems, removeItem, clearCart, makePayment, thanksAlert}
