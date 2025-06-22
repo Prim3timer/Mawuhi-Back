@@ -203,3 +203,12 @@
 2025 06 14	05:06:10	3b89a2d5-c054-47a6-a2e9-026a0bd5f6a8	ValidationError: Cart validation failed: userId: Path `userId` is required.
 2025 06 14	05:06:54	846cbd49-35c9-44e4-b97f-d360bb176374	ValidationError: Cart validation failed: userId: Path `userId` is required.
 2025 06 17	12:03:40	3dffacd2-7647-4e88-94be-b52d5976e25f	TypeError: Cannot read properties of null (reading 'name')
+2025 06 22	01:41:08	cbf6321c-1167-442b-a6a5-357f15565dea	ValidationError: Cart validation failed: qty: Path `qty` is required.
+2025 06 22	01:44:08	994c0556-f488-4ab9-b570-6ce943f0b5f2	ValidationError: Cart validation failed: transQty: Path `transQty` is required.
+2025 06 22	01:45:30	387c1798-d435-4d3a-8a01-60250a2f6896	ValidationError: Cart validation failed: transQty: Path `transQty` is required.
+2025 06 22	01:49:04	3e5090c2-4256-4f47-be1e-7e8afd35dc0b	ValidationError: Cart validation failed: transQty: Path `transQty` is required.
+2025 06 22	01:50:10	18157a5b-74c8-416b-a88c-c1528d02a9ef	ValidationError: Cart validation failed: transQty: Path `transQty` is required.
+2025 06 22	01:50:35	d4f48d05-0ba2-486a-b5f8-bcd14242d7b5	ValidationError: Cart validation failed: transQty: Path `transQty` is required.
+2025 06 22	02:01:52	cfd6b594-a8b7-4dcf-88de-e7f5aaf6ccc8	ValidationError: Cart validation failed: transQty: Path `transQty` is required.
+2025 06 22	02:11:50	9cc8b85c-e317-43c4-947f-92dca57c2e93	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 06 22	02:11:58	c4bdedd4-9d80-4f2f-8731-61d078f955ba	ValidationError: Cart validation failed: userId: Path `userId` is required.

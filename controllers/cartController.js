@@ -30,7 +30,7 @@ const makePayment = async (req, res) => {
                         },
                         unit_amount: storeItem.price * 100
                     },
-                    quantity: item.quantity,
+                    quantity: item.transQty,
                 }
                 
             }),
@@ -55,6 +55,7 @@ const makePayment = async (req, res) => {
 }
 
 const thanksAlert = asyncHandler(async (req, res)=> {
+    console.log(req.body)
     const response = await Cart.find()
 
    console.log(response.data)
@@ -70,6 +71,7 @@ const addToCart = asyncHandler(async (req, res) => {
         name: req.body.name,
        id: req.body.id,
         quantity: req.body.quantity,
+        transQty: req.body.transQty,
         price: req.body.price,
         total: req.body.total
         
