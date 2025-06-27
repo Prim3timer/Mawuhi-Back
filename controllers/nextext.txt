@@ -1,0 +1,570 @@
+
+[
+    {
+        "id": "cs_test_b1lR4bTjVY6wuZwUDmN0FypVF0clcrAVeyAgReu3TMK04p91Ppg01zRu85",
+        "object": "checkout.session",
+        "adaptive_pricing": {
+            "enabled": true
+        },
+        "after_expiration": null,
+        "allow_promotion_codes": null,
+        "amount_subtotal": 3092,
+        "amount_total": 3092,
+        "automatic_tax": {
+            "enabled": false,
+            "liability": null,
+            "provider": null,
+            "status": null
+        },
+        "billing_address_collection": null,
+        "cancel_url": "http://localhost:3000/shopping",
+        "client_reference_id": null,
+        "client_secret": null,
+        "collected_information": null,
+        "consent": null,
+        "consent_collection": null,
+        "created": 1750988347,
+        "currency": "usd",
+        "currency_conversion": null,
+        "custom_fields": [],
+        "custom_text": {
+            "after_submit": null,
+            "shipping_address": null,
+            "submit": null,
+            "terms_of_service_acceptance": null
+        },
+        "customer": null,
+        "customer_creation": "if_required",
+        "customer_details": {
+            "address": {
+                "city": null,
+                "country": "US",
+                "line1": null,
+                "line2": null,
+                "postal_code": "05401",
+                "state": null
+            },
+            "email": "amaluekwelie@gmail.com",
+            "name": "Gulag",
+            "phone": null,
+            "tax_exempt": "none",
+            "tax_ids": []
+        },
+        "customer_email": null,
+        "discounts": [],
+        "expires_at": 1751074747,
+        "invoice": null,
+        "invoice_creation": {
+            "enabled": false,
+            "invoice_data": {
+                "account_tax_ids": null,
+                "custom_fields": null,
+                "description": null,
+                "footer": null,
+                "issuer": null,
+                "metadata": {},
+                "rendering_options": null
+            }
+        },
+        "livemode": false,
+        "locale": null,
+        "metadata": {},
+        "mode": "payment",
+        "payment_intent": {
+            "id": "pi_3ReRG7AmqfFAlCI219KYGsv7",
+            "object": "payment_intent",
+            "amount": 3092,
+            "amount_capturable": 0,
+            "amount_details": {
+                "tip": {}
+            },
+            "amount_received": 3092,
+            "application": null,
+            "application_fee_amount": null,
+            "automatic_payment_methods": null,
+            "canceled_at": null,
+            "cancellation_reason": null,
+            "capture_method": "automatic_async",
+            "client_secret": "pi_3ReRG7AmqfFAlCI219KYGsv7_secret_reJLgzNfxemzkNYt4TROc6e43",
+            "confirmation_method": "automatic",
+            "created": 1750988359,
+            "currency": "usd",
+            "customer": null,
+            "description": null,
+            "last_payment_error": null,
+            "latest_charge": "ch_3ReRG7AmqfFAlCI21PwVvJ59",
+            "livemode": false,
+            "metadata": {},
+            "next_action": null,
+            "on_behalf_of": null,
+            "payment_method": {
+                "id": "pm_1ReRG1AmqfFAlCI2GrhUsVpX",
+                "object": "payment_method",
+                "allow_redisplay": "limited",
+                "billing_details": {
+                    "address": {
+                        "city": null,
+                        "country": "US",
+                        "line1": null,
+                        "line2": null,
+                        "postal_code": "05401",
+                        "state": null
+                    },
+                    "email": "amaluekwelie@gmail.com",
+                    "name": "Gulag",
+                    "phone": null,
+                    "tax_id": null
+                },
+                "card": {
+                    "brand": "visa",
+                    "checks": {
+                        "address_line1_check": null,
+                        "address_postal_code_check": "pass",
+                        "cvc_check": "pass"
+                    },
+                    "country": "US",
+                    "display_brand": "visa",
+                    "exp_month": 6,
+                    "exp_year": 2025,
+                    "fingerprint": "rAIVUDBwaXo92Uaq",
+                    "funding": "credit",
+                    "generated_from": null,
+                    "last4": "4242",
+                    "networks": {
+                        "available": [
+                            "visa"
+                        ],
+                        "preferred": null
+                    },
+                    "regulated_status": "unregulated",
+                    "three_d_secure_usage": {
+                        "supported": true
+                    },
+                    "wallet": {
+                        "dynamic_last4": null,
+                        "link": {},
+                        "type": "link"
+                    }
+                },
+                "created": 1750988353,
+                "customer": null,
+                "livemode": false,
+                "metadata": {},
+                "type": "card"
+            },
+            "payment_method_configuration_details": null,
+            "payment_method_options": {
+                "card": {
+                    "installments": null,
+                    "mandate_options": null,
+                    "network": null,
+                    "request_three_d_secure": "automatic"
+                }
+            },
+            "payment_method_types": [
+                "card"
+            ],
+            "processing": null,
+            "receipt_email": null,
+            "review": null,
+            "setup_future_usage": null,
+            "shipping": null,
+            "source": null,
+            "statement_descriptor": null,
+            "statement_descriptor_suffix": null,
+            "status": "succeeded",
+            "transfer_data": null,
+            "transfer_group": null
+        },
+        "payment_link": null,
+        "payment_method_collection": "if_required",
+        "payment_method_configuration_details": null,
+        "payment_method_options": {
+            "card": {
+                "request_three_d_secure": "automatic"
+            }
+        },
+        "payment_method_types": [
+            "card"
+        ],
+        "payment_status": "paid",
+        "permissions": null,
+        "phone_number_collection": {
+            "enabled": false
+        },
+        "recovered_from": null,
+        "saved_payment_method_options": null,
+        "setup_intent": null,
+        "shipping_address_collection": null,
+        "shipping_cost": null,
+        "shipping_options": [],
+        "status": "complete",
+        "submit_type": null,
+        "subscription": null,
+        "success_url": "http://localhost:3000/cart/thanks?session_id={CHECKOUT_SESSION_ID}",
+        "total_details": {
+            "amount_discount": 0,
+            "amount_shipping": 0,
+            "amount_tax": 0
+        },
+        "ui_mode": "hosted",
+        "url": null,
+        "wallet_options": null
+    },
+    {
+        "object": "list",
+        "data": [
+            {
+                "id": "li_1ReRFvAmqfFAlCI2PCfBYnZi",
+                "object": "item",
+                "amount_discount": 0,
+                "amount_subtotal": 392,
+                "amount_tax": 0,
+                "amount_total": 392,
+                "currency": "usd",
+                "description": "Petrol",
+                "price": {
+                    "id": "price_1ReRFvAmqfFAlCI2RPqdjFCn",
+                    "object": "price",
+                    "active": false,
+                    "billing_scheme": "per_unit",
+                    "created": 1750988347,
+                    "currency": "usd",
+                    "custom_unit_amount": null,
+                    "livemode": false,
+                    "lookup_key": null,
+                    "metadata": {},
+                    "nickname": null,
+                    "product": "prod_SS0huieAIfSLz9",
+                    "recurring": null,
+                    "tax_behavior": "unspecified",
+                    "tiers_mode": null,
+                    "transform_quantity": null,
+                    "type": "one_time",
+                    "unit_amount": 392,
+                    "unit_amount_decimal": "392"
+                },
+                "quantity": 1
+            },
+            {
+                "id": "li_1ReRFvAmqfFAlCI2YjqlEUC4",
+                "object": "item",
+                "amount_discount": 0,
+                "amount_subtotal": 2700,
+                "amount_tax": 0,
+                "amount_total": 2700,
+                "currency": "usd",
+                "description": "Meal",
+                "price": {
+                    "id": "price_1ReRFvAmqfFAlCI2Y2mNyzWh",
+                    "object": "price",
+                    "active": false,
+                    "billing_scheme": "per_unit",
+                    "created": 1750988347,
+                    "currency": "usd",
+                    "custom_unit_amount": null,
+                    "livemode": false,
+                    "lookup_key": null,
+                    "metadata": {},
+                    "nickname": null,
+                    "product": "prod_SRuc7tLlol5SHo",
+                    "recurring": null,
+                    "tax_behavior": "unspecified",
+                    "tiers_mode": null,
+                    "transform_quantity": null,
+                    "type": "one_time",
+                    "unit_amount": 2700,
+                    "unit_amount_decimal": "2700"
+                },
+                "quantity": 1
+            }
+        ],
+        "has_more": false,
+        "url": "/v1/checkout/sessions/cs_test_b1lR4bTjVY6wuZwUDmN0FypVF0clcrAVeyAgReu3TMK04p91Ppg01zRu85/line_items"
+    }
+]
+
+[
+    {
+        "id": "cs_test_b1lR4bTjVY6wuZwUDmN0FypVF0clcrAVeyAgReu3TMK04p91Ppg01zRu85",
+        "object": "checkout.session",
+        "adaptive_pricing": {
+            "enabled": true
+        },
+        "after_expiration": null,
+        "allow_promotion_codes": null,
+        "amount_subtotal": 3092,
+        "amount_total": 3092,
+        "automatic_tax": {
+            "enabled": false,
+            "liability": null,
+            "provider": null,
+            "status": null
+        },
+        "billing_address_collection": null,
+        "cancel_url": "http://localhost:3000/shopping",
+        "client_reference_id": null,
+        "client_secret": null,
+        "collected_information": null,
+        "consent": null,
+        "consent_collection": null,
+        "created": 1750988347,
+        "currency": "usd",
+        "currency_conversion": null,
+        "custom_fields": [],
+        "custom_text": {
+            "after_submit": null,
+            "shipping_address": null,
+            "submit": null,
+            "terms_of_service_acceptance": null
+        },
+        "customer": null,
+        "customer_creation": "if_required",
+        "customer_details": {
+            "address": {
+                "city": null,
+                "country": "US",
+                "line1": null,
+                "line2": null,
+                "postal_code": "05401",
+                "state": null
+            },
+            "email": "amaluekwelie@gmail.com",
+            "name": "Gulag",
+            "phone": null,
+            "tax_exempt": "none",
+            "tax_ids": []
+        },
+        "customer_email": null,
+        "discounts": [],
+        "expires_at": 1751074747,
+        "invoice": null,
+        "invoice_creation": {
+            "enabled": false,
+            "invoice_data": {
+                "account_tax_ids": null,
+                "custom_fields": null,
+                "description": null,
+                "footer": null,
+                "issuer": null,
+                "metadata": {},
+                "rendering_options": null
+            }
+        },
+        "livemode": false,
+        "locale": null,
+        "metadata": {},
+        "mode": "payment",
+        "payment_intent": {
+            "id": "pi_3ReRG7AmqfFAlCI219KYGsv7",
+            "object": "payment_intent",
+            "amount": 3092,
+            "amount_capturable": 0,
+            "amount_details": {
+                "tip": {}
+            },
+            "amount_received": 3092,
+            "application": null,
+            "application_fee_amount": null,
+            "automatic_payment_methods": null,
+            "canceled_at": null,
+            "cancellation_reason": null,
+            "capture_method": "automatic_async",
+            "client_secret": "pi_3ReRG7AmqfFAlCI219KYGsv7_secret_reJLgzNfxemzkNYt4TROc6e43",
+            "confirmation_method": "automatic",
+            "created": 1750988359,
+            "currency": "usd",
+            "customer": null,
+            "description": null,
+            "last_payment_error": null,
+            "latest_charge": "ch_3ReRG7AmqfFAlCI21PwVvJ59",
+            "livemode": false,
+            "metadata": {},
+            "next_action": null,
+            "on_behalf_of": null,
+            "payment_method": {
+                "id": "pm_1ReRG1AmqfFAlCI2GrhUsVpX",
+                "object": "payment_method",
+                "allow_redisplay": "limited",
+                "billing_details": {
+                    "address": {
+                        "city": null,
+                        "country": "US",
+                        "line1": null,
+                        "line2": null,
+                        "postal_code": "05401",
+                        "state": null
+                    },
+                    "email": "amaluekwelie@gmail.com",
+                    "name": "Gulag",
+                    "phone": null,
+                    "tax_id": null
+                },
+                "card": {
+                    "brand": "visa",
+                    "checks": {
+                        "address_line1_check": null,
+                        "address_postal_code_check": "pass",
+                        "cvc_check": "pass"
+                    },
+                    "country": "US",
+                    "display_brand": "visa",
+                    "exp_month": 6,
+                    "exp_year": 2025,
+                    "fingerprint": "rAIVUDBwaXo92Uaq",
+                    "funding": "credit",
+                    "generated_from": null,
+                    "last4": "4242",
+                    "networks": {
+                        "available": [
+                            "visa"
+                        ],
+                        "preferred": null
+                    },
+                    "regulated_status": "unregulated",
+                    "three_d_secure_usage": {
+                        "supported": true
+                    },
+                    "wallet": {
+                        "dynamic_last4": null,
+                        "link": {},
+                        "type": "link"
+                    }
+                },
+                "created": 1750988353,
+                "customer": null,
+                "livemode": false,
+                "metadata": {},
+                "type": "card"
+            },
+            "payment_method_configuration_details": null,
+            "payment_method_options": {
+                "card": {
+                    "installments": null,
+                    "mandate_options": null,
+                    "network": null,
+                    "request_three_d_secure": "automatic"
+                }
+            },
+            "payment_method_types": [
+                "card"
+            ],
+            "processing": null,
+            "receipt_email": null,
+            "review": null,
+            "setup_future_usage": null,
+            "shipping": null,
+            "source": null,
+            "statement_descriptor": null,
+            "statement_descriptor_suffix": null,
+            "status": "succeeded",
+            "transfer_data": null,
+            "transfer_group": null
+        },
+        "payment_link": null,
+        "payment_method_collection": "if_required",
+        "payment_method_configuration_details": null,
+        "payment_method_options": {
+            "card": {
+                "request_three_d_secure": "automatic"
+            }
+        },
+        "payment_method_types": [
+            "card"
+        ],
+        "payment_status": "paid",
+        "permissions": null,
+        "phone_number_collection": {
+            "enabled": false
+        },
+        "recovered_from": null,
+        "saved_payment_method_options": null,
+        "setup_intent": null,
+        "shipping_address_collection": null,
+        "shipping_cost": null,
+        "shipping_options": [],
+        "status": "complete",
+        "submit_type": null,
+        "subscription": null,
+        "success_url": "http://localhost:3000/cart/thanks?session_id={CHECKOUT_SESSION_ID}",
+        "total_details": {
+            "amount_discount": 0,
+            "amount_shipping": 0,
+            "amount_tax": 0
+        },
+        "ui_mode": "hosted",
+        "url": null,
+        "wallet_options": null
+    },
+    {
+        "object": "list",
+        "data": [
+            {
+                "id": "li_1ReRFvAmqfFAlCI2PCfBYnZi",
+                "object": "item",
+                "amount_discount": 0,
+                "amount_subtotal": 392,
+                "amount_tax": 0,
+                "amount_total": 392,
+                "currency": "usd",
+                "description": "Petrol",
+                "price": {
+                    "id": "price_1ReRFvAmqfFAlCI2RPqdjFCn",
+                    "object": "price",
+                    "active": false,
+                    "billing_scheme": "per_unit",
+                    "created": 1750988347,
+                    "currency": "usd",
+                    "custom_unit_amount": null,
+                    "livemode": false,
+                    "lookup_key": null,
+                    "metadata": {},
+                    "nickname": null,
+                    "product": "prod_SS0huieAIfSLz9",
+                    "recurring": null,
+                    "tax_behavior": "unspecified",
+                    "tiers_mode": null,
+                    "transform_quantity": null,
+                    "type": "one_time",
+                    "unit_amount": 392,
+                    "unit_amount_decimal": "392"
+                },
+                "quantity": 1
+            },
+            {
+                "id": "li_1ReRFvAmqfFAlCI2YjqlEUC4",
+                "object": "item",
+                "amount_discount": 0,
+                "amount_subtotal": 2700,
+                "amount_tax": 0,
+                "amount_total": 2700,
+                "currency": "usd",
+                "description": "Meal",
+                "price": {
+                    "id": "price_1ReRFvAmqfFAlCI2Y2mNyzWh",
+                    "object": "price",
+                    "active": false,
+                    "billing_scheme": "per_unit",
+                    "created": 1750988347,
+                    "currency": "usd",
+                    "custom_unit_amount": null,
+                    "livemode": false,
+                    "lookup_key": null,
+                    "metadata": {},
+                    "nickname": null,
+                    "product": "prod_SRuc7tLlol5SHo",
+                    "recurring": null,
+                    "tax_behavior": "unspecified",
+                    "tiers_mode": null,
+                    "transform_quantity": null,
+                    "type": "one_time",
+                    "unit_amount": 2700,
+                    "unit_amount_decimal": "2700"
+                },
+                "quantity": 1
+            }
+        ],
+        "has_more": false,
+        "url": "/v1/checkout/sessions/cs_test_b1lR4bTjVY6wuZwUDmN0FypVF0clcrAVeyAgReu3TMK04p91Ppg01zRu85/line_items"
+    }
+]

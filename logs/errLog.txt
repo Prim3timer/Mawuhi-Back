@@ -212,3 +212,24 @@
 2025 06 22	02:01:52	cfd6b594-a8b7-4dcf-88de-e7f5aaf6ccc8	ValidationError: Cart validation failed: transQty: Path `transQty` is required.
 2025 06 22	02:11:50	9cc8b85c-e317-43c4-947f-92dca57c2e93	ValidationError: Cart validation failed: userId: Path `userId` is required.
 2025 06 22	02:11:58	c4bdedd4-9d80-4f2f-8731-61d078f955ba	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 06 26	18:53:50	99cf3911-1aa9-41df-8ca0-bc48135166f1	ReferenceError: response is not defined
+2025 06 26	18:53:50	9a5073d5-ba04-4dbe-947a-36f65be0a246	ReferenceError: response is not defined
+2025 06 26	21:02:40	e50e4304-59eb-4ebb-9540-83e9acf83946	TypeError: Cannot read properties of undefined (reading 'session_id')
+2025 06 26	21:02:40	80a3974d-cb89-4640-9437-d8cba358ee98	TypeError: Cannot read properties of undefined (reading 'session_id')
+2025 06 26	21:25:13	03a19a75-edc5-46e1-b907-5adb2153f006	ReferenceError: stripe is not defined
+2025 06 26	21:25:13	319b262a-505f-40ce-b46b-107c88c68d07	ReferenceError: stripe is not defined
+2025 06 26	22:15:22	3b2630da-aa17-46b4-af5e-7092e3818335	TypeError: result.map is not a function
+2025 06 26	22:15:22	0c96c066-d04a-46ca-b11e-17224158dc42	TypeError: result.map is not a function
+2025 06 26	22:16:36	6ca884e3-a859-463b-8bd5-96c7b2b0c05a	TypeError: result.map is not a function
+2025 06 26	22:16:36	c25c065d-2a12-4fd5-a1ea-5262d84718cd	TypeError: result.map is not a function
+2025 06 26	22:17:58	a972735a-ad2f-49e7-978c-b0e2759a1a53	TypeError: result.map is not a function
+2025 06 26	22:17:58	00a7e643-de79-4d47-a7ab-c3b5707467e1	TypeError: result.map is not a function
+2025 06 26	23:35:46	0ce833e9-3fb0-4611-a716-4bcfbc51afb7	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 06 26	23:36:17	a8a471af-72cc-46a2-ba73-7915f9a7eb1a	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 06 26	23:36:26	33e40aa8-5b5e-4336-88bc-54c7d0d4fd6f	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 06 27	11:23:17	3d706456-934d-4906-9710-0961cb1e1189	ReferenceError: currentQty is not defined
+2025 06 27	11:23:17	5444b9fa-615c-498a-a911-ac62d9fd9bba	ReferenceError: currentQty is not defined
+2025 06 27	11:57:20	6f6c6bf4-1fb7-4bd4-bd19-cde32ba63c91	ReferenceError: currentCartQty is not defined
+2025 06 27	11:57:20	8c35cda3-ee7e-4dff-aed3-4320c25f371d	ReferenceError: currentCartQty is not defined
+2025 06 27	11:59:02	7325dfb7-e96c-4e8b-bab7-0246ca3a213f	ReferenceError: cartQty is not defined
+2025 06 27	11:59:02	f452f20a-ff72-4c72-b224-1cd65b33e4c6	ReferenceError: cartQty is not defined

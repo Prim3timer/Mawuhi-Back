@@ -10,7 +10,7 @@ router.route('/addcart').post(cartController.addToCart)
 router.route('/').get(cartController.getCartItems)
 router.route('/:id').delete(cartController.removeItem)
 router.route('/clear/:id').delete(cartController.clearCart)
-router.route('/thanks').get(cartController.thanksAlert)
+router.route('/thanks/:sessionId').post (cartController.thanksAlert)
 // router.route('/thanks').get(cartController.make)
 
 module.exports = router

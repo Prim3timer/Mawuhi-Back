@@ -6,20 +6,18 @@ const { json } = require('express')
 const express = require('express')
 const app = express()
 // Rhinohorn1#
+const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 const makePayment = async (req, res) => {
     // console.log(req.body)
     
-    const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
     try {
         const storeItems = await Item.find()
-        // console.log('store items are: ', storeItems)
 
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             mode: 'payment',
             line_items: req.body.map((item)=> {
                 const storeItem = storeItems.find((things) => things._id == item.id)
-                // console.log('store item is: ', storeItem)
                 
               
                 return {
@@ -38,29 +36,48 @@ const makePayment = async (req, res) => {
             //     allowed_countries: ['US', 'NG']
             // },
             
-            
-            
-            success_url: `${process.env.CLIENT_URL}/cart/thanks`,
+                    
+            success_url: `${process.env.CLIENT_URL}/cart/thanks?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url:`${process.env.CLIENT_URL}/shopping`
             
         })  
        
-        const {url} = session
-        res.json({url})
-//    console.log(session)
+        // const {url} = session
+        res.status(200).json({session})
     } catch (error) {
         res.status(500).json({error: error.message})
-    }
+    }finally{
 
+    }
+    
 }
 
 const thanksAlert = asyncHandler(async (req, res)=> {
-    console.log(req.body)
-    const response = await Cart.find()
+  const {sessionId} = req.params 
+  const result = Promise.all([
+        stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']}),
+        stripe.checkout.sessions.listLineItems(sessionId)
+  ])
 
-   console.log(response.data)
+//    console.log(JSON.stringify(await result)) 
+//    console.log({items})
+const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
 
-    console.log('Sorry not sorry')
+
+const cartItems = await Item.find()
+if (lineItems){
+    
+    const currentQty = lineItems.data.map(async (item)=> {
+   
+        const cartQty = cartItems.find((prod) => prod.name == item.description)
+       const currentCartQty =  await Item.updateOne({name: item.description},
+           {qty: cartQty.qty - item.quantity}
+        )
+       
+        return currentCartQty
+    })
+    console.log(currentQty)
+}
 
 })
 
