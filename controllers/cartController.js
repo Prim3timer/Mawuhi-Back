@@ -6,7 +6,8 @@ const { json } = require('express')
 const express = require('express')
 const app = express()
 // Rhinohorn1#
-const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
+// const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
+const stripe =  require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
 const makePayment = async (req, res) => {
     // console.log(req.body)
     
@@ -80,6 +81,9 @@ if (lineItems){
 }
 
 })
+
+// sold:
+// 10 blender, 3 speaker, 2 meals
 
 
 const addToCart = asyncHandler(async (req, res) => {
