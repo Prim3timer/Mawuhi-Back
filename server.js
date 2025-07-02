@@ -30,7 +30,7 @@ app.use(cookieParser());
 app.use('/', express.static(path.join(__dirname, 'public')))
 
 app.use('/results', require('./routes/resultRoutes'))
-app.use('/login', require('./routes/authRoutes'))
+app.use('/auth', require('./routes/authRoutes'))
 app.use('/', require('./routes/root'))  
 app.use('/items', require('./routes/itemRoutes'))
 app.use('/transactions', require('./routes/transactionRoutes'))
