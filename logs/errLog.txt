@@ -235,3 +235,11 @@
 2025 06 27	11:59:02	f452f20a-ff72-4c72-b224-1cd65b33e4c6	ReferenceError: cartQty is not defined
 2025 06 27	22:51:45	0785cf67-88dc-4fbc-9683-181657068e21	ValidationError: Cart validation failed: userId: Path `userId` is required.
 2025 06 27	23:10:08	fa38fe36-0ae2-4e4c-b446-1a0f62a8c93b	ValidationError: Cart validation failed: userId: Path `userId` is required.
+                                                                                                                                                                                                                                                          2025 06 30	21:43:34	68e1fdd4-6444-4b76-abf2-30249556af80	ReferenceError: customer is not defined
+2025 06 30	21:43:34	7c2d09a3-7113-41da-b0d0-6ae7aad1c53d	ReferenceError: customer is not defined
+2025 07 01	21:54:01	a49c0909-e32b-4a43-8f6b-f0dc929b41eb	TypeError: Cannot read properties of undefined (reading 'userId')
+2025 07 01	21:54:01	880b436b-9bb6-47c4-9935-a5116a8209cc	TypeError: Cannot read properties of undefined (reading 'userId')
+2025 07 01	21:56:47	947df80f-a2c9-4307-9c0f-68ea301d92e0	TypeError: Cannot read properties of undefined (reading 'userId')
+2025 07 01	21:56:47	cadedd62-070b-486e-bf50-cdec423008fb	TypeError: Cannot read properties of undefined (reading 'userId')
+2025 07 01	21:57:51	737352e5-0dbb-4a77-8a85-4a5f1aa2e975	TypeError: Cannot read properties of undefined (reading 'userId')
+2025 07 01	21:57:51	f94eed08-a781-4e20-b1cc-0265f74ab7b2	TypeError: Cannot read properties of undefined (reading 'userId')

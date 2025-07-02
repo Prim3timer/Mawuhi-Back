@@ -9,14 +9,14 @@ const app = express()
 const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 // const stripe =  require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
 const makePayment = async (req, res) => {
-    // console.log(req.body)
     
     try {
         const storeItems = await Item.find()
-
+       const userId = req.body[0].userId
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             mode: 'payment',
+       
             line_items: req.body.map((item)=> {
                 const storeItem = storeItems.find((things) => things._id == item.id)
                 
@@ -36,15 +36,21 @@ const makePayment = async (req, res) => {
             // shipping_address_collection: {
             //     allowed_countries: ['US', 'NG']
             // },
-            
+            // customer: [
+            //     req.body[0].userId
+            // ],
                     
             success_url: `${process.env.CLIENT_URL}/cart/thanks?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url:`${process.env.CLIENT_URL}/shopping`
+            cancel_url:`${process.env.CLIENT_URL}/shopping`,
+            metadata: {
+                userId: req.body[0].userId
+            }
             
         })  
        
         // const {url} = session
-        res.status(200).json({session})
+        console.log({session})
+        res.status(200).json({session, userId})
     } catch (error) {
         res.status(500).json({error: error.message})
     }finally{
@@ -55,25 +61,29 @@ const makePayment = async (req, res) => {
 
 const thanksAlert = asyncHandler(async (req, res)=> {
   const {sessionId} = req.params 
-  const result = Promise.all([
-        stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']}),
-        stripe.checkout.sessions.listLineItems(sessionId)
-  ])
+ 
+        const sessions = await stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']})
+const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
+console.log({customer: sessions2.metadata.userId})
+//   const result = Promise.all([
+//         stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']}),
+//         stripe.checkout.sessions.listLineItems(sessionId)
+//   ])
 
 //    console.log(JSON.stringify(await result)) 
-//    console.log({items})
 const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
+console.log({lineItems})
 
 
 const cartItems = await Item.find()
 if (lineItems){
-    
     const currentQty = lineItems.data.map(async (item)=> {
-   
+        
         const cartQty = cartItems.find((prod) => prod.name == item.description)
-       const currentCartQty =  await Item.updateOne({name: item.description},
-           {qty: cartQty.qty - item.quantity}
+        const currentCartQty =  await Item.updateOne({name: item.description},
+            {qty: cartQty.qty - item.quantity}
         )
+        await Cart.deleteMany({userId: sessions2.metadata.userId})
        
         return currentCartQty
     })
