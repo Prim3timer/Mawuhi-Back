@@ -6,9 +6,6 @@ const bcrypt = require('bcrypt')
 
 const getAllUsers = asyncHandler(async (req, res) => {
      const users = await User.find();
-     for (let user of users){
-        console.log(user.username, user.password)
-     }
     if (!users.length) return res.status(204).json({ 'message': 'No users found' });
     res.json(users);
 })

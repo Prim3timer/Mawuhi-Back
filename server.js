@@ -29,19 +29,20 @@ app.use(cookieParser());
 
 app.use('/', express.static(path.join(__dirname, 'public')))
 
+app.use('/', require('./routes/root'))  
 app.use('/results', require('./routes/resultRoutes'))
 app.use('/auth', require('./routes/authRoutes'))
-app.use('/', require('./routes/root'))  
 app.use('/items', require('./routes/itemRoutes'))
 app.use('/transactions', require('./routes/transactionRoutes'))
 app.use('/register', require('./routes/registerRoutes'))
 app.use('/users', require('./routes/userRoutes'))
 app.use('/cart', require('./routes/cartRoutes'))
-app.use('/create-checkout-session', require('./routes/cartRoutes'))
+// app.use('/create-checkout-session', require('./routes/cartRoutes'))
+
 app.use(verifyJWT);
 
 
-    app.all('/*', (req, res)=> { 
+    app.all('*', (req, res)=> { 
         // res.status(404)
         if (req.accepts('html')){
             res.sendFile(path.join(__dirname, 'views', '404.html'))

@@ -49,7 +49,7 @@ const makePayment = async (req, res) => {
         })  
        
         // const {url} = session
-        console.log({session})
+        // console.log({session})
         res.status(200).json({session, userId})
     } catch (error) {
         res.status(500).json({error: error.message})
@@ -62,9 +62,11 @@ const makePayment = async (req, res) => {
 const thanksAlert = asyncHandler(async (req, res)=> {
   const {sessionId} = req.params 
  
+ 
         const sessions = await stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']})
 const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
-console.log({customer: sessions2.metadata.userId})
+// console.log({customer: sessions2.metadata.userId})
+const userId = sessions2.metadata.userId
 //   const result = Promise.all([
 //         stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']}),
 //         stripe.checkout.sessions.listLineItems(sessionId)
@@ -72,18 +74,18 @@ console.log({customer: sessions2.metadata.userId})
 
 //    console.log(JSON.stringify(await result)) 
 const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
-console.log({lineItems})
+// console.log({lineItems: lineItems.data})
 
 
 const cartItems = await Item.find()
 if (lineItems){
     const currentQty = lineItems.data.map(async (item)=> {
         
-        const cartQty = cartItems.find((prod) => prod.name == item.description)
+        // const cartQty = cartItems.find((prod) => prod.name == item.description)
         const currentCartQty =  await Item.updateOne({name: item.description},
-            {qty: cartQty.qty - item.quantity}
+            {qty: cartItems.find((prod) => prod.name == item.description).qty - item.quantity}
         )
-        await Cart.deleteMany({userId: sessions2.metadata.userId})
+        // await Cart.deleteMany({userId: sessions2.metadata.userId})
        
         return currentCartQty
     })
@@ -92,8 +94,6 @@ if (lineItems){
 
 })
 
-// sold:
-// 10 blender, 3 speaker, 2 meals
 
 
 const addToCart = asyncHandler(async (req, res) => {

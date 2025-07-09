@@ -243,3 +243,296 @@
 2025 07 01	21:56:47	cadedd62-070b-486e-bf50-cdec423008fb	TypeError: Cannot read properties of undefined (reading 'userId')
 2025 07 01	21:57:51	737352e5-0dbb-4a77-8a85-4a5f1aa2e975	TypeError: Cannot read properties of undefined (reading 'userId')
 2025 07 01	21:57:51	f94eed08-a781-4e20-b1cc-0265f74ab7b2	TypeError: Cannot read properties of undefined (reading 'userId')
+2025 07 03	00:54:30	0c185297-a158-4933-946c-7ea45fbf0046	ReferenceError: currentQty is not defined
+2025 07 03	00:54:30	b2d49fff-d936-434a-b26c-2518401ea71d	ReferenceError: currentQty is not defined
+2025 07 03	01:04:30	18f79c45-f09f-4cb1-a553-e8d306195bc8	ReferenceError: currentQty is not defined
+2025 07 03	01:04:30	23f549e4-668f-4beb-a0e9-1050220b048e	ReferenceError: currentQty is not defined
+2025 07 03	10:57:13	648e15de-9f2a-4f6d-b962-b4c6a69d086a	ReferenceError: currentQty is not defined
+2025 07 03	10:57:13	99f1b36e-7d02-42b0-b076-2b37906a3154	ReferenceError: currentQty is not defined
+2025 07 03	10:57:34	a07e32da-ed48-44fc-a688-1352d2650cf9	ReferenceError: currentQty is not defined
+2025 07 03	10:57:34	2fb346d6-0233-4f01-912a-0de4ba043117	ReferenceError: currentQty is not defined
+2025 07 03	17:35:57	aab6f072-d09a-4548-bba1-013dde6f1441	Error: Cannot set headers after they are sent to the client
+2025 07 04	10:27:21	28867352-a8a2-45bb-a6d5-bf65cc80e66c	Error: Cannot set headers after they are sent to the client
+2025 07 04	10:27:49	ea9385cb-1165-486b-be9f-83202fa7aec7	ReferenceError: currentQty is not defined
+2025 07 04	10:27:49	99ec6351-3489-4570-b9bf-2d88fbf01984	ReferenceError: currentQty is not defined
+2025 07 04	11:20:57	5b2e73dd-d287-4d7b-a358-75d7dc22367d	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	11:20:57	02fc3a3b-81c8-4ea9-88f3-db56ce088b69	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	11:33:36	33c77c01-8b23-4ae3-84e1-9e0b4c263ddc	SyntaxError: Expected double-quoted property name in JSON at position 22
+2025 07 04	12:07:39	087865d1-e9d2-4933-a2ff-3f6ac4da5af9	Error: Cannot set headers after they are sent to the client
+2025 07 04	14:46:02	9bdbd9df-a6bf-43eb-8ee0-8a4c115a26a6	Error: Cannot set headers after they are sent to the client
+2025 07 04	14:47:26	b93e26a4-001e-45a8-bdb7-2db950ade399	Error: Cannot set headers after they are sent to the client
+2025 07 04	14:52:42	3b64fefd-23cc-45b4-b49a-3611993a3442	Error: Cannot set headers after they are sent to the client
+2025 07 04	14:52:52	ce2b2001-a633-40dc-a4bf-c327c112d002	Error: Cannot set headers after they are sent to the client
+2025 07 04	14:53:00	d41be16a-8041-4871-8a38-03269f5bc1be	Error: Cannot set headers after they are sent to the client
+2025 07 04	14:53:09	81f65c7f-9c37-4323-81a8-32a4ca3de6d8	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	16:05:58	420e88b2-98df-49f0-99b5-e71e66638d37	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	16:08:07	d4e48905-7068-4852-9688-1f1c9699db41	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	16:08:07	5efbf7d5-ead2-406b-a439-0d3e598b3092	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	16:08:50	e83c03da-d220-451c-9399-84576be1beaf	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	16:09:55	8ba2349b-8c28-44b4-b6aa-1a8e4b4d662c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	16:09:55	befa68bd-88cf-43aa-93d2-0211b1673463	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	16:41:57	4e243474-f09a-45ce-906d-da3fc95eb970	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	16:42:03	7bf945f4-1612-497d-b423-cc2e3529c167	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	17:25:47	e121b9a2-1bff-48c4-9c62-4d67fa1b135d	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	17:54:56	708e2501-cf41-4b83-a47d-0dedeabc67b1	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	17:54:56	6615ba48-6f59-4b49-a740-1f7c66f681cd	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	17:54:56	0f3e0271-979d-4a54-a4e6-72f6c5bc0fd9	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	17:54:56	0b7bfa08-550f-4cd7-89ec-704151897b0a	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	22:28:42	ebcbcf36-3264-4bdd-bace-13a8c9c77e8f	Error: Cannot set headers after they are sent to the client
+2025 07 04	22:34:28	e97d4e57-c282-459b-a536-bb1cfe7f317e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	22:34:37	9295e84b-2816-423a-8b62-77dd9eb6c6fa	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	22:34:37	866b5f5a-33d7-43d7-b5c5-eb2168b24c28	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	22:35:31	25543484-8320-4ec1-bf19-a315878057fa	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	22:35:31	28eb200c-c65a-409b-b9bc-0c2be60eee7c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	22:35:39	c3b1a32b-8fc2-4451-b9a4-6087458f2bb7	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	22:35:48	3eeb59c6-db79-451c-b6ee-c87819ec3e0d	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	22:37:45	083ee185-2f83-47bc-b602-41249b368cf2	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	22:37:47	475e54a7-88b0-468e-b32d-f37cb2960351	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	22:37:47	43435ee2-9326-4dd6-b687-20002101b859	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	23:07:42	59713182-f164-4b32-aa74-19af721a43c6	Error: Cannot set headers after they are sent to the client
+2025 07 04	23:11:15	7e8d0f2d-a3bb-4df9-bb64-2ff819be20a3	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 07 04	23:28:46	82ef044f-4a24-4a25-9454-969e02f8c23f	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 04	23:28:46	4fa6b108-8ba5-4bb2-b8ba-4fe6a93ac263	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 05	09:26:04	93ff405f-28e5-40dd-9191-3faa88b34c33	Error: Cannot set headers after they are sent to the client
+2025 07 05	09:26:05	e1382012-03f6-4baa-bdda-87f7e61e7b0e	Error: Cannot set headers after they are sent to the client
+2025 07 05	14:56:06	8f9f55a6-0a1d-48a7-9931-f9f0c3060d21	Error: Cannot set headers after they are sent to the client
+2025 07 05	22:45:27	c73342b1-a0a8-45ba-948d-078c3c219f59	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 05	22:45:40	bc26f4fa-5613-427c-8aed-39c97c53d530	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 05	22:45:40	a98cabfb-148c-40af-8b73-53266c14dae3	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 05	22:50:39	5d1ee31c-697b-419f-8c57-cf5c02044182	Error: Cannot set headers after they are sent to the client
+2025 07 05	22:50:41	537a8adb-beda-4f7f-93e2-f2770b12db5b	Error: Cannot set headers after they are sent to the client
+2025 07 06	08:34:16	dffb6aee-c769-4cf8-a35d-f815ab45f30c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	08:34:18	3fbe97a7-1e5a-4c21-8a5f-5e91af94b341	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	08:34:26	c977b160-be83-4c90-816f-25477300174c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	08:36:32	ba163298-c8ad-4392-a9d2-8fbb0996ec9e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	08:36:41	5fb20188-5501-4e4a-8268-c7cb16c35969	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	08:36:50	42dea4b4-861c-4824-ad64-e7e053b2d12c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	08:47:27	f30dbedd-c619-4a20-9ef2-60253e52a2cd	Error: Cannot set headers after they are sent to the client
+2025 07 06	08:47:56	9b6a586f-a68e-4e4b-bded-5abc3decbc51	Error: Cannot set headers after they are sent to the client
+2025 07 06	08:48:15	f9beab98-d53a-42a7-91e2-b78cb2595376	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	08:58:12	3598ae40-7681-40c6-b25b-cde1ee268314	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	08:58:26	c5b9733e-0652-4e2e-b2d4-88048128ffbd	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	08:59:51	6e5230b4-2450-4f1e-9331-bbaefde188e8	Error: Cannot set headers after they are sent to the client
+2025 07 06	09:00:14	d960c7a8-02cc-452b-9d51-378ab491c96a	Error: Cannot set headers after they are sent to the client
+2025 07 06	09:00:36	2cd5f247-4d6d-4921-adcc-049ab0da318c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:00:43	bba1149b-b693-4533-9248-4cbf779c2358	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:19:03	b6ee4ef7-2a27-4c11-853e-3d0c4adc7c42	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:19:03	5f86709d-0635-4a8a-a1a2-e34f2caedb02	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:19:20	ac6b73b2-93d5-4350-8449-c27ddf67f56a	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:19:27	70b98513-e3dc-4ab8-b9d4-2fd2e2c97dae	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:24:07	c96c3e0b-ffcc-4eb0-8876-c8f1b7d59edf	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:24:07	d5272899-7cfe-4113-bd5b-cef4aba73df8	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:24:09	7a64270f-0ec5-4b7d-b325-b2e7c0b3d989	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:24:09	9a6d7cef-cf74-4151-8ed5-1b79664b9d5e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:24:12	caddacbb-b13d-4893-a98b-4b2fbffa9bd5	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:24:12	6c35ef2c-f993-43b0-9866-c3d506ef010e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:24:26	ac5e7eec-8bfe-4388-8462-bbfeb21054de	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:24:26	846cf54c-9b7c-40f3-95f0-08154f36f464	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:27:06	ea773e67-1b49-4690-bacb-ce161477708a	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:27:06	dfcb323a-5480-4d9c-8f06-fe5485e1e516	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:27:29	eb58e58e-9153-4797-bf27-06c7162e850a	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:27:29	dc5de315-13ab-4f6b-b14f-8a48b135cd74	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:27:30	ef39ef13-25e3-437b-b426-d91ed34b2fc8	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:27:34	8afbc7a8-40d5-48e4-83b0-6f8c79e33643	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:27:35	ac71bf33-f514-4a5d-926b-b76a7c1eea2b	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:27:54	75e81374-cbfc-4bf1-a780-fb592887ecd1	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:28:01	d81b669d-4efb-411f-b81e-d1cb3a7200e1	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	09:28:42	8f22e17f-f8fd-4aa2-8414-4cbb213762fe	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:07:09	ca89aac3-9d77-4b1d-b787-2850e1cecbe2	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:10:08	3cb28c7b-6392-4bed-9924-fb559be1b660	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:14:39	932328c9-b17d-4ca6-a4d4-d67192a56a59	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:14:45	43a0fbdc-e454-4af3-8010-11b0f5f6ab5d	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:15:05	8138e20a-78e6-4c57-bcc1-be13e1a44569	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:15:14	9e6073ed-6d6f-4db9-967e-8cce76220b4e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:15:14	e694d20b-1410-465f-99a2-f0252f98375e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:16:16	08194764-0c09-4a3b-97c4-217fa718cab5	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:16:16	fad4bcfd-0fa0-4f3e-91b9-6c736ad824b1	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:21:49	84c3f850-e724-463e-b7d3-a49134a3de77	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:22:52	181d12af-59dc-4037-9a88-9bc2f57dafb3	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:23:01	9fa1c3d7-50bc-4876-8289-ae1a51661692	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:28:45	02b539c3-fee1-4d4d-ae7d-7fb81697f0a0	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:28:48	8a53e64c-53d8-4233-92af-670713c76ba9	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:28:48	5608e4b1-01b5-4837-b149-da3625e6bf9c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:28:50	ed90af5d-577f-4050-9859-b0689a1a13d8	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:34:01	a1324901-3532-439b-8645-427349ea6139	Error: Cannot set headers after they are sent to the client
+2025 07 06	10:34:13	db9e50c3-b057-4d6d-b2a9-f5313ae87f1f	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:36:10	1760eee4-d6ae-44de-ae02-ee6c33f934f5	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:36:10	5a641cb3-f6cf-4d11-9ceb-ba71bda705f0	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:36:42	9c07bffb-ad2f-475e-a233-0cbeaee303e1	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:36:54	9c0aa690-d988-45c6-9df6-a4dcab18fc70	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:36:54	bec9959f-7caa-4d8e-9100-20c20813dbc6	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:37:02	258f5631-fb36-47e7-811b-07d83abd4be0	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:37:02	2cf30e38-c4fe-4d30-97e6-13fe17f36d52	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:37:41	cb56d2c5-a624-4ce0-8bbe-62891eb150af	Error: Cannot set headers after they are sent to the client
+2025 07 06	10:37:57	8f9d9956-fe4c-4f17-8412-5fea8982e990	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:38:22	31bc3e66-1a89-433c-a52a-c4fe1f28245c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:38:22	703fba5c-1461-4270-8c5f-252d7dfe7788	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:38:30	c6e89d74-a316-44b2-a881-973740616eb8	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:38:30	dc2f4994-c175-41ed-965f-ec02d8f45e38	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:39:04	fc50c88e-1d75-4a82-a70c-f5fc5ce38ad9	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:39:35	64cb238f-7a55-4d80-841d-0b99d78d579f	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:39:37	646fd327-50ae-4938-a970-70a18101072d	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:39:43	bf5641a2-7b66-45ba-a5c4-91616d34b9dc	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:44:39	740a2154-d19a-41d9-b200-5b4a8e2fbe61	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:44:39	cb39a271-5451-42e0-aeb8-36895bd3f752	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:47:13	d7fffb27-29a5-4b7d-97a2-b6dcb464f2ea	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:47:19	16f96718-fa63-4ef8-aad3-42398718366e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:49:58	38c1a071-8a32-4dad-a316-350a4d636186	Error: Cannot set headers after they are sent to the client
+2025 07 06	10:50:08	878ca1c8-8c30-44e1-aa52-811b1d0b92df	Error: Cannot set headers after they are sent to the client
+2025 07 06	10:50:49	cfa063a5-8dbb-48df-a7b6-0f291474eb1b	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:50:49	8eacd251-65bb-444a-b38e-8768f9f5db93	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:51:39	38c1081b-4029-408a-b11d-7463854d5a57	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:54:52	9a182666-5312-42bd-aa74-c5cd007fcafd	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:55:03	1f54730a-cace-4ffb-a67a-cd7afba8258b	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:55:03	cbfee791-9645-4342-add9-28af861b0968	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:55:11	00d5476f-93d6-4ce6-b30c-20306324e744	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:55:11	95a4e88d-2dd9-4504-ad2c-6a1a02d517a4	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:55:19	f9123992-6599-4ed7-a464-70509b28da3f	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:55:19	abc6f8d5-8c9d-452d-afd3-88fbdffcdefe	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:55:30	1571f26c-b817-4565-8efe-61cc94f139fc	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:56:07	2f22d19f-54ec-4fef-bd65-c8145d0521ba	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:56:12	7b593aa5-20dd-4454-aef1-a9cdbff313d0	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:56:15	1cf2c0e9-433e-4735-ab41-8799d018f290	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	10:56:44	31e42c0e-d477-40dc-896d-2750b4b9e1d6	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:09:20	797d4cdf-0916-4ebd-91f7-bf638f735cf0	Error: Cannot set headers after they are sent to the client
+2025 07 06	11:09:33	d4ed3997-1a8d-4f0f-acd8-55bb119847a4	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:09:33	9a51e4c2-51da-4706-8b28-900f9ec1448c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:09:40	013d4cc6-de2e-486c-97f3-fab502623429	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:10:00	7aded098-6b01-437f-8588-96fd39eaf0cb	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:13:58	286ec015-fedf-4f59-8c62-e22fe743beb9	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:13:58	37c8e9c6-6cee-40cb-9c4a-3924201f5424	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:13:58	93a59531-4ff1-4e60-8e7e-f92882ceecb5	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:14:21	ca1d2921-7012-48e6-92b6-2d23cb036dc1	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:14:21	59743f78-7ee8-4be9-bdd9-ccf17843289e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:14:21	ef2a4134-22d8-459d-b668-abf781521bad	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:14:26	0d4e9afb-1b4a-425f-aade-11cabb35de82	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:14:26	db048505-8dff-43ea-8860-ab5a4f317e88	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:14:26	965b1d1e-b343-4f64-8c39-a72f4541798d	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:14:29	a70bc6dc-2d49-449d-9c33-812c05024347	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:14:29	33e9f949-d36e-4668-a89e-1ea4a7ac57c7	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:14:29	a11a0a93-610b-48e5-8c7b-03cb23b17217	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:15:12	250c3313-6744-4df0-bc18-6ee44b36748b	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:15:12	e748ebea-cbc9-4af4-9e37-1e3557793c0b	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:15:30	07df7943-18e6-4755-8ec0-863b8178503d	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:15:36	9d171cea-51dc-4823-8cda-734b4f166e26	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:15:36	04b66572-c74c-4791-b95c-7080356e3edd	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:15:40	01e6ddc6-d641-4305-9a72-38f84f8300e6	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:15:40	0eba656a-f779-4a80-907d-2be505fb39a9	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	11:17:17	f565bec2-9208-453b-8e5e-4efe33aeff1a	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:14:08	b50e0071-6863-4827-ac1f-a2f336c99997	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:14:08	cb3d3e17-a419-426d-8cb9-b749fa959e98	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:14:27	2101e0f8-198d-4842-9058-5403d4f7f00d	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:15:32	0f72a4c9-7755-442e-819c-84d06e8143cf	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:24:08	8cfd36b9-0004-4c28-a777-5e4402046153	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:24:14	5e194ac7-ba31-48b3-b938-89f0301e75e2	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:24:45	73024a4b-b016-45d7-b31b-45b2c0098523	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:24:52	e0e42463-9a06-49d5-9d31-b02d764a8288	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:24:52	08218791-1292-43e6-bc48-9a2ee2ba6b38	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:28:54	ea402912-6433-45e5-999d-f22203358a0e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:29:26	da2ab9fa-a4bc-40d0-b90f-9a9be407eea0	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:29:54	7d68a718-879a-4744-8a05-848a62ade2d6	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:29:54	c9a139d9-2d55-4330-be5c-c1aafbc8377c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:29:59	434ba7b6-d930-4589-a9bf-6c46fad99445	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:29:59	ce5cd081-9ea5-47b1-9151-d3c3a992992b	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:30:03	7d9ee68c-2bfd-4b08-879b-ce0e9d5ff879	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:30:03	5b67ab97-10e5-4fb4-ba2d-13eb9dead48a	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:30:09	5250fefa-6bc6-4af5-9e99-448081bba31a	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:30:09	eb568905-edea-40cd-9cd6-0924c5f5eceb	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:31:02	d7db71b4-d596-4caf-a5ac-d036d243feae	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:31:02	c3fdbfa5-ef0b-45b4-bdf8-cbb306492471	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:31:17	21da3504-9e7a-475a-9bd1-a40ebbe652c7	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:31:18	23f8a6e8-ab20-4414-88dc-6aa195f41b8a	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:34:59	f8b576e9-5cb4-46ac-8725-9c831b3789eb	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:37:28	63c3dfea-fe8f-4aa5-8d83-c756d3a50917	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:40:59	4b3ca624-75f2-4e5e-95b0-1afcf68ed2b9	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:41:05	cc892354-209f-4722-aecc-8a197f179c4e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:41:05	5e11ae81-6466-4feb-8119-1f35c90c9569	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:41:08	545827ad-cc98-4713-a248-017c4023a288	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "User"
+2025 07 06	20:45:45	a24701b3-f309-488e-bc7f-6f7b8643fd62	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	20:46:05	c8659672-675f-4727-91a1-8ee8df542e5b	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "User"
+2025 07 06	21:03:03	d559e25d-1178-4107-b0a6-b6b19dde5dba	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "User"
+2025 07 06	21:03:09	bd0a0c8c-ebb9-4228-b568-7ddf45b9f3ed	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:03:09	d43fcb0c-9248-4aa2-987c-fae8a7e25273	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:03:23	e19e81dd-8408-4430-ab47-3bc7d39561b0	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:03:30	1ea60514-60b1-4433-b72e-37059f4a7f75	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:04:05	3787da13-7f98-45e3-8dc0-ba362dbf449e	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "User"
+2025 07 06	21:09:15	4872f2f1-6b28-4061-8465-28102d2f5df8	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:09:27	9cbe06f3-2768-4be3-98e5-236e190c0ae1	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:09:49	9d3192e7-d016-4fdd-a653-6e4d4a3db08c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:18:06	5fe99350-10af-425c-8782-84d82d59dda9	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "User"
+2025 07 06	21:27:57	289330e4-4113-4433-9bb9-14d9cb2e67ca	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:37:00	657f58dd-114c-49cf-bf7f-56505601b494	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:37:01	11369c73-930f-4e98-8fa0-0b5e3447ce2c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:37:01	9d741394-9450-4579-8031-1114d0756169	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:37:09	2dcb0f2e-3ac5-47f8-8e4c-e13c1cd76907	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:40:11	57fa02fb-7731-4aec-a9a8-065978e0a7da	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:44:29	ee7369c6-3d3b-4349-a80b-a3bb684efbb6	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:44:29	959f5b2b-ce43-46fc-9ee2-9f8996ed6dc0	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:45:44	d54b71c3-70ae-48ce-b5f4-e5f0315a06f7	Error: Cannot set headers after they are sent to the client
+2025 07 06	21:45:52	98865ac2-ca31-4e7f-99c8-b1774a407b6f	Error: Cannot set headers after they are sent to the client
+2025 07 06	21:47:30	df220c4b-9de2-47d7-ba5b-c752c76933c2	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:47:30	98ba5e12-87ba-4bf7-93ca-05a06b5ae85a	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:47:34	54146d25-3dcf-4baa-8fc0-646a7bc14795	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:47:39	17206542-c11f-46df-be1e-8432502e98f9	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:47:39	e57f2fa9-395c-4dad-b321-37cd10d2cbf6	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:47:43	e7b9ea48-cd9e-45b6-9884-865fee591950	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:47:43	0c517a30-0524-40ed-b9d2-09d3cd6a4161	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:47:59	74009559-82bb-4a3a-83e9-721182eb968a	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:48:31	38f30a2b-28ab-4399-b9d5-b48708942727	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:48:31	5d1d51f6-a739-465a-91ce-a36f38cd0fc3	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:48:36	9fd7480c-7fd1-4283-84db-0a6cbf2d9ac4	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:49:13	77256d77-8c80-4046-b00a-5a64df6067b2	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:49:13	354e9e61-fc98-4155-88b8-44fa41683d33	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:49:33	49786d46-bfac-416c-af18-814a80515606	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:49:33	14132d16-6acf-41c7-a61a-457a88105ea2	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:49:40	4cb80b41-6b99-403f-8fdc-a42a3eb32d23	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:49:40	248c0f98-18d5-45e5-b277-18d0e0822170	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:51:26	a831e9c1-21c7-42f2-ac76-631ed278df30	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:51:26	aabf8145-b495-4db9-bc2e-bdfcca2cb5cd	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:51:31	d33fac7d-e4ed-40c6-8d4e-d1b923daf9ad	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:51:31	205e42b8-8f77-4f33-a29b-2bfc683128e0	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:53:48	cfb42ea8-fe7a-4981-bb0c-010f6cee0e5f	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:53:48	db2db520-b492-4816-9f24-8f00437ad215	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:53:52	f64c5e98-4009-4aa4-9754-65cc3ad62c49	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:53:52	5b1997bd-d80a-48ed-bf11-95bc76aa9203	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:53:56	0c14f978-d9c6-42cc-8415-2dcc64e1650e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:53:56	6de42775-3d25-4db3-853a-6ad8a2b16b17	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:53:58	39defe57-e944-4b2a-b9d2-a0a1de1df01c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:53:58	29e7f313-d008-403b-9813-cb09fa91aab7	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:53:59	34a3c6d4-8de8-4c6c-bcb5-c53b77dec3e9	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:53:59	836c79ab-4903-4d24-bf2a-6ee7c200b982	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:01	2b24d741-20b6-4d29-b4b8-7f13cf49d2f4	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:01	fb82780c-2f5b-4ea6-b141-1a972a878d2b	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:02	02755392-9593-4f26-bc7b-47bc4c199833	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:02	0c132484-a8c7-4aaf-8b98-03dc026b37ab	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:03	b3919d1b-4642-4e0a-9464-ce8db9b1aec1	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:03	364df80a-0423-42ab-8749-074b79842503	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:04	1801de88-3ae9-4d19-9c86-74d45862e75e	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:04	dfb600ea-b386-4a37-9fec-0f25300fd300	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:06	7325d2b7-8983-46ee-bbf1-f2572d4a46b4	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:06	b9ed9603-01f9-44a6-84c6-2e50b873eaea	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:11	3172dc60-a3d3-4b46-8991-40a034f03f70	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:11	dc43acac-3225-4176-bf90-0f5e2e716b5c	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:12	6acec226-1e8e-43ec-b60b-3c6926bc8346	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:12	92c4d65f-bffe-4b56-9620-ed7b47842786	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:15	50cfca42-06ec-4760-9ec1-240b8e68e001	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:15	d679acec-daad-42ae-9495-082cac599fe5	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 06	21:54:27	2a715734-8086-4649-9b09-32a8f2d50f23	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 07 07	01:56:58	d05900f4-ddaf-467e-b474-24303dbf2d85	Error: Cannot set headers after they are sent to the client
+2025 07 07	01:58:03	221b18b1-d97e-4463-8e77-5772f10ee798	Error: Cannot set headers after they are sent to the client
+2025 07 07	01:59:33	51d2ad37-70e7-4ab9-9c1a-c05018b6a14b	Error: Cannot set headers after they are sent to the client
+2025 07 07	02:01:08	88d3219e-c048-49c4-91bc-b7e96699fd79	Error: Cannot set headers after they are sent to the client
+2025 07 07	02:04:40	34b85de4-20b4-4db0-8d81-9bbec212bc74	Error: Cannot set headers after they are sent to the client
+2025 07 07	02:05:44	09e653bb-b0ab-4c1f-a5d8-ad9b217559a2	Error: Cannot set headers after they are sent to the client
+2025 07 07	02:07:12	fdd56419-ebca-4760-92ff-17839f28f669	Error: Cannot set headers after they are sent to the client
+2025 07 07	22:51:21	bc3287a5-ce07-467e-857f-7fbfc05ffb0e	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 07 07	22:53:06	745ffda4-152b-408c-8184-265ce3c1c197	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 07 07	23:23:29	9166dc29-2844-49d0-a96b-2d6c8ee5b6de	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 07 08	10:30:13	9344b9be-9345-4edd-8f83-4033fe37ed85	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 07 08	10:37:21	51cdbad1-9207-48eb-ae71-64a355b3f823	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 07 08	10:58:07	6b481f9d-55bd-4f90-870e-4abfac6c46f8	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 07 08	12:02:47	3fe031c5-c09a-490d-981d-5a4bf6c84502	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 07 08	12:03:06	810b1342-2a45-4a78-8b76-bc4a7dd08b31	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 07 08	21:05:17	c52b8d48-64c5-4f70-9fa2-00be57dcee2b	ReferenceError: currentQty is not defined
+2025 07 08	21:05:17	68ec7ce7-b5ec-4e11-8c94-be00ad670cfa	ReferenceError: currentQty is not defined
+2025 07 08	23:01:48	62d8036f-81c5-4b3c-acce-07d04344523b	ValidationError: Cart validation failed: userId: Path `userId` is required.
