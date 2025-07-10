@@ -537,3 +537,4 @@
 2025 07 08	21:05:17	68ec7ce7-b5ec-4e11-8c94-be00ad670cfa	ReferenceError: currentQty is not defined
 2025 07 08	23:01:48	62d8036f-81c5-4b3c-acce-07d04344523b	ValidationError: Cart validation failed: userId: Path `userId` is required.
 2025 07 09	22:51:31	a0d34811-a030-4c14-8db3-12002ab78b39	ValidationError: Cart validation failed: userId: Path `userId` is required.
+2025 07 10	12:45:49	cbaa7092-fbe9-4a56-8a01-a8375478d0c7	Error: Not allowed by CORS
