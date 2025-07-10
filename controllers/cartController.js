@@ -88,7 +88,12 @@ if (lineItems){
                 )
             }
         })
-        await Cart.deleteMany({userId: sessions2.metadata.userId})
+        const cart = Cart.find()
+        const indCart = cart.filter((item)=> item.userId === userId)
+        if (indCart){
+
+            await Cart.deleteMany({userId})
+        }
     })
 }
 
