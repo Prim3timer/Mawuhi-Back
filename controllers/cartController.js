@@ -80,16 +80,16 @@ const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
 const cartItems = await Item.find()
 if (lineItems){
     const currentQty = lineItems.data.map(async (item)=> {
-        
-        // const cartQty = cartItems.find((prod) => prod.name == item.description)
-        const currentCartQty =  await Item.updateOne({name: item.description},
-            {qty: cartItems.find((prod) => prod.name == item.description).qty - item.quantity}
-        )
+        cartItems.map(async (prod) => {
+            if (item.description === prod.name){
+
+                await Item.updateOne({name: item.description},
+                    {qty: prod.qty - item.quantity}
+                )
+            }
+        })
         // await Cart.deleteMany({userId: sessions2.metadata.userId})
-       
-        return currentCartQty
     })
-    console.log(currentQty)
 }
 
 })
