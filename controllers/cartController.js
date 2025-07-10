@@ -88,7 +88,7 @@ if (lineItems){
                 )
             }
         })
-        // await Cart.deleteMany({userId: sessions2.metadata.userId})
+        await Cart.deleteMany({userId: sessions2.metadata.userId})
     })
 }
 
