@@ -77,6 +77,7 @@ const updateUser = asyncHandler(async (req, res) => {
     
     console.log(active)
     const id = req.params.id
+  
     const foundUser  = await User.findById(id).exec()
     if (foundUser){
         

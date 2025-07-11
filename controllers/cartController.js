@@ -88,7 +88,7 @@ if (lineItems){
                 )
             }
         })
-        const cart = Cart.find()
+        const cart = await Cart.find()
         const indCart = cart.filter((item)=> item.userId === userId)
         if (indCart){
 
