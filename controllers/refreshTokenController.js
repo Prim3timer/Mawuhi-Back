@@ -34,6 +34,7 @@ const asyncHandler = require('express-async-handler')
 
 
 
+
 const handleRefreshToken = asyncHandler(async (req, res) => {
     const cookies = req.cookies;
 
@@ -57,7 +58,7 @@ const handleRefreshToken = asyncHandler(async (req, res) => {
             const roles = Object.values(foundUser.roles);
         const username = foundUser.username
         const id = foundUser._id
-        console.log({id})
+    
             // if user is found, we create a new access token with the username and roles
             const accessToken = jwt.sign(
                 {
@@ -68,7 +69,7 @@ const handleRefreshToken = asyncHandler(async (req, res) => {
                     }
                 },
                 process.env.ACCESS_TOKEN_SECRET,
-                { expiresIn: '30s' }
+                { expiresIn: '4h' }
             );
             res.json({accessToken, roles, username, id })
         }

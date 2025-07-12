@@ -90,6 +90,20 @@ if (lineItems){
         })
         const cart = await Cart.find()
         const indCart = cart.filter((item)=> item.userId === userId)
+
+        // const transactionObject = {
+        //         cashier,
+        //         cashierID,
+        //         goods,
+        //         completed,
+        //         date, 
+        //         grandTotal: grandTotal
+        //     }
+        
+        //     // Create and store new item 
+        //     const transaction = await Transaction.create(transactionObject)
+        
+
         if (indCart){
 
             await Cart.deleteMany({userId})
