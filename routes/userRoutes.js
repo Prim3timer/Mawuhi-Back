@@ -3,10 +3,11 @@ const router = express.Router()
 const verifyJWT = require('../middleware/verifyJwT')
 const usersController = require('../controllers/usersController')
 
-router.use(verifyJWT)
 
-router.route('/')
-.get(usersController.getAllUsers)
+router.use(verifyJWT)   
+
+router.route('/')   
+.get( usersController.getAllUsers)
 .post(usersController.createNewUser) 
 
 router.route('/delete/:id')

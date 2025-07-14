@@ -37,7 +37,7 @@ app.use('/transactions', require('./routes/transactionRoutes'))
 app.use('/register', require('./routes/registerRoutes'))
 app.use('/users', require('./routes/userRoutes'))
 app.use('/cart', require('./routes/cartRoutes'))
-app.use('refresh', require('./routes/refreshRoutes'))
+app.use('/refresh', require('./routes/refreshRoutes'))
 // app.use('/create-checkout-session', require('./routes/cartRoutes'))
 
 app.use(verifyJWT);

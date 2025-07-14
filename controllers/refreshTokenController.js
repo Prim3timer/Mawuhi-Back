@@ -54,7 +54,7 @@ const handleRefreshToken = asyncHandler(async (req, res) => {
 
             const foundUser = await User.findOne({username: decoded.username})
 
-            if (!foundUser)res.status(401).json({message: 'Unauthorized'})
+            if (!foundUser)return res.status(401).json({message: 'Unauthorized'})
             const roles = Object.values(foundUser.roles);
         const username = foundUser.username
         const id = foundUser._id
@@ -69,9 +69,9 @@ const handleRefreshToken = asyncHandler(async (req, res) => {
                     }
                 },
                 process.env.ACCESS_TOKEN_SECRET,
-                { expiresIn: '4h' }
+                { expiresIn: '15s' }
             );
-            res.json({accessToken, roles, username, id })
+            res.json({accessToken, roles, username, id})
         }
     ));
 })

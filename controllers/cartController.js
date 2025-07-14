@@ -42,6 +42,7 @@ const makePayment = async (req, res) => {
                     
             success_url: `${process.env.CLIENT_URL}/cart/thanks?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url:`${process.env.CLIENT_URL}/shopping`,
+            
             metadata: {
                 userId: req.body[0].userId
             }
