@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt')
 const getAllUsers = asyncHandler(async (req, res) => {
      const users = await User.find();
     if (!users.length) return res.status(204).json({ 'message': 'No users found' });
-    res.json(users);
+    res.json({users});
 })
 
 // @desc Create new user
