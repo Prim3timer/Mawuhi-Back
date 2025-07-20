@@ -2,7 +2,10 @@ const mongoose = require('mongoose')
 const AutoIncrement = require('mongoose-sequence')(mongoose)
 
 const transactionSchema = new mongoose.Schema({
-
+title: {
+    type: String,
+    default: 'Yo Biz'
+},
     cashier: {
         type: String,
         // required: true
