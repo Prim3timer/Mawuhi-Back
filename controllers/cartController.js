@@ -1,7 +1,9 @@
 const Item = require('../models/Item')
 const Cart = require('../models/Cart')
 const Transaction = require('../models/Transaction')
+const User = require('../models/User')
 const asyncHandler = require('express-async-handler')
+const {format} = require('date-fns')
 const { json } = require('express')
 const express = require('express')
 const app = express()
@@ -9,14 +11,34 @@ const app = express()
 const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 // const stripe =  require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
 const makePayment = async (req, res) => {
-    
+console.log({firstElement: req.body[0]})
+
+// for the receipt generation, i'll need the:
+// id, transQty, price from each item and
+// finally, the grandTotal
+
+
+    // console.log({requestBody: req.body})
+    const grandTotal = req.body.reduce((accummulator, item)=>{
+        
+     return  accummulator + item.total
+    }, 0)
+
+    const itemDets = req.body.map((item)=> {
+        const {total, transQty, id} = item
+        return {transQty, id}
+    })
+
+    console.log({itemDets})
+
+
     try {
         const storeItems = await Item.find()
        const userId = req.body[0].userId
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             mode: 'payment',
-       
+    
             line_items: req.body.map((item)=> {
                 const storeItem = storeItems.find((things) => things._id == item.id)
                 
@@ -44,7 +66,9 @@ const makePayment = async (req, res) => {
             cancel_url:`${process.env.CLIENT_URL}/shopping`,
             
             metadata: {
-                userId: req.body[0].userId
+                userId: req.body[0].userId,
+                grandTotal: JSON.stringify(grandTotal),
+                cashier: req.body[0].cashier
             }
             
         })  
@@ -62,12 +86,16 @@ const makePayment = async (req, res) => {
 
 const thanksAlert = asyncHandler(async (req, res)=> {
   const {sessionId} = req.params 
+  
+  console.log({requestBody: req.body.date})
  
  
         const sessions = await stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']})
 const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
-// console.log({customer: sessions2.metadata.userId})
+// console.log({invoice: JSON.parse(sessions2.metadata.itemDets)})
+// console.log({metadata: sessions2.metadata})
 const userId = sessions2.metadata.userId
+// console.log({userId})
 //   const result = Promise.all([
 //         stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']}),
 //         stripe.checkout.sessions.listLineItems(sessionId)
@@ -75,42 +103,70 @@ const userId = sessions2.metadata.userId
 
 //    console.log(JSON.stringify(await result)) 
 const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
-// console.log({lineItems: lineItems.data})
+
+//   console.log({lineItems: lineItems.data})
 
 
+
+// neededProps are unit_amount(price), description(name), quantity, sub total
+const detective = []
 const cartItems = await Item.find()
+
+
+const neededProps = lineItems.data.map((item, i)=> {
+    const {amount_subtotal, amount_total, price, quantity,  description} = item
+    // console.log({price})
+
+
+    const {unit_amount} = price
+    return {total: amount_subtotal, price: unit_amount, qty: quantity, name: description}
+  })
+//   console.log({neededProps})
+
 if (lineItems){
     const currentQty = lineItems.data.map(async (item)=> {
         cartItems.map(async (prod) => {
             if (item.description === prod.name){
-
                 await Item.updateOne({name: item.description},
                     {qty: prod.qty - item.quantity}
                 )
             }
-        })
+        })  
         const cart = await Cart.find()
         const indCart = cart.filter((item)=> item.userId === userId)
-
-        // const transactionObject = {
-        //         cashier,
-        //         cashierID,
-        //         goods,
-        //         completed,
-        //         date, 
-        //         grandTotal: grandTotal
-        //     }
         
-        //     // Create and store new item 
-        //     const transaction = await Transaction.create(transactionObject)
-        
-
-        if (indCart){
-
-            await Cart.deleteMany({userId})
+    })
+    const receiptArray = neededProps.map((prop)=> {
+        const currentItem = cartItems.find((cartItem) => cartItem.name === prop.name)
+        if (currentItem){
+            return {...prop, unitMeasure: currentItem.unitMeasure}
         }
     })
+    console.log({receiptArray})
+
+    // console.log({cartItems})
+  const currentUser = await User.findById(userId)
+
+  const completed = false
+      const transactionObject = {
+          cashier: currentUser.username,
+          cashierID: currentUser._id,
+          goods: receiptArray,
+          completed,
+          date: req.body.date, 
+          grandTotal: JSON.parse(sessions2.metadata.grandTotal)
+      }
+      const transaction = await Transaction.create(transactionObject)
+        if (transaction) { //created 
+        res.status(201).json({ message: `New transaction created` })
+    } else {
+        res.status(400).json({ message: 'Invalid transaction data received' })
+    }
 }
+
+
+
+    // Create and store new item 
 
 })
 

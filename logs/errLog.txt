@@ -547,3 +547,75 @@
 2025 07 10	22:06:28	4bd5d535-6d03-46d3-97ae-05e1d601a252	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
 2025 07 13	22:50:31	fc184516-f482-4392-b168-fa162675a1db	ReferenceError: jwt is not defined
 2025 07 13	22:50:31	54cd5b47-03c2-419f-8135-8fe7cb92e096	ReferenceError: jwt is not defined
+2025 07 16	22:08:38	255629f2-d4de-432d-8edc-2300c4d2b8aa	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"
+2025 07 16	22:09:29	4d35eba9-0d34-4799-8ca3-e1f7c9422fa9	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"
+2025 07 16	22:13:10	3edf962b-de12-4a65-a0ff-aa9c44684742	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"
+2025 07 16	23:34:28	91784db6-d242-4454-98c2-6f456d639455	SyntaxError: "[object Object]" is not valid JSON
+2025 07 16	23:34:28	65cc9ad1-50c8-48b9-ac54-b1fc12e2ce3b	SyntaxError: "[object Object]" is not valid JSON
+2025 07 19	15:57:46	1a3d3457-1f27-414c-af21-90499c9f56b7	SyntaxError: "[object Object]" is not valid JSON
+2025 07 19	15:57:46	12e2aac7-d898-4938-b5cb-0b97cfa28ce3	SyntaxError: "[object Object]" is not valid JSON
+2025 07 19	15:59:37	9895b0de-8294-4f9f-8cb2-c34b48901284	SyntaxError: "[object Object]" is not valid JSON
+2025 07 19	15:59:37	a5c8d043-3d56-49d7-848b-105e84966930	SyntaxError: "[object Object]" is not valid JSON
+2025 07 19	17:11:31	c3ac8a10-4ef8-4205-a3b0-013326541634	ReferenceError: description is not defined
+2025 07 19	17:11:31	05bf108d-6ee8-4451-96ef-c604af12233a	ReferenceError: description is not defined
+2025 07 19	21:55:10	74da19ea-37e7-4240-ab6a-cbd0f0353bde	ReferenceError: receiptArray is not defined
+2025 07 19	21:55:10	ae9dfe4e-41b7-4a33-a078-78d6fc7ffeef	ReferenceError: receiptArray is not defined
+2025 07 19	22:55:38	b061fb08-c729-4f20-8f16-3c4439e14fb0	MongooseError: Query.prototype.find() no longer accepts a callback
+2025 07 19	22:55:38	9a92fddd-d5e0-4ea2-8890-432bb5aa3fbf	MongooseError: Query.prototype.find() no longer accepts a callback
+2025 07 19	23:17:12	8342012d-07a5-45bd-b853-090ee2aa6a25	ReferenceError: date is not defined
+2025 07 19	23:17:12	e77dacdb-fbb9-4ba0-8cd3-3d44743f91d5	ReferenceError: date is not defined
+2025 07 19	23:38:40	913a3593-e381-426f-9ee4-f8315d277851	Error: Invalid string: cs_test_b1...pvDjc8W6l,; must be at most 66 characters
+2025 07 19	23:39:32	6e5458ad-7e91-4ac1-98e0-e58e2101d2ed	Error: Invalid string: cs_test_b1...L4rJDyzFD,; must be at most 66 characters
+2025 07 19	23:39:32	2b36b690-e899-46e3-9620-aa4613b0dfbd	Error: Invalid string: cs_test_b1...L4rJDyzFD,; must be at most 66 characters
+2025 07 19	23:40:44	44acdd54-2299-4cb1-a2f8-08a61a770047	Error: Invalid string: cs_test_b1...UvBZq7ifG,; must be at most 66 characters
+2025 07 19	23:40:44	4f82a13a-3150-4bdb-9ef3-445ec54cfd63	Error: Invalid string: cs_test_b1...UvBZq7ifG,; must be at most 66 characters
+2025 07 19	23:48:08	4a6dc6ef-e5c1-421f-a2ae-5694e07b9d6a	Error: Invalid string: cs_test_b1...UvBZq7ifG,; must be at most 66 characters
+2025 07 19	23:48:34	ef54b469-986a-499e-93e7-8a385ec33179	Error: Invalid string: cs_test_b1...xZ9mhOaKZ,; must be at most 66 characters
+2025 07 19	23:48:35	4ddf30c1-9267-4a02-a516-f20c75aa542e	Error: Invalid string: cs_test_b1...xZ9mhOaKZ,; must be at most 66 characters
+2025 07 19	23:49:57	b4be4766-de67-4764-b737-98b747046f98	Error: Invalid string: cs_test_b1...nQWLi8et6,; must be at most 66 characters
+2025 07 19	23:49:57	356c69dc-bf9a-4d8b-b49f-8766e3b80c2a	Error: Invalid string: cs_test_b1...nQWLi8et6,; must be at most 66 characters
+2025 07 19	23:51:23	03989fe3-e806-4b01-9cda-fd36e668a6d8	Error: Invalid string: cs_test_b1...nQWLi8et6,; must be at most 66 characters
+2025 07 19	23:51:48	40f13fdf-d4d7-40c5-bd4d-a20fdc691825	Error: Invalid string: cs_test_b1...9DgXEMVdS,; must be at most 66 characters
+2025 07 19	23:51:48	b48d3206-dbbd-438c-96f0-4f10f92ebe04	Error: Invalid string: cs_test_b1...9DgXEMVdS,; must be at most 66 characters
+2025 07 19	23:52:05	9e422169-ad4b-459f-8e17-8bc516d68324	Error: Invalid string: cs_test_b1...9DgXEMVdS,; must be at most 66 characters
+2025 07 19	23:52:31	f84c38bc-747b-4999-a5d0-f1165f0fb937	Error: Invalid string: cs_test_b1...EW6BsVROs,; must be at most 66 characters
+2025 07 19	23:52:31	164e78b3-4274-4f3b-96c0-81417c3a3aaf	Error: Invalid string: cs_test_b1...EW6BsVROs,; must be at most 66 characters
+2025 07 19	23:54:18	e700152c-b3d7-4d34-ae8d-8a2178915c40	Error: Invalid string: cs_test_b1...ExEZqBnrq,; must be at most 66 characters
+2025 07 19	23:54:18	b09cdf22-b6f3-423b-a3a0-aa6e5f54fb34	Error: Invalid string: cs_test_b1...ExEZqBnrq,; must be at most 66 characters
+2025 07 20	00:19:51	8efd0945-051f-4750-a7f9-209370df1a32	ReferenceError: cashier is not defined
+2025 07 20	00:20:14	215ff020-423e-44a7-b18e-43941438470f	ReferenceError: cashier is not defined
+2025 07 20	00:20:14	cdc33e66-9d0e-4899-873b-22af6e334219	ReferenceError: cashier is not defined
+2025 07 20	00:26:15	12aa3e7b-ae24-49c3-93ac-23d53487d612	ValidationError: Transaction validation failed: completed: Cast to Boolean failed for value "" (type string) at path "completed" because of "CastError"
+2025 07 20	00:26:15	b78e8cd8-3ad0-4f04-9380-b1e6604151e5	ValidationError: Transaction validation failed: completed: Cast to Boolean failed for value "" (type string) at path "completed" because of "CastError"
+2025 07 20	00:41:09	d74614aa-caa2-4556-ac8a-cf01f02cf2e6	ReferenceError: session2 is not defined
+2025 07 20	00:41:09	4fda92c6-9176-46dd-ad8b-fe40d082b9ff	ReferenceError: session2 is not defined
+2025 07 20	00:41:45	2697fdd8-55d0-46b5-b4e5-c7244b5fcf56	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	00:41:45	8248cd5f-9f75-4f42-af25-d17427ab140e	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	00:43:00	f0c75f89-0256-4836-823e-57c3c56c6efb	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	00:43:01	a73cd60f-3d9c-4abe-85a2-b1e2ddf79b51	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	00:45:36	398e163e-1007-4849-8c89-120b908c5152	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	00:45:37	66282713-7d37-455a-9e0b-14222508dc5a	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	00:47:23	907809d8-36d1-4ee9-af56-ceab47148d64	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	00:47:23	6f47c683-99ee-4417-96ee-8659fa2976ca	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	00:47:46	1c43344c-aedf-438c-b0e5-ba62bdbdf7ff	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	00:47:46	25e6c23b-105b-46fa-8986-9d59247f1561	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	00:48:50	dc8a645d-9ddc-4ee1-9267-0365c16055bd	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	00:48:50	661e4dc9-1c1d-4daa-9617-25cce9365bb1	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	01:05:52	ef121dd5-097d-4ac3-a6b3-e099c88bc019	ReferenceError: Cannot access 'price' before initialization
+2025 07 20	01:05:52	80501547-81f3-46b5-85de-5d0f255a678b	ReferenceError: Cannot access 'price' before initialization
+2025 07 20	01:58:48	eac6a862-7432-45ec-be01-63c8d6266a25	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	01:58:49	b4fc38f1-ffce-43b7-9430-e992178037f1	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	02:01:49	cdefa02a-e197-49c1-a72c-fb6fe90c0895	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	02:01:49	270a3e84-8ff1-4ad7-8656-9520391654b7	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	02:04:09	92bf4125-6baa-4995-be6c-ffa566dc8986	ReferenceError: currentItem is not defined
+2025 07 20	02:04:10	3516064c-5247-4fba-9075-938f1fd58d3a	ReferenceError: currentItem is not defined
+2025 07 20	02:05:03	20539e07-622b-4d92-bc08-98512a23157c	ReferenceError: currentItem is not defined
+2025 07 20	02:05:03	4fb73441-522a-4690-95f3-4344ff750c0f	ReferenceError: currentItem is not defined
+2025 07 20	09:36:50	61396f45-4341-440b-94f6-8730367757cc	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	09:36:50	d1385738-351b-4ee3-86b8-d5937504799a	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2025 07 20	09:49:30	d4108bf8-fcda-459e-b427-69c85bbe6190	ReferenceError: receiptArray is not defined
+2025 07 20	09:49:30	9e4117ec-3d70-4967-b281-261c5295d758	ReferenceError: receiptArray is not defined
+2025 07 20	09:59:24	30f64f08-2fe7-47ee-b46b-8c5f78c41b4c	ReferenceError: currentItem is not defined
+2025 07 20	09:59:25	47028d0f-fca1-4577-8fc2-92113c111498	ReferenceError: currentItem is not defined
+2025 07 20	10:25:53	be8a4f27-84b1-46d2-9f66-0637c32a5339	ReferenceError: cartItem is not defined
+2025 07 20	10:25:53	a19ca22d-d55e-45e4-93a5-fc938ea0ed84	ReferenceError: cartItem is not defined
