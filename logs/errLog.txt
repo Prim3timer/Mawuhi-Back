@@ -619,3 +619,7 @@
 2025 07 20	09:59:25	47028d0f-fca1-4577-8fc2-92113c111498	ReferenceError: currentItem is not defined
 2025 07 20	10:25:53	be8a4f27-84b1-46d2-9f66-0637c32a5339	ReferenceError: cartItem is not defined
 2025 07 20	10:25:53	a19ca22d-d55e-45e4-93a5-fc938ea0ed84	ReferenceError: cartItem is not defined
+2025 07 20	11:04:30	828e4f24-7fb6-45ad-9b06-0ad63436afe9	TypeError: Cannot read properties of null (reading 'username')
+2025 07 20	11:04:30	8efc6142-be64-4fcc-994c-ded4a63b7b97	TypeError: Cannot read properties of null (reading 'username')
+2025 07 20	11:17:51	4f7acc34-d46e-425f-b035-7985309d4b99	TypeError: Cannot read properties of null (reading 'username')
+2025 07 20	11:17:51	755192dc-e2f7-46f8-8ecd-c0fc6fc0f7fc	TypeError: Cannot read properties of null (reading 'username')

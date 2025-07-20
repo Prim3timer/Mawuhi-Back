@@ -11,7 +11,7 @@ const app = express()
 const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 // const stripe =  require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
 const makePayment = async (req, res) => {
-console.log({firstElement: req.body[0]})
+console.log({reqBody: req.body})
 
 // for the receipt generation, i'll need the:
 // id, transQty, price from each item and
@@ -29,7 +29,9 @@ console.log({firstElement: req.body[0]})
         return {transQty, id}
     })
 
-    console.log({itemDets})
+
+
+    console.log({grandTotal})
 
 
     try {
@@ -67,7 +69,7 @@ console.log({firstElement: req.body[0]})
             
             metadata: {
                 userId: req.body[0].userId,
-                grandTotal: JSON.stringify(grandTotal),
+                grandTotal: JSON.stringify(grandTotal * 100),
                 cashier: req.body[0].cashier
             }
             
@@ -157,6 +159,7 @@ if (lineItems){
           grandTotal: JSON.parse(sessions2.metadata.grandTotal)
       }
       const transaction = await Transaction.create(transactionObject)
+      
         if (transaction) { //created 
         res.status(201).json({ message: `New transaction created` })
     } else {
@@ -164,7 +167,7 @@ if (lineItems){
     }
 }
 
-
+await Cart.deleteMany({userId})
 
     // Create and store new item 
 
