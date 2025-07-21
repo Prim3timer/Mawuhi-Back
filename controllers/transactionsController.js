@@ -2,6 +2,7 @@ const Transaction = require('../models/Transaction')
 const Item = require('../models/Item')
 const asyncHandler = require('express-async-handler')
 const {format} = require('date-fns')
+const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 
 const getAllTransactions = asyncHandler(async (req, res)=> {
     const transactions = await Transaction.find()
@@ -58,6 +59,75 @@ const createNewTransaction = asyncHandler(async (req, res) => {
 })
 
 
+
+const makePayment = async (req, res) => {
+console.log({reqBody: req.body})
+const theArray = req.body.goods
+// for the receipt generation, i'll need the:
+// id, transQty, price from each item and
+// finally, the grandTotal
+
+
+    try {
+        const storeItems = await Item.find()
+       const userId = req.body.cashierID
+    console.log({line_items: theArray.map((item)=> {
+        const {total, qty, _id} = item
+        return {total, qty, _id}
+    })})
+    
+
+        const session = await stripe.checkout.sessions.create({
+            payment_method_types: ['card'],
+            mode: 'payment',
+    
+            line_items: req.body.goods.map((item)=> {
+                const storeItem = storeItems.find((things) => things._id == item._id)
+                // console.log({storeItem})
+                
+              
+                return {
+                    price_data:{ 
+                        currency: 'usd',
+                        product_data: {
+                            name: storeItem.name
+                        },
+                        unit_amount: storeItem.price * 100
+                    },
+                    quantity: item.qty
+                }
+                
+            }),
+            // shipping_address_collection: {
+            //     allowed_countries: ['US', 'NG']
+            // },
+            // customer: [
+            //     req.body[0].userId
+            // ],
+                    
+            success_url: `${process.env.CLIENT_URL}/transactions/local-thanks?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url:`${process.env.CLIENT_URL}/shopping`,
+            
+              metadata: {
+                userId,
+                grandTotal: JSON.stringify(req.body.grandTotal * 100),
+                cashier: req.body.cashier
+            }
+        })  
+       
+        // const {url} = session
+        // console.log({session})
+        res.status(200).json({session, userId})
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+    // finally{
+        
+    // }
+    
+}
+
+
 const deleteTransaction = asyncHandler(async (req, res) => {
     const { id } = req.params
 
@@ -91,5 +161,6 @@ module.exports = {
     createNewTransaction,
     getSales,
     deleteTransaction,
+    makePayment
 
 }

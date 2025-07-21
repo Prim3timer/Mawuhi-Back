@@ -39,6 +39,7 @@ const handleRefreshToken = asyncHandler(async (req, res) => {
     const cookies = req.cookies;
 
     // if there is no cookie with name jwt, return 401 unauthorized
+    console.log({cookeiChecker: cookies?.jwt})
     if (!cookies?.jwt) return res.sendStatus(401);
     //else, set the refresh token variable to that cookie
     const refreshToken = cookies.jwt;

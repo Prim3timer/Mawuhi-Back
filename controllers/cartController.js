@@ -129,10 +129,11 @@ if (lineItems){
     const currentQty = lineItems.data.map(async (item)=> {
         cartItems.map(async (prod) => {
             if (item.description === prod.name){
-                await Item.updateOne({name: item.description},
+               await Item.updateOne({name: item.description},
                     {qty: prod.qty - item.quantity}
                 )
-            }
+                return
+            } else return
         })  
         const cart = await Cart.find()
         const indCart = cart.filter((item)=> item.userId === userId)

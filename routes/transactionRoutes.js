@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const transactionsController = require('../controllers/transactionsController.js')
+const cartController = require('../controllers/cartController.js')
 
 // router.route('/create-checkout-session').post(transactionsController.makePayment)
 router.route('/')
@@ -10,9 +11,9 @@ router.route('/')
 router.route('/:id')
 .delete(transactionsController.deleteTransaction)
 
-// router.route('/').get(transactionsController.makePayment)`
+router.route('/create-checkout-session').post(transactionsController.makePayment)
 
-
+router.route('/local-thanks/:sessionId').post(cartController.thanksAlert)
 
 
 // router.route('/sales').get(transactionsController.getSales)
