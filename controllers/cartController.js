@@ -149,7 +149,7 @@ if (lineItems){
 
     // console.log({cartItems})
   const currentUser = await User.findById(userId)
-
+const users = await User.find()
   const completed = false
       const transactionObject = {
           cashier: currentUser.username,
@@ -162,7 +162,7 @@ if (lineItems){
       const transaction = await Transaction.create(transactionObject)
       
         if (transaction) { //created 
-        res.status(201).json({ message: `New transaction created` })
+        res.status(201).json({ message: `New transaction created` , users})
     } else {
         res.status(400).json({ message: 'Invalid transaction data received' })
     }
