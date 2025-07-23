@@ -630,3 +630,5 @@
 2025 07 20	22:43:30	ee3ba949-6b5b-45cf-8188-a1ec626aaade	Error: Cannot set headers after they are sent to the client
 2025 07 21	13:37:48	10bd8136-6e33-48a4-afca-1a6aaee0e8d7	TypeError: Cannot read properties of null (reading 'username')
 2025 07 21	13:54:39	ccb1d1b4-0a5d-4076-bd08-fe79626c5392	TypeError: Cannot read properties of null (reading 'username')
+2025 07 22	15:02:24	b65e0166-ac22-46ab-8a6b-e2ef3c0a7bce	ReferenceError: User is not defined
+2025 07 22	17:43:48	9a41a06e-d46e-4a38-a550-567a78c325e0	CastError: Cast to Boolean failed for value "{}" (type Object) at path "active" because of "CastError"

@@ -2,6 +2,7 @@ const Inventory = require('../models/Inventory')
 const Item = require('../models/Item')
 const asyncHandler = require('express-async-handler')
 const {format} = require('date-fns');
+const { useEffect } = require('react');
 
 getAllInventory = asyncHandler( async(req, res) => {
     const inventory = await Item.find().lean()
@@ -128,7 +129,10 @@ const deleteInventory = asyncHandler(async (req, res) => {
     const reply = `Inventory ${inventory.username} with ID ${inventory._id} deleted`
 
     res.json(reply)
-})
+})   
+
+
+
 
 module.exports = {
     getAllInventory,
@@ -136,6 +140,7 @@ module.exports = {
     updateInventory,
     deleteInventory,
     getAnInventory,
-    updateInventoryyy 
+    updateInventoryyy ,
+ 
 
 }

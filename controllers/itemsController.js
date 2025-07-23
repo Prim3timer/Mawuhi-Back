@@ -1,4 +1,5 @@
 const Item = require('../models/Item')
+const User = require('../models/User')
 const asyncHandler = require('express-async-handler')
 const {format, yearsToDays} = require('date-fns');
 const { default: nodemon } = require('nodemon');
@@ -138,6 +139,59 @@ getAnItem = async (req, res)=> {
 }
 
 
+
+// this update user function is here because ever since i put the getUsers function inside
+// a useEffect in the Users Component, http requests made to the users route always fails.
+// The getUsers function has to do with refresh token and access token matter.
+const updateUser = asyncHandler(async (req, res) => {
+    const {roles, username, password, active} = req.body
+    
+    console.log(active)
+    const id = req.params.id
+  
+    const foundUser  = await User.findById(id).exec()
+    if (foundUser){
+        
+            const currentItem = await User.findOneAndUpdate({
+               _id: id}, 
+                {
+                    username,
+              roles,
+              active,
+              password: password ? await bcrypt.hash(password, 10) : foundUser.password,
+           })
+
+    
+           res.json(`${currentItem.username} Updated`)
+    }
+
+
+
+})
+
+const deleteUser = asyncHandler(async (req, res) => {
+    const { id } = req.params
+
+    // Confirm data
+    if (!id) {
+        return res.status(400).json({ message: 'User ID required' })
+    }
+
+    // Confirm note exists to delete 
+    const results = await User.findByIdAndDelete(id).exec()
+
+    if (!results) {
+        return res.status(400).json({ message: 'Item not found' })
+    }
+
+    // const result = await User.deleteOne({_id: id})
+console.log(results)
+    const reply = `${results.username}  Deleted`
+
+    res.json(reply)
+})
+
+
 module.exports = {
     getAllItems,
     createNewItem,
@@ -145,7 +199,9 @@ module.exports = {
     deleteItem,
     getAnItem,
     updateInventoryyy,
-    updateInventoryy
+    updateInventoryy,
+    updateUser,
+    deleteUser
 }
 
 

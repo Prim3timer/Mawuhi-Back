@@ -19,5 +19,9 @@ router.route('/inventory/:id')
 router.route('/dynam')
 .put(itemsController.updateInventoryy)
 
+router.route('/update-user/:id').patch(itemsController.updateUser)
+
+router.route('/delete-user/:id').delete(itemsController.deleteUser)
+
 
 module.exports = router
