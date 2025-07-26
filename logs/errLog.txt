@@ -632,3 +632,7 @@
 2025 07 21	13:54:39	ccb1d1b4-0a5d-4076-bd08-fe79626c5392	TypeError: Cannot read properties of null (reading 'username')
 2025 07 22	15:02:24	b65e0166-ac22-46ab-8a6b-e2ef3c0a7bce	ReferenceError: User is not defined
 2025 07 22	17:43:48	9a41a06e-d46e-4a38-a550-567a78c325e0	CastError: Cast to Boolean failed for value "{}" (type Object) at path "active" because of "CastError"
+2025 07 23	21:21:14	b0454ae3-5996-48ec-887e-503ce2066f0a	ReferenceError: successCounter is not defined
+2025 07 23	21:22:06	8c253ce8-e2a2-47de-8962-277609955e07	ReferenceError: successCounter is not defined
+2025 07 25	22:20:19	00d75d92-2ee5-48c7-882d-ec664e2021fd	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 07 25	22:20:29	35b2bf2e-68f8-4d4e-ba6c-fd78fb762ad1	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net

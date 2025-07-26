@@ -12,81 +12,82 @@ const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 // const stripe =  require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
 const makePayment = async (req, res) => {
 console.log({reqBody: req.body})
-
 // for the receipt generation, i'll need the:
 // id, transQty, price from each item and
 // finally, the grandTotal
 
 
-    // console.log({requestBody: req.body})
-    const grandTotal = req.body.reduce((accummulator, item)=>{
-        
-     return  accummulator + item.total
-    }, 0)
-
-    const itemDets = req.body.map((item)=> {
-        const {total, transQty, id} = item
-        return {transQty, id}
-    })
-
-
-
-    console.log({grandTotal})
-
-
-    try {
-        const storeItems = await Item.find()
-       const userId = req.body[0].userId
-        const session = await stripe.checkout.sessions.create({
-            payment_method_types: ['card'],
-            mode: 'payment',
+// console.log({requestBody: req.body})
+const grandTotal = req.body.reduce((accummulator, item)=>{
     
-            line_items: req.body.map((item)=> {
-                const storeItem = storeItems.find((things) => things._id == item.id)
-                
-              
-                return {
-                    price_data:{ 
-                        currency: 'usd',
-                        product_data: {
-                            name: storeItem.name
-                        },
-                        unit_amount: storeItem.price * 100
+    return  accummulator + item.total
+}, 0)
+
+const itemDets = req.body.map((item)=> {
+    const {total, transQty, id} = item
+    return {transQty, id}
+})
+
+
+
+console.log({grandTotal})
+
+
+try {
+    const storeItems = await Item.find()
+    const userId = req.body[0].userId
+    const session = await stripe.checkout.sessions.create({
+        payment_method_types: ['card'],
+        mode: 'payment',
+        
+        line_items: req.body.map((item)=> {
+            const storeItem = storeItems.find((things) => things._id == item.id)
+            
+            
+            return {
+                price_data:{ 
+                    currency: 'usd',
+                    product_data: {
+                        name: storeItem.name
                     },
-                    quantity: item.transQty,
-                }
-                
-            }),
-            // shipping_address_collection: {
+                    unit_amount: storeItem.price * 100
+                },
+                quantity: item.transQty,
+            }
+            
+        }),
+        // shipping_address_collection: {
             //     allowed_countries: ['US', 'NG']
             // },
             // customer: [
-            //     req.body[0].userId
-            // ],
+                //     req.body[0].userId
+                // ],
+                
+                success_url: `${process.env.CLIENT_URL}/cart/thanks?session_id={CHECKOUT_SESSION_ID}`,
+                cancel_url:`${process.env.CLIENT_URL}/shopping`,
+                
+                metadata: {
+                    userId: req.body[0].userId,
+                    grandTotal: JSON.stringify(grandTotal * 100),
+                    cashier: req.body[0].cashier,
                     
-            success_url: `${process.env.CLIENT_URL}/cart/thanks?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url:`${process.env.CLIENT_URL}/shopping`,
+                    
+                }
+                
+            })  
             
-            metadata: {
-                userId: req.body[0].userId,
-                grandTotal: JSON.stringify(grandTotal * 100),
-                cashier: req.body[0].cashier
-            }
+            // const {url} = session
+            // console.log({session})
+            res.status(200).json({session, userId})
+        } catch (error) {
+            res.status(500).json({error: error.message})
+        }finally{
             
-        })  
-       
-        // const {url} = session
-        // console.log({session})
-        res.status(200).json({session, userId})
-    } catch (error) {
-        res.status(500).json({error: error.message})
-    }finally{
-
+        }
+        
     }
     
-}
-
-const thanksAlert = asyncHandler(async (req, res)=> {
+    const thanksAlert = asyncHandler(async (req, res)=> {
   const {sessionId} = req.params 
   
   console.log({requestBody: req.body.date})
@@ -171,6 +172,7 @@ const users = await User.find()
 await Cart.deleteMany({userId})
 
     // Create and store new item 
+  
 
 })
 
