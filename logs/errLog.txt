@@ -636,3 +636,24 @@
 2025 07 23	21:22:06	8c253ce8-e2a2-47de-8962-277609955e07	ReferenceError: successCounter is not defined
 2025 07 25	22:20:19	00d75d92-2ee5-48c7-882d-ec664e2021fd	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
 2025 07 25	22:20:29	35b2bf2e-68f8-4d4e-ba6c-fd78fb762ad1	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 07 30	20:52:19	898fab71-743b-46ed-b2a5-ca47bac52b8e	ReferenceError: session is not defined
+2025 07 30	22:57:07	fa79aacf-8dd9-4af2-8446-e01b8bf71887	TypeError: Cannot read properties of null (reading 'username')
+2025 07 30	23:26:10	b4e2516f-62bc-4460-9ef7-75644b0a4126	ReferenceError: detetrminant is not defined
+2025 07 30	23:26:53	725472df-89fa-4a6f-b712-79d807bbf18e	ReferenceError: detetrminant is not defined
+2025 07 30	23:28:08	2b198bf5-e6f5-40ce-a089-90172febea6e	ReferenceError: detetrminant is not defined
+2025 07 30	23:28:37	92e35292-18e7-4ec6-a810-8507452ed462	ReferenceError: detetrminant is not defined
+2025 07 30	23:29:58	96094d29-6079-4c9d-96a7-c225efdd4566	ReferenceError: detetrminant is not defined
+2025 07 30	23:30:19	7df4d607-69f3-4fde-85bc-0019d5e7cf22	ReferenceError: detetrminant is not defined
+2025 07 30	23:33:33	05ca4422-e4cf-467b-bd02-f460dcc5310b	ReferenceError: detetrminant is not defined
+2025 07 30	23:34:34	22abbfa0-5183-456e-a46d-b4f998b13002	ReferenceError: detetrminant is not defined
+2025 07 30	23:37:57	95bbed76-3d50-4824-8826-1528bd2cbbb2	ReferenceError: detetrminant is not defined
+2025 07 30	23:38:30	4f43a6e7-3666-441b-8f7d-f2dc72a05896	ReferenceError: detetrminant is not defined
+2025 07 30	23:39:29	153ad350-65ea-4f85-95b7-9803d8b4e77f	ReferenceError: detetrminant is not defined
+2025 07 31	10:38:57	8d81aa71-4f86-4b5f-8008-d7bf6d507dbf	TypeError: Cannot read properties of undefined (reading 'log')
+2025 07 31	10:41:46	1d558655-4dd1-4e6e-8178-56bedf8783f6	CastError: Cast to ObjectId failed for value "thanks" (type string) at path "_id" for model "Cart"
+2025 07 31	10:45:35	e0f8a565-ae74-4448-915b-40035b1b0947	CastError: Cast to ObjectId failed for value "thanks" (type string) at path "_id" for model "Cart"
+2025 07 31	11:32:34	3ea9b6a8-2fb8-49e5-8096-222b30b145ab	CastError: Cast to ObjectId failed for value "thanks" (type string) at path "_id" for model "Cart"
+2025 07 31	11:37:15	9fb3a92a-2f38-49e2-b9af-33c0fa05dbe6	TypeError: Cannot read properties of null (reading '0')
+2025 07 31	12:12:05	275e62f2-6427-4d1b-9d5c-df8f03674f59	CastError: Cast to ObjectId failed for value "null" (type string) at path "_id" for model "MySession"
+2025 07 31	12:12:30	c7b37308-4591-4209-aa00-55429afd002f	CastError: Cast to ObjectId failed for value "null" (type string) at path "_id" for model "MySession"
+2025 07 31	12:14:15	f9fee7cf-9186-4e15-b32e-48c04f39431e	CastError: Cast to ObjectId failed for value "null" (type string) at path "_id" for model "MySession"

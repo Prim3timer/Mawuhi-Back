@@ -2,6 +2,7 @@ const Item = require('../models/Item')
 const Cart = require('../models/Cart')
 const Transaction = require('../models/Transaction')
 const User = require('../models/User')
+const MySession = require('../models/sessionModel')
 const asyncHandler = require('express-async-handler')
 const {format} = require('date-fns')
 const { json } = require('express')
@@ -75,7 +76,7 @@ try {
                 }
                 
             })  
-            
+           
             // const {url} = session
             // console.log({session})
             res.status(200).json({session, userId})
@@ -89,9 +90,11 @@ try {
     
     const thanksAlert = asyncHandler(async (req, res)=> {
   const {sessionId} = req.params 
-  
+  console.log({sessionId})
   console.log({requestBody: req.body.date})
- 
+
+  const determinant = {title: sessionId}
+ await  MySession.create(determinant)
  
         const sessions = await stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']})
 const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
@@ -131,7 +134,9 @@ if (lineItems){
         cartItems.map(async (prod) => {
             if (item.description === prod.name){
                await Item.updateOne({name: item.description},
-                    {qty: Number(prod.qty) - Number(item.quantity)}
+                    {qty: Number(prod.qty) - Number(item.quantity), 
+                        date: req.body.date
+                    }
                 )
                 return
             } else return
@@ -146,6 +151,7 @@ if (lineItems){
             return {...prop, unitMeasure: currentItem.unitMeasure}
         }
     })
+
     console.log({receiptArray})
 
     // console.log({cartItems})
@@ -232,6 +238,29 @@ const clearCart = asyncHandler(async (req, res) => {
 })
 
 
+const getSessionId = asyncHandler(async (req, res) => {
+   const {sessionId} = req.params
+   console.log({sessionId})
+    // console.log({deleteSession: sessionId})
+    const response = await MySession.findOne({title: sessionId})
+    console.log({response})
+    res.json(response)
+
+})
 
 
-module.exports = {addToCart, getCartItems, removeItem, clearCart, makePayment, thanksAlert}
+const deleteSession = asyncHandler(async(req, res)=> {
+    const oldSession = req.params.oldSessionId
+    console.log({delreqParam: req.params})
+    if (oldSession){
+
+        await MySession.deleteOne({_id: oldSession})
+    }
+})
+
+
+
+
+module.exports = {addToCart, getCartItems, removeItem, clearCart, makePayment, thanksAlert, getSessionId,
+    deleteSession
+}
