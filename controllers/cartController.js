@@ -13,9 +13,9 @@ const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 // const stripe =  require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
 const makePayment = async (req, res) => {
 console.log({reqBody: req.body})
-// for the receipt generation, i'll need the:
-// id, transQty, price from each item and
-// finally, the grandTotal
+    // for the receipt generation, i'll need the:
+    // id, transQty, price from each item and
+    // finally, the grandTotal
 
 
 // console.log({requestBody: req.body})
@@ -64,7 +64,7 @@ try {
                 //     req.body[0].userId
                 // ],
                 
-                success_url: `${process.env.CLIENT_URL}/cart/thanks?session_id={CHECKOUT_SESSION_ID}`,
+                success_url: `${process.env.CLIENT_URL}/transactons?session_id={CHECKOUT_SESSION_ID}`,
                 cancel_url:`${process.env.CLIENT_URL}/shopping`,
                 
                 metadata: {
@@ -101,7 +101,7 @@ const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
 // console.log({invoice: JSON.parse(sessions2.metadata.itemDets)})
 // console.log({metadata: sessions2.metadata})
 const userId = sessions2.metadata.userId
-// console.log({userId})
+console.log({userId})
 //   const result = Promise.all([
 //         stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']}),
 //         stripe.checkout.sessions.listLineItems(sessionId)
@@ -254,7 +254,8 @@ const deleteSession = asyncHandler(async(req, res)=> {
     console.log({delreqParam: req.params})
     if (oldSession){
 
-        await MySession.deleteOne({_id: oldSession})
+        const response = await MySession.findOneAndDelete(oldSession).exec()
+        
     }
 })
 

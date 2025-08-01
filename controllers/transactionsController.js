@@ -105,7 +105,7 @@ const theArray = req.body.goods
             //     req.body[0].userId
             // ],
                     
-            success_url: `${process.env.CLIENT_URL}/transactions/local-thanks?session_id={CHECKOUT_SESSION_ID}`,
+            success_url: `${process.env.CLIENT_URL}/transactions?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url:`${process.env.CLIENT_URL}/shopping`,
             
               metadata: {
@@ -119,7 +119,7 @@ const theArray = req.body.goods
         // console.log({session})
         res.status(200).json({session, userId})
     } catch (error) {
-        res.status(500).json({message: error.message})
+        res.status(500).json({message: error.message}) 
     }
     // finally{
         

@@ -657,3 +657,32 @@
 2025 07 31	12:12:05	275e62f2-6427-4d1b-9d5c-df8f03674f59	CastError: Cast to ObjectId failed for value "null" (type string) at path "_id" for model "MySession"
 2025 07 31	12:12:30	c7b37308-4591-4209-aa00-55429afd002f	CastError: Cast to ObjectId failed for value "null" (type string) at path "_id" for model "MySession"
 2025 07 31	12:14:15	f9fee7cf-9186-4e15-b32e-48c04f39431e	CastError: Cast to ObjectId failed for value "null" (type string) at path "_id" for model "MySession"
+2025 07 31	21:01:43	1818270a-2aab-44e3-89ed-201151c23dcd	CastError: Cast to ObjectId failed for value "thanks" (type string) at path "_id" for model "Cart"
+2025 07 31	21:02:16	3b159387-ab12-45af-b200-b73da3535de3	CastError: Cast to ObjectId failed for value "thanks" (type string) at path "_id" for model "Cart"
+2025 07 31	21:04:22	656557f6-2b3f-46b7-80ac-a82e6e2c2628	CastError: Cast to ObjectId failed for value "thanks" (type string) at path "_id" for model "Cart"
+2025 07 31	21:07:41	1c7c1765-9b2f-4921-bdee-b935f052113d	CastError: Cast to ObjectId failed for value "thanks" (type string) at path "_id" for model "Cart"
+2025 07 31	21:09:07	bcea4170-bf07-4429-bc26-681aea205ce2	CastError: Cast to ObjectId failed for value "thanks" (type string) at path "_id" for model "Cart"
+2025 07 31	21:11:12	e0bba81d-b953-4d3c-8669-fc0a5f26d72a	CastError: Cast to ObjectId failed for value "thanks" (type string) at path "_id" for model "Cart"
+2025 08 01	10:41:41	3d43c1e8-5d90-413b-8b2e-f2ddecbe363f	TypeError: Cannot read properties of null (reading 'username')
+2025 08 01	10:44:14	0bfe6eab-d6d3-4233-99ea-d7d095891939	TypeError: Cannot read properties of null (reading 'username')
+2025 08 01	10:46:53	f518afd8-011b-4628-a4e3-773d3552d7a8	TypeError: Cannot read properties of null (reading 'username')
+2025 08 01	10:59:14	3f5dac5c-8ca0-4563-8ab4-64b8c5bb7515	TypeError: Cannot read properties of null (reading 'username')
+2025 08 01	11:14:44	6cd064f8-6670-4649-b697-db507ce32eb7	TypeError: Cannot read properties of null (reading 'username')
+2025 08 01	11:21:11	06785e82-20b7-4350-bbcf-2986970c22b6	TypeError: Cannot read properties of null (reading 'username')
+2025 08 01	11:28:53	34dc99a5-cbac-47a7-af55-a0176dad71fe	TypeError: Cannot read properties of null (reading 'username')
+2025 08 01	11:39:10	eea77bb4-ba32-4763-8314-0545bebbb656	TypeError: Cannot read properties of null (reading 'username')
+2025 08 01	11:39:41	10a0e73a-59ab-46f7-9149-8cce3670aa53	Error: No such checkout.session: null
+2025 08 01	11:46:26	9666c521-1f70-4695-8b1d-1620b05bfb53	TypeError: Cannot read properties of null (reading 'username')
+2025 08 01	12:14:42	72d5d84b-e77b-4e01-b77c-e9031e31e459	Error: No such checkout.session: null
+2025 08 01	12:15:37	52e43b55-ff80-4060-92c3-9409e2d6c53e	Error: No such checkout.session: null
+2025 08 01	12:17:19	1b18f504-2680-4e71-b261-29c49093bcde	Error: No such checkout.session: null
+2025 08 01	12:18:53	e97549b5-d2ba-4c39-9dbd-aa69a7eddee1	Error: No such checkout.session: null
+2025 08 01	12:19:03	c008d10e-d366-4dd5-836d-424461b7eedb	Error: No such checkout.session: null
+2025 08 01	12:19:34	9bb395ba-2ff6-45f0-a40e-4f7468aa558a	Error: No such checkout.session: null
+2025 08 01	12:27:48	158ffa28-8607-4d8c-8f07-7d1251446d39	TypeError: Cannot read properties of null (reading 'username')
+2025 08 01	12:31:00	ae172ab2-142c-4d9a-8278-44c196bbd5f4	Error: No such checkout.session: null
+2025 08 01	12:33:02	fb65a009-5af7-404d-afbe-716ea4b1efd5	Error: No such checkout.session: null
+2025 08 01	12:33:04	0938cc71-e331-4559-a6a7-44e807d6f142	Error: No such checkout.session: null
+2025 08 01	12:33:20	bd424163-25b3-48b9-9241-fda7fc06ebdc	Error: No such checkout.session: null
+2025 08 01	12:33:22	f883818c-0dff-4cef-a9a2-e736c023230f	Error: No such checkout.session: null
+2025 08 01	12:37:25	7d3fdb3f-be5c-418c-9222-14c21840ce35	TypeError: Cannot read properties of null (reading 'username')
