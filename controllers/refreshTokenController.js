@@ -45,6 +45,7 @@ const handleRefreshToken = asyncHandler(async (req, res) => {
     const refreshToken = cookies.jwt;
     // find by refresh token
     const foundUser = await User.findOne({ refreshToken }).exec();
+    const users = await User.find().exec()
     if (!foundUser) return res.sendStatus(403); //Forbidden 
     // we will use the jwt dependency to verify the refresh token
     jwt.verify(
@@ -72,7 +73,7 @@ const handleRefreshToken = asyncHandler(async (req, res) => {
                 process.env.ACCESS_TOKEN_SECRET,
                 { expiresIn: '15m' }
             );
-            res.json({accessToken, roles, username, id})
+            res.json({accessToken, roles, username, id, users})
         }
     ));
 })

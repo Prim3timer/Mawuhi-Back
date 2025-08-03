@@ -19,6 +19,8 @@ router.route('/inventory/:id')
 router.route('/dynam')
 .put(itemsController.updateInventoryy)
 
+
+// detour (makeshift because user route doesen't work. someithing to do with setting up interceptors)
 router.route('/update-user/:id').patch(itemsController.updateUser)
 
 router.route('/delete-user/:id').delete(itemsController.deleteUser)

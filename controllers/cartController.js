@@ -14,7 +14,7 @@ const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 const makePayment = async (req, res) => {
 console.log({reqBody: req.body})
     // for the receipt generation, i'll need the:
-    // id, transQty, price from each item and
+    // id, transQty, price from each item and   
     // finally, the grandTotal
 
 

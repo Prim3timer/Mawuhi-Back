@@ -56,10 +56,10 @@ const updateItem = asyncHandler(async (req, res) => {
      const currentItem = await Item.findOneAndUpdate({
         _id: id}, 
          {
-        name,
-        unitMeasure,
-        price,
-        img
+        name: name || '',
+        unitMeasure: unitMeasure || '',
+        price: price || '',
+        img: img || ''
     })
 
 
