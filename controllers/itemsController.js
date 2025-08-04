@@ -1,6 +1,7 @@
 const Item = require('../models/Item')
 const User = require('../models/User')
 const asyncHandler = require('express-async-handler')
+const bcrypt = require('bcrypt');
 const {format, yearsToDays} = require('date-fns');
 const { default: nodemon } = require('nodemon');
 

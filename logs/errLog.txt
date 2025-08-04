@@ -686,3 +686,7 @@
 2025 08 01	12:33:20	bd424163-25b3-48b9-9241-fda7fc06ebdc	Error: No such checkout.session: null
 2025 08 01	12:33:22	f883818c-0dff-4cef-a9a2-e736c023230f	Error: No such checkout.session: null
 2025 08 01	12:37:25	7d3fdb3f-be5c-418c-9222-14c21840ce35	TypeError: Cannot read properties of null (reading 'username')
+2025 08 04	10:16:34	42d76e65-f556-48df-ae73-8ed848b1a590	ReferenceError: bcrypt is not defined
+2025 08 04	10:16:51	32f7129a-7ffe-4699-ac45-7e5c43ecfc27	ReferenceError: bcrypt is not defined
+2025 08 04	10:17:11	724040bf-a2c9-499b-9dcc-44029839b263	ReferenceError: bcrypt is not defined
+2025 08 04	10:17:43	ecaba56c-ab56-4886-b311-864496e1d16a	ReferenceError: bcrypt is not defined
