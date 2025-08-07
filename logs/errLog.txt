@@ -690,3 +690,9 @@
 2025 08 04	10:16:51	32f7129a-7ffe-4699-ac45-7e5c43ecfc27	ReferenceError: bcrypt is not defined
 2025 08 04	10:17:11	724040bf-a2c9-499b-9dcc-44029839b263	ReferenceError: bcrypt is not defined
 2025 08 04	10:17:43	ecaba56c-ab56-4886-b311-864496e1d16a	ReferenceError: bcrypt is not defined
+2025 08 06	10:48:19	64b8c316-d157-4810-b631-a887045e2694	TypeError: Cannot read properties of null (reading 'refreshToken')
+2025 08 06	10:48:45	5f67935a-3962-4c88-a6c2-e2ee1e36c008	TypeError: Cannot read properties of null (reading 'refreshToken')
+2025 08 06	10:48:59	c7c4c68f-5404-46c0-80d7-45a2958145df	TypeError: Cannot read properties of null (reading 'refreshToken')
+2025 08 06	11:33:28	44f512ee-96ff-4bab-9f84-902ef8c0771b	TypeError: Cannot read properties of null (reading 'refreshToken')
+2025 08 06	11:33:32	78ac505f-0fee-439d-bc36-5773d7e71386	TypeError: Cannot read properties of null (reading 'refreshToken')
+2025 08 06	11:33:34	e232a3ba-cc90-42ed-b185-bb35fe7fe407	TypeError: Cannot read properties of null (reading 'refreshToken')
