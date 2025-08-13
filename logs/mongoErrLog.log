@@ -46,3 +46,5 @@
 2025 07 30	21:59:15	30dcb9e5-000d-4b9c-8a45-a1dd8a1299ec	undefined: EREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
 2025 08 05	18:29:17	75641f10-a099-4eca-a5e0-746b194a7f08	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
 2025 08 06	22:52:24	10b085cc-8070-4ea9-8a37-9a08b2c3ee0c	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2025 08 11	20:30:53	65b027ff-3b94-411f-915d-56ed950608f9	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2025 08 12	18:48:48	4d1fb113-403f-4399-ac8f-bb4f48262803	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
