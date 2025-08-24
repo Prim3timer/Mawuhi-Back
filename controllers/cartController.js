@@ -47,7 +47,7 @@ try {
             
             return {
                 price_data:{ 
-                    currency: 'usd',
+                    currency: 'ngn',
                     product_data: {
                         name: storeItem.name
                     },
