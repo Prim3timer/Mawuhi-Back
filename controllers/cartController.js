@@ -134,7 +134,7 @@ if (lineItems){
         cartItems.map(async (prod) => {
             if (item.description === prod.name){
                await Item.updateOne({name: item.description},
-                    {qty: Number(prod.qty) - Number(item.quantity), 
+                    {qty: prod.qty - item.quantity, 
                         date: req.body.date
                     }
                 )
