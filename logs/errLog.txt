@@ -774,3 +774,30 @@
 2025 08 19	11:41:12	1a0f5276-f0cd-4be6-979e-9f5e3757da63	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "User"
 2025 08 19	11:47:22	7f5c8bf0-0bc5-43ab-8454-2ccdc47c6f3d	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "User"
 2025 08 19	11:48:41	51c67d1c-ed96-44e9-aec4-c26cb6f51690	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "User"
+2025 10 21	21:00:49	837fa82d-adb2-4154-927f-b77448ff6ac3	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:01:19	493c243a-f258-42d6-a909-5987047a850f	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:03:28	083e7f9c-6dc0-44c5-a07a-9207a79b957a	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 10 21	21:03:32	ff616003-3beb-4035-9d20-cccb58fb0315	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:03:34	45f9a1b5-488f-4ce1-b4ee-f8c35e4e3b89	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:03:48	3e8139f0-441e-4178-9926-2b056128a59b	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:03:52	7d1217bf-a92d-418c-ac23-9dde8ab7a8b1	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:03:56	544a8fe8-cff9-4337-ae26-187ab97092a5	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:05:44	cd57808a-8cc0-4706-bdf5-45f4da0a0847	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:05:47	769fc990-32e7-4757-ba67-1e873e1e968e	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:05:50	2ce6e7c6-1332-4792-85ed-d3f688dba0c0	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:09:56	eae123b7-389d-483f-88e9-42c7aed84de4	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:10:41	02c20b35-ce4c-4fb6-93f0-24c8d27792e1	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:10:41	4aa0393d-6fd4-473c-a7fb-f9ec8ad39cb3	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:10:43	9f5b350a-ebc8-4c54-9570-c12096c152c0	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:10:45	0ccd9294-cd6f-412b-b3fc-9c545ca845d4	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:10:45	25cd09a9-0ad4-4bce-b655-e3832a812307	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:11:55	8cabd678-d29e-404e-b901-6d477a4edd78	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:12:09	592bc1e2-c1d4-4c3f-bb5d-415c665231a7	TypeError: Cannot read properties of undefined (reading 'messsaage')
+2025 10 21	21:12:26	9c7dd37e-aa3a-4077-b149-488fc41962a0	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:12:26	dc7a37a0-bdf3-4e65-a360-7025bb6a93e2	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:12:28	dd7988ed-c850-44ac-a9a0-1ee5abd185e2	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:12:29	a76bdac1-442d-4f8d-91c2-57b3e557a006	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:12:34	270272e1-051c-4801-932b-bf6430a5b9eb	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:12:35	991a9334-0d38-4dec-be49-9dbd02443c8f	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:12:36	1cf23a6e-8a41-4c7d-9073-0ec56a4cb863	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2025 10 21	21:12:36	8d6a1137-a585-4579-b0c3-611939ab7361	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
