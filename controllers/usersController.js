@@ -75,7 +75,7 @@ console.log(results)
 const updateUser = asyncHandler(async (req, res) => {
     const {roles, username, password, active} = req.body
     
-    console.log(active)
+    console.log({roles})
     const id = req.params.id
   
     const foundUser  = await User.findById(id).exec()

@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken');
 
 const verifyJWT = (req, res, next) => {
     const authHeader = req.headers.authorization || req.headers.Authorization;
-    console.log({authBeginer: authHeader?.startsWith('Bearer ')})
     if (!authHeader?.startsWith('Bearer ')) return res.sendStatus(401);
 
     // get token which is after the space

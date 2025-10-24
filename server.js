@@ -39,8 +39,8 @@ app.use('/refresh', require('./routes/refreshRoutes'))
 
 app.use('/transactions', require('./routes/transactionRoutes'))
 app.use(verifyJWT); 
+app.use('/users', require('./routes/userRoutes'))   
 app.use('/items', require('./routes/itemRoutes'))   
-app.use('/users', require('./routes/userRoutes'))
 
 
     app.all('/*', (req, res)=> { 
