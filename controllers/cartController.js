@@ -243,15 +243,21 @@ const getSessionId = asyncHandler(async (req, res) => {
    console.log({sessionId})
     // console.log({deleteSession: sessionId})
     const response = await MySession.find().exec()
-    const lastElement = response[response.length - 1]
+    const lastElement = response[1]
+    const firstElement = response[0]
+    console.log({lastElement})
     // delete the session id in the database which should the only onehn
-    if (response.length){
+    if (response.length > 1){
 
-        const responseForDelete = await MySession.findOneAndDelete({title: lastElement.title})
+        const responseForDelete = await MySession.findOneAndDelete({title: firstElement.title})
         console.log(responseForDelete)
     }
-    console.log({lastElement})
-    res.json(lastElement)
+    if (response.length === 1){
+
+        res.json(firstElement)
+    } else {
+        res.json(lastElement)
+    }
 
 })
 
