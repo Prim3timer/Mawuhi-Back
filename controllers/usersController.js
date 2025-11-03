@@ -98,23 +98,57 @@ const updateUser = asyncHandler(async (req, res) => {
 
 })
 
-// const updateCart = asyncHandler(async (req, res) => {
-//      const id = req.params.id
-// const foundUser = await User.findById(id).exec()
-// // console.log(req.body)
-// const newCart = foundUser.cart.push(req.body)
-// console.log(foundUser.cart)
-// if (foundUser){
 
-//     console.log(foundUser.cart)
-//     const currentUser = await User.findOneAndUpdate({_id: id},
-//         {
-//         cart: newCart
-//         }
-//     )
-//     res.json(`${currentUser.username} Updated`)
-// }
-// })
+// for quick edit
+const updateUsersy = async () => {
+    const users = await User.find().exec()
+  
+
+    console.log({users})
+}
+
+updateUsersy()
+
+const addToCart = asyncHandler(async (req, res) => {
+    const id = req.params.id
+    const foundUser = await User.findById(id).exec()
+    const oldCart = foundUser.cart
+console.log({reqBody: req.body})
+    console.log({oldCart})
+    const newCart = [...oldCart, req.body]
+    console.log({newCart})
+    
+    const newArray = {...foundUser, cart: newCart}
+    // console.log({newArray})
+
+    // console.log(r)
+    // console.log({cartProp: req.body})
+   const updated =  await User.findOneAndUpdate({
+        _id: id},
+       {cart: newCart})
+       console.log({updated})
+res.json(newArray)
+})
+
+const deleteCartItem = asyncHandler(async (req, res) => {
+    const {userId, itemId} = req.query
+
+    const users = await User.find().exec()
+    console.log({userId})
+    const foundUser = users.find((user) => user._id == userId)
+    console.log({foundUser})
+    if (foundUser){
+
+        const cartItems = foundUser.cart
+        const newCart = cartItems.filter((cartItem) => cartItem.id != itemId)
+       const response =  await User.findOneAndUpdate({_id: userId},
+            {cart: newCart}
+        )
+        console.log({response})
+    }
+})
+
+
 
 
 
@@ -123,7 +157,7 @@ module.exports = {
     createNewUser,
     deleteUser,
     updateUser,
-    // updateCart
-  
+    addToCart,
+    deleteCartItem
 }
 

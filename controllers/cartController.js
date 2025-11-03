@@ -2,7 +2,6 @@ const Item = require('../models/Item')
 const Cart = require('../models/Cart')
 const Transaction = require('../models/Transaction')
 const User = require('../models/User')
-const MySession = require('../models/sessionModel')
 const asyncHandler = require('express-async-handler')
 const {format} = require('date-fns')
 const { json } = require('express')
@@ -13,13 +12,15 @@ const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 // const stripe =  require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
 const makePayment = async (req, res) => {
 console.log({reqBody: req.body})
+const fromFront = req.body
     // for the receipt generation, i'll need the:
     // id, transQty, price from each item and   
     // finally, the grandTotal
-
+const userId = fromFront.shift()
+console.log(userId)
 
 // console.log({requestBody: req.body})
-const grandTotal = req.body.reduce((accummulator, item)=>{
+const grandTotal = fromFront.reduce((accummulator, item)=>{
     
     return  accummulator + item.total
 }, 0)
@@ -36,7 +37,7 @@ console.log({grandTotal})
 
 try {
     const storeItems = await Item.find()
-    const userId = req.body[0].userId
+    // const userId = userId
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         mode: 'payment',
@@ -68,7 +69,7 @@ try {
                 cancel_url:`${process.env.CLIENT_URL}/shopping`,
                 
                 metadata: {
-                    userId: req.body[0].userId,
+                    userId,
                     grandTotal: JSON.stringify(grandTotal * 100),
                     cashier: req.body[0].cashier,
                     
@@ -92,16 +93,22 @@ try {
   const {sessionId} = req.params 
   console.log({sessionId})
   console.log({requestBody: req.body.date})
+  
+  const sessions = await stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']})
+  const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
+  // console.log({invoice: JSON.parse(sessions2.metadata.itemDets)})
+  // console.log({metadata: sessions2.metadata})
+  const userId = sessions2.metadata.userId
+  console.log({userId})
+  console.log({reqQuery: req.query})
+    const determinant = sessionId
+    console.log({determinant})
+    const sessionsArray = []
+    sessionsArray.push(determinant)
+//    await  User.findOneAndUpdate({_id: userId},
+//     {sessionIds: sessionsArray}
+//    )
 
-  const determinant = {title: sessionId}
- await  MySession.create(determinant)
- 
-        const sessions = await stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']})
-const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
-// console.log({invoice: JSON.parse(sessions2.metadata.itemDets)})
-// console.log({metadata: sessions2.metadata})
-const userId = sessions2.metadata.userId
-console.log({userId})
 //   const result = Promise.all([
 //         stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']}),
 //         stripe.checkout.sessions.listLineItems(sessionId)
@@ -156,7 +163,8 @@ if (lineItems){
 
     // console.log({cartItems})
   const currentUser = await User.findById(userId)
-const users = await User.find()
+  console.log({currentUser})
+
   const completed = false
       const transactionObject = {
           cashier: currentUser.username,
@@ -169,16 +177,14 @@ const users = await User.find()
       const transaction = await Transaction.create(transactionObject)
       
         if (transaction) { //created 
-        res.status(201).json({ message: `New transaction created` , users})
+        res.status(201).json({ message: `New transaction created`})
     } else {
         res.status(400).json({ message: 'Invalid transaction data received' })
     }
+    await User.findOneAndUpdate({_id: currentUser._id},
+        {cart: []}
+    )
 }
-
-await Cart.deleteMany({userId})
-
-    // Create and store new item 
-  
 
 })
 
@@ -241,40 +247,25 @@ const clearCart = asyncHandler(async (req, res) => {
 const getSessionId = asyncHandler(async (req, res) => {
    const {sessionId} = req.params
    console.log({sessionId})
+     const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
     // console.log({deleteSession: sessionId})
-    const response = await MySession.find().exec()
-    const lastElement = response[1]
-    const firstElement = response[0]
-    console.log({lastElement})
-    // delete the session id in the database which should the only onehn
-    if (response.length > 1){
+    const responseSession = await User.find().exec()
+    console.log({responseSession})
 
-        const responseForDelete = await MySession.findOneAndDelete({title: firstElement.title})
-        console.log(responseForDelete)
-    }
-    if (response.length === 1){
+     const userId = sessions2.metadata.userId
 
-        res.json(firstElement)
-    } else {
-        res.json(lastElement)
-    }
+   const response = await  User.findOneAndUpdate({_id: userId},
+    {sessionId})
+
+
+    res.json(response.sessionId)
 
 })
 
 
-const deleteSession = asyncHandler(async(req, res)=> {
-    const oldSession = req.params.oldSessionId
-    console.log({delreqParam: req.params})
-    if (oldSession){
-
-        const response = await MySession.findOneAndDelete(oldSession).exec()
-        
-    }
-})
 
 
 
 
-module.exports = {addToCart, getCartItems, removeItem, clearCart, makePayment, thanksAlert, getSessionId,
-    deleteSession
+module.exports = {addToCart, getCartItems, removeItem, clearCart, makePayment, thanksAlert, getSessionId
 }

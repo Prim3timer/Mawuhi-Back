@@ -12,7 +12,5 @@ router.route('/:id').delete(cartController.removeItem)
 router.route('/clear/:id').delete(cartController.clearCart)
 router.route('/thanks/:sessionId').post (cartController.thanksAlert)
 router.route('/thanks/old-session/:sessionId').get(cartController.getSessionId)
-router.route('/thanks/alot/:oldSessionId').delete(cartController.deleteSession)
-// router.route('/thanks').get(cartController.make)
 
 module.exports = router

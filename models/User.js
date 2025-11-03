@@ -24,6 +24,9 @@ const userSchema = new mongoose.Schema({
     cart: {
         type: Array
     },
+    sessionId: {
+        type: String
+    },
     refreshToken: String
 })
 

@@ -804,3 +804,24 @@
 2025 10 30	21:25:13	fc27fa07-f96e-4eaa-998c-4d650b85aa5c	TypeError: Cannot read properties of undefined (reading 'title')
 2025 10 30	21:44:29	69630751-c420-49e1-b4c3-01adea7fcfbd	TypeError: Cannot read properties of undefined (reading 'title')
 2025 10 30	22:05:16	b3bc5d67-5410-4af8-ae99-0f522739d4b8	TypeError: Cannot read properties of undefined (reading 'title')
+2025 11 01	23:53:54	998bda36-dfc4-49e1-8409-776408b2aed2	TypeError: Cannot read properties of undefined (reading 'picker')
+2025 11 01	23:57:29	437842b8-681b-45c7-b824-4655ff6c4d83	TypeError: Cannot read properties of undefined (reading 'picker')
+2025 11 02	11:22:53	68ca8610-7f77-47b5-b501-e7c2d5cda9f7	TypeError: Cannot read properties of undefined (reading 'id')
+2025 11 02	12:23:34	aa5f21ab-c3d0-4cd0-9198-11898e87b91c	ReferenceError: response is not defined
+2025 11 02	13:15:00	83cce7f7-8383-41f8-bef0-2a4058adccce	TypeError: Cannot read properties of null (reading 'username')
+2025 11 02	13:25:34	11ad2cb8-35d2-4087-a351-7d2f51a4b45b	TypeError: Cannot read properties of null (reading 'username')
+2025 11 02	13:35:47	fb1f78ec-2fee-4538-9320-39da27504566	TypeError: Cannot read properties of null (reading 'username')
+2025 11 02	13:36:35	d9cc85eb-0420-4152-bdae-b2394f4dac6c	TypeError: Cannot read properties of null (reading 'username')
+2025 11 02	14:22:47	f5e18a8e-c6bf-474d-9001-8464076ea1ac	TypeError: Cannot read properties of null (reading 'username')
+2025 11 02	14:58:25	3b9d44a3-b3c8-4c89-b4c2-7268ef5ed310	TypeError: Cannot read properties of null (reading 'username')
+2025 11 02	15:01:57	1f1273fd-43d7-42c7-aeb5-5a7565050603	ReferenceError: users is not defined
+2025 11 02	15:17:20	e8f6737a-eaf6-41d3-a342-02d6146b43db	ReferenceError: currentUser is not defined
+2025 11 02	15:21:11	414aa221-3cc9-4d9f-a9ec-dc8f096bb8a1	ReferenceError: currentUser is not defined
+2025 11 02	15:22:53	c22d805e-6658-4ee7-a813-c7a0b103b7b1	ReferenceError: currentUser is not defined
+2025 11 02	15:25:40	ffdbe6f8-2145-46ee-a6b3-93216cd511a3	ReferenceError: currentUser_id is not defined
+2025 11 02	15:26:28	5cc2a9c4-6ba5-4fc4-92b8-b039410bec18	ReferenceError: currentUser is not defined
+2025 11 02	15:27:29	c6095790-37c8-4100-bca8-55e1456981e8	ReferenceError: currentUser is not defined
+2025 11 02	15:30:13	384f8f68-e33e-409c-853e-c965aef1b59a	ReferenceError: currentUser is not defined
+2025 11 02	15:31:46	bde99468-7f92-40db-a896-177d4c77e1bb	ReferenceError: currentUser is not defined
+2025 11 02	16:57:35	f09058f1-db1e-42af-bb49-6730e774d3d0	ReferenceError: responseSession is not defined
+2025 11 02	19:44:10	32e11f88-6ae5-4e63-9c44-7ce492070c4f	TypeError: Cannot read properties of undefined (reading '0')
