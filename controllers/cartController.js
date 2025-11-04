@@ -10,6 +10,8 @@ const app = express()
 // Rhinohorn1#
 const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 // const stripe =  require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
+
+
 const makePayment = async (req, res) => {
 console.log({reqBody: req.body})
 const fromFront = req.body
@@ -185,68 +187,10 @@ if (lineItems){
 
 })
 
-
-
-const addToCart = asyncHandler(async (req, res) => {
-    const cartItem = {
-        userId: req.body.userId,
-        name: req.body.name,
-       id: req.body.id,
-        quantity: req.body.quantity,
-        transQty: req.body.transQty,
-        price: req.body.price,
-        total: req.body.total
-        
-    }
-    // console.log(cartItem)
-    if (cartItem){
-// console.log(cartItem)
-        const item = await Cart.create(cartItem)
-        if (item){
-            res.status(201).json({message: 'item added to cart'})
-        }
-    }
-
-
-}) 
-
-const getCartItems = asyncHandler(async (req, res) => {
-    const cartItems = await Cart.find()
-    if(!cartItems){
-        return json.status(400).send({message: 'no  cart items found'})
-    }
-    else res.json(cartItems)
-})
-
-
-const removeItem = asyncHandler( async (req, res) => {
-    const {id} = req.params
-    if (!id) res.status(400).json('item id required')
-
-        const item = await Cart.findById(id).exec()
-
-        if(!item) res.status(400).json('no item found')
-
-            await item.deleteOne()
-            const reply = `item romved`
-            res.json(reply)
-})
-
-const clearCart = asyncHandler(async (req, res) => {
-   const {id} = req.params
-   console.log({id})
-   const response = await User.findOneAndUpdate({_id: id},
-    {cart: []}
-   )
-   res.json(response)
-})
-
-
 const getSessionId = asyncHandler(async (req, res) => {
    const {sessionId} = req.params
    console.log({sessionId})
      const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
-    // console.log({deleteSession: sessionId})
     const responseSession = await User.find().exec()
     console.log({responseSession})
 
@@ -254,16 +198,9 @@ const getSessionId = asyncHandler(async (req, res) => {
 
    const response = await  User.findOneAndUpdate({_id: userId},
     {sessionId})
-
-
     res.json(response.sessionId)
 
 })
 
-
-
-
-
-
-module.exports = {addToCart, getCartItems, removeItem, clearCart, makePayment, thanksAlert, getSessionId
+module.exports = {makePayment, thanksAlert, getSessionId
 }

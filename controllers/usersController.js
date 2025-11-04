@@ -117,23 +117,23 @@ console.log({reqBody: req.body})
     console.log({oldCart})
     const newCart = [...oldCart, req.body]
     console.log({newCart})
-    
-    const newArray = {...foundUser, cart: newCart}
-   
+     
    const updated =  await User.findOneAndUpdate({
         _id: id},
        {cart: newCart})
        console.log({updated})
-res.json(newArray)
+       if (updated){
+            res.status(201).json({message: 'item added to cart'})
+       }
 })
 
 const deleteCartItem = asyncHandler(async (req, res) => {
     const {userId, itemId} = req.query
 
     const users = await User.find().exec()
-    console.log({userId})
+    // console.log({userId})
     const foundUser = users.find((user) => user._id == userId)
-    console.log({foundUser})
+    // console.log({foundUser})
     if (foundUser){
 
         const cartItems = foundUser.cart
@@ -141,7 +141,12 @@ const deleteCartItem = asyncHandler(async (req, res) => {
        const response =  await User.findOneAndUpdate({_id: userId},
             {cart: newCart}
         )
-        console.log({response})
+        if (response){
+            const reply = `item romved`
+            console.log({reply})
+            res.json(reply)
+
+        }
     }
 })
 
