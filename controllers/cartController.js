@@ -122,19 +122,16 @@ const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
 
 
 // neededProps are unit_amount(price), description(name), quantity, sub total
-const detective = []
 const cartItems = await Item.find()
 
 
-const neededProps = lineItems.data.map((item, i)=> {
+const neededProps = lineItems.data.map((item)=> {
     const {amount_subtotal, amount_total, price, quantity,  description} = item
-    // console.log({price})
 
 
     const {unit_amount} = price
     return {total: amount_subtotal, price: unit_amount, qty: quantity, name: description}
   })
-//   console.log({neededProps})
 
 if (lineItems){
     const currentQty = lineItems.data.map(async (item)=> {
@@ -237,10 +234,11 @@ const removeItem = asyncHandler( async (req, res) => {
 
 const clearCart = asyncHandler(async (req, res) => {
    const {id} = req.params
-   const response = await Cart.deleteMany({userId: id})
+   console.log({id})
+   const response = await User.findOneAndUpdate({_id: id},
+    {cart: []}
+   )
    res.json(response)
-   
-
 })
 
 

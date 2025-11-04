@@ -6,8 +6,9 @@ require('dotenv').config()
 const handleLogin = asyncHandler(async (req, res) => {
     const { user, pwd, acitve } = req.body;
     if (!user || !pwd) return res.status(400).json({ 'message': 'Username and password are required.' });
-
+    
     const foundUser = await User.findOne({ username: user }).exec();
+    // console.log({foundUser})
     if (!foundUser || !foundUser.active) return res.sendStatus(401);  
     // evaluate password 
     const match = await bcrypt.compare(pwd, foundUser.password);
@@ -52,17 +53,17 @@ const handleLogout = asyncHandler(async(req, res)=> {
     const cookies = req.cookies
     if (!cookies?.jwt) return res.sendStatus(204) // no content
     const refreshToken = cookies.jwt
-
+    
     const foundUser = await User.findOne({refreshToken}).exec()
-    if (foundUser) {
-        
-        res.clearCookie('jwt', {httpOnly: true, sameSite: 'None', secure: true})
+   if (!foundUser) {
+        res.clearCookie('jwt',{httpOnly: true, maxAge: 24 * 60 * 60 * 1000})
+        res.sendStatus(204)
     }
     foundUser.refreshToken = ''
     const result = foundUser.save()
     console.log(result)
-    res.json({message: 'Cookie Cleared'})
-
+    res.clearCookie('jwt', {httpOnly: true, maxAge: 24 * 60 * 60 * 1000}) // secure true - only servers on https
+    res.sendStatus(204)
 })
 
 

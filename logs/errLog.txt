@@ -825,3 +825,5 @@
 2025 11 02	15:31:46	bde99468-7f92-40db-a896-177d4c77e1bb	ReferenceError: currentUser is not defined
 2025 11 02	16:57:35	f09058f1-db1e-42af-bb49-6730e774d3d0	ReferenceError: responseSession is not defined
 2025 11 02	19:44:10	32e11f88-6ae5-4e63-9c44-7ce492070c4f	TypeError: Cannot read properties of undefined (reading '0')
+2025 11 03	10:12:37	3e2ec505-08e4-43df-8fe8-fa3f5d33f538	ObjectParameterError: Parameter "filter" to find() must be an object, got "69079b3fd97c99f09e5a1b88" (type string)
+2025 11 03	10:14:15	ba638c2f-f837-467e-adb7-b551a04b2e35	ObjectParameterError: Parameter "filter" to find() must be an object, got "69079b3fd97c99f09e5a1b88" (type string)

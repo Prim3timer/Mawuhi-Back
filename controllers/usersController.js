@@ -100,14 +100,14 @@ const updateUser = asyncHandler(async (req, res) => {
 
 
 // for quick edit
-const updateUsersy = async () => {
-    const users = await User.find().exec()
+// const updateUsersy = async () => {
+//     const users = await User.find().exec()
   
 
-    console.log({users})
-}
+//     console.log({users})
+// }
 
-updateUsersy()
+// updateUsersy()
 
 const addToCart = asyncHandler(async (req, res) => {
     const id = req.params.id
@@ -119,10 +119,7 @@ console.log({reqBody: req.body})
     console.log({newCart})
     
     const newArray = {...foundUser, cart: newCart}
-    // console.log({newArray})
-
-    // console.log(r)
-    // console.log({cartProp: req.body})
+   
    const updated =  await User.findOneAndUpdate({
         _id: id},
        {cart: newCart})
