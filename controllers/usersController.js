@@ -142,7 +142,7 @@ const deleteCartItem = asyncHandler(async (req, res) => {
             {cart: newCart}
         )
         if (response){
-            const reply = `item romved`
+            const reply = `item removed`
             console.log({reply})
             res.json(reply)
 
