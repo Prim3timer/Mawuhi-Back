@@ -1,5 +1,4 @@
 const Item = require('../models/Item')
-const Cart = require('../models/Cart')
 const Transaction = require('../models/Transaction')
 const User = require('../models/User')
 const asyncHandler = require('express-async-handler')
@@ -19,7 +18,7 @@ const fromFront = req.body
     // id, transQty, price from each item and   
     // finally, the grandTotal
 const userId = fromFront.shift()
-console.log(userId)
+console.log({userId})
 
 // console.log({requestBody: req.body})
 const grandTotal = fromFront.reduce((accummulator, item)=>{
@@ -147,8 +146,7 @@ if (lineItems){
                 return
             } else return
         })  
-        const cart = await Cart.find()
-        const indCart = cart.filter((item)=> item.userId === userId)
+       
         
     })
     const receiptArray = neededProps.map((prop)=> {
@@ -186,6 +184,7 @@ if (lineItems){
 }
 
 })
+
 
 const getSessionId = asyncHandler(async (req, res) => {
    const {sessionId} = req.params

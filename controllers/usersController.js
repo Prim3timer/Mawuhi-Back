@@ -65,7 +65,7 @@ const deleteUser = asyncHandler(async (req, res) => {
     }
 
     // const result = await User.deleteOne({_id: id})
-console.log(results)
+console.log({results})
     const reply = `${results.username}  Deleted`
 
     res.json(reply)
@@ -113,15 +113,11 @@ const addToCart = asyncHandler(async (req, res) => {
     const id = req.params.id
     const foundUser = await User.findById(id).exec()
     const oldCart = foundUser.cart
-console.log({reqBody: req.body})
-    console.log({oldCart})
     const newCart = [...oldCart, req.body]
-    console.log({newCart})
      
    const updated =  await User.findOneAndUpdate({
         _id: id},
        {cart: newCart})
-       console.log({updated})
        if (updated){
             res.status(201).json({message: 'item added to cart'})
        }
@@ -131,9 +127,7 @@ const deleteCartItem = asyncHandler(async (req, res) => {
     const {userId, itemId} = req.query
 
     const users = await User.find().exec()
-    // console.log({userId})
     const foundUser = users.find((user) => user._id == userId)
-    // console.log({foundUser})
     if (foundUser){
 
         const cartItems = foundUser.cart
@@ -143,12 +137,24 @@ const deleteCartItem = asyncHandler(async (req, res) => {
         )
         if (response){
             const reply = `item removed`
-            console.log({reply})
             res.json(reply)
 
         }
     }
 })
+
+
+const clearCart = asyncHandler( async(req, res) => {
+    const {id}  = req.params
+    const response = await User.findOneAndUpdate({_id: id},
+        {cart: []}
+    )
+     if (response){
+            const reply = `cart cleared`
+            res.json(reply)
+
+        }
+    })
 
 
 
@@ -160,6 +166,7 @@ module.exports = {
     deleteUser,
     updateUser,
     addToCart,
-    deleteCartItem
+    deleteCartItem,
+    clearCart
 }
 

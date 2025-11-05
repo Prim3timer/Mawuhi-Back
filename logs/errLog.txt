@@ -827,3 +827,6 @@
 2025 11 02	19:44:10	32e11f88-6ae5-4e63-9c44-7ce492070c4f	TypeError: Cannot read properties of undefined (reading '0')
 2025 11 03	10:12:37	3e2ec505-08e4-43df-8fe8-fa3f5d33f538	ObjectParameterError: Parameter "filter" to find() must be an object, got "69079b3fd97c99f09e5a1b88" (type string)
 2025 11 03	10:14:15	ba638c2f-f837-467e-adb7-b551a04b2e35	ObjectParameterError: Parameter "filter" to find() must be an object, got "69079b3fd97c99f09e5a1b88" (type string)
+2025 11 05	11:32:57	14349a5f-86f7-48d2-8e9d-2012e922caad	ReferenceError: req is not defined
+2025 11 05	11:33:08	39dc33cc-b757-4715-a4b1-ccaefd5d7bc0	ReferenceError: req is not defined
+2025 11 05	11:45:40	4b7c12cc-435e-4087-9a43-ec4e530b939d	Error: Cannot set headers after they are sent to the client

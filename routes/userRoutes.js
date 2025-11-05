@@ -22,4 +22,7 @@ router.route('/cart/:id')
 router.route('/cart/delete')
 .delete(usersController.deleteCartItem)
 
+router.route('/clear/:id')
+.delete(usersController.clearCart)
+
 module.exports = router 
