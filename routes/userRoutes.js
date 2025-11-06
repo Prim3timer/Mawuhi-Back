@@ -16,10 +16,10 @@ router.route('/delete/:id')
     router.route('/update/:id')
 .patch(usersController.updateUser)
 
-router.route('/cart/:id')
+router.route('/sessions/:id')
 .post(usersController.addToCart)
 
-router.route('/cart/delete')
+router.route('sessions/delete')
 .delete(usersController.deleteCartItem)
 
 router.route('/clear/:id')
