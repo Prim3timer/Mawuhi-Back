@@ -19,7 +19,7 @@ router.route('/delete/:id')
 router.route('/sessions/:id')
 .post(usersController.addToCart)
 
-router.route('sessions/delete')
+router.route('/sessions/delete')
 .delete(usersController.deleteCartItem)
 
 router.route('/clear/:id')
