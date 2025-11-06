@@ -22,7 +22,6 @@ console.log({userId})
 
 // console.log({requestBody: req.body})
 const grandTotal = fromFront.reduce((accummulator, item)=>{
-    
     return  accummulator + item.total
 }, 0)
 
@@ -71,16 +70,10 @@ try {
                 
                 metadata: {
                     userId,
-                    grandTotal: JSON.stringify(grandTotal * 100),
-                    cashier: req.body[0].cashier,
-                    
-                    
+                    grandTotal: JSON.stringify(grandTotal * 100)                
                 }
                 
             })  
-           
-            // const {url} = session
-            // console.log({session})
             res.status(200).json({session, userId})
         } catch (error) {
             res.status(500).json({error: error.message})
@@ -117,10 +110,6 @@ try {
 
 //    console.log(JSON.stringify(await result)) 
 const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
-
-//   console.log({lineItems: lineItems.data})
-
-
 
 // neededProps are unit_amount(price), description(name), quantity, sub total
 const cartItems = await Item.find()
