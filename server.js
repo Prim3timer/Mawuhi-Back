@@ -33,7 +33,7 @@ app.use('/', require('./routes/root'))
 app.use('/results', require('./routes/resultRoutes'))
 app.use('/auth', require('./routes/authRoutes'))
 app.use('/register', require('./routes/registerRoutes'))
-app.use('/cart', require('./routes/cartRoutes'))
+app.use('/cart', require('./routes/sessionsRoutes'))
 app.use('/refresh', require('./routes/refreshRoutes'))
 // app.use('/create-checkout-session', require('./routes/cartRoutes'))
 
