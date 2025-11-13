@@ -54,7 +54,8 @@ try {
                     },
                     unit_amount: storeItem.price * 100
                 },
-                quantity: item.transQty,
+                 quantity: item.unitMeasure === 'Kilogram (kg)'  || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? item.transQty * 1000 : item.unitMeasure === 'Litre (L)' ? item.transQty * 100 : item.transQty
+                // quantity: item.transQty,
             }
             
         }),
