@@ -63,6 +63,7 @@ const createNewTransaction = asyncHandler(async (req, res) => {
 const makePayment = async (req, res) => {
 console.log({reqBody: req.body})
 const theArray = req.body.goods
+console.log({theArray})
 // for the receipt generation, i'll need the:
 // id, transQty, price from each item and
 // finally, the grandTotal
@@ -94,7 +95,7 @@ const theArray = req.body.goods
                         },
                         unit_amount: storeItem.price * 100
                     },
-                    quantity: item.qty
+                    quantity: item.unitMeasure === 'Kilogram (kg)'  || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? item.qty * 1000 : item.unitMeasure === 'Litre (L)' ? item.qty * 100 : item.qty
                 }
                 
             }),
