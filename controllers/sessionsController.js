@@ -122,17 +122,28 @@ const cartItems = await Item.find()
 
 const neededProps = lineItems.data.map((item)=> {
     const {amount_subtotal, amount_total, price, quantity,  description} = item
+    const {unit_amount} = price
+    const prod = cartItems.find((cartItem) => cartItem.name === description)
+    const dynamicQty = prod.unitMeasure === 'Kilogram (Kg)' || prod.unitMeasure === 'Kilowatthour (KWh)' 
+                    || prod.unitMeasure === 'Kilowatt (KW)' ? quantity / 1000 : prod.unitMeasure === 'Litre (L)' ?
+                    quantity / 100 : quantity
+    
+    const dynamicTotal = prod.unitMeasure === 'Kilogram (Kg)' || prod.unitMeasure === 'Kilowatthour (KWh)' 
+                    || prod.unitMeasure === 'Kilowatt (KW)' ? amount_subtotal / 1000 : prod.unitMeasure === 'Litre (L)' ?
+                    amount_subtotal / 100 : amount_subtotal
+                if (prod){
 
-// const dynQty = item.unitMeasure === 'Kilogram (Kg)'  || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? (item.transQty * 1000) : item.unitMeasure === 'Litre (L)' ? (item.transQty * 100) : item.transQty
-//     const {unit_amount} = price
-    return {total: amount_subtotal, price: unit_amount, qty: quantity, name: description}
+                    return {total: dynamicTotal, price: unit_amount, qty: dynamicQty, name: description}
+                }
+
   })
+
 
 if (lineItems){
     const currentQty = lineItems.data.map(async (item)=> {
         cartItems.map(async (prod) => {
             if (item.description === prod.name){
-                const dynamicQty = prod.unitMeasure === 'Kilogram (Kg)' || prod.unitMeasure === '(Kilowatthour)' 
+                const dynamicQty = prod.unitMeasure === 'Kilogram (Kg)' || prod.unitMeasure === 'Kilowatthour (KWh)' 
                         || prod.unitMeasure === 'Kilowatt (KW)' ? item.quantity / 1000 : prod.unitMeasure === 'Litre (L)' ?
                         item.quantity / 100 : item.quantity
                await Item.updateOne({name: item.description},
@@ -155,9 +166,19 @@ if (lineItems){
 
     console.log({receiptArray})
 
+    const grandT = receiptArray.reduce((accummulator, total) => {
+        return accummulator + total.total
+    }, 0)
+
+    console.log({grandT})
+
     // console.log({cartItems})
   const currentUser = await User.findById(userId)
   console.log({currentUser})
+// const grandTotal = sessions2.metadata.grandTotal
+// prod.unitMeasure === 'Kilogram (Kg)' || prod.unitMeasure === 'Kilowatthour (KWh)' 
+//                     || prod.unitMeasure === 'Kilowatt (KW)' ? quantity / 1000 : prod.unitMeasure === 'Litre (L)' ?
+//                     quantity / 100 : quantity
 
   const completed = false
       const transactionObject = {
@@ -166,7 +187,7 @@ if (lineItems){
           goods: receiptArray,
           completed,
           date: req.body.date, 
-          grandTotal: JSON.parse(sessions2.metadata.grandTotal)
+          grandTotal: grandT
       }
       const transaction = await Transaction.create(transactionObject)
       
