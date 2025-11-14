@@ -85,7 +85,7 @@ console.log({theArray})
             line_items: req.body.goods.map((item)=> {
                 const storeItem = storeItems.find((things) => things._id == item._id)
                 // console.log({storeItem})
-                
+                 const dynQty = item.unitMeasure === 'Kilogram (Kg)'  || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? (item.qty * 1000) : item.unitMeasure === 'Litre (L)' ? (item.qty * 100) : item.qty
               
                 return {
                     price_data:{ 
@@ -93,9 +93,9 @@ console.log({theArray})
                         product_data: {
                             name: storeItem.name
                         },
-                        unit_amount: storeItem.price * 100
+                        unit_amount: item.unitMeasure === 'Kilogram (Kg)' || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? (storeItem.price * 100) / 1000 :  item.unitMeasure === 'Litre (L)' ? (storeItem.price * 100) / 100 :  storeItem.price * 100
                     },
-                    quantity: item.unitMeasure === 'Kilogram (kg)'  || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? item.qty * 1000 : item.unitMeasure === 'Litre (L)' ? item.qty * 100 : item.qty
+                    quantity: dynQty
                 }
                 
             }),

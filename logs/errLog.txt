@@ -830,3 +830,6 @@
 2025 11 05	11:32:57	14349a5f-86f7-48d2-8e9d-2012e922caad	ReferenceError: req is not defined
 2025 11 05	11:33:08	39dc33cc-b757-4715-a4b1-ccaefd5d7bc0	ReferenceError: req is not defined
 2025 11 05	11:45:40	4b7c12cc-435e-4087-9a43-ec4e530b939d	Error: Cannot set headers after they are sent to the client
+2025 11 13	23:31:56	b763d85a-6841-44b8-be3e-fca3143f0043	ReferenceError: unit_amount is not defined
+2025 11 13	23:40:56	5919af63-7f80-4ac1-8141-43206fa6d43c	ReferenceError: unit_amount is not defined
+2025 11 13	23:41:59	e2c120c0-638c-4837-9380-9446448e2cdc	ReferenceError: unit_amount is not defined
