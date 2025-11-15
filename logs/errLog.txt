@@ -845,3 +845,10 @@
 2025 11 14	09:23:34	d29ac0e2-5f47-48f4-a0c0-2079e67e88d1	TypeError: Cannot read properties of undefined (reading 'name')
 2025 11 14	10:23:32	321cf752-0712-462f-a5a2-816b69a0ec4e	ReferenceError: prod is not defined
 2025 11 14	10:52:47	f3e19a0e-3f50-40a7-b5cc-109384798269	ReferenceError: granT is not defined
+2025 11 15	00:29:21	6b0c3a69-39c7-4a4b-9430-b0f15eee91df	ReferenceError: Cannot access 'prod' before initialization
+2025 11 15	00:30:24	fdadd8ec-d875-4216-a6eb-d61c9202f840	ReferenceError: Cannot access 'prod' before initialization
+2025 11 15	11:56:14	579daed7-0420-44a4-ae3c-aac7503cbd49	TypeError: Cannot set properties of null (setting 'refreshToken')
+2025 11 15	13:25:18	64173a1a-79e1-44cd-aa07-8c463b92718e	ReferenceError: dynamicPrice is not defined
+2025 11 15	13:47:36	aa4eb9ef-cdee-489d-9665-9c34420eb649	ReferenceError: dynamicTotal is not defined
+2025 11 15	13:56:11	ca28050d-56fc-4e92-a84f-cb1a1583868f	ReferenceError: dynamicTotal is not defined
+2025 11 15	13:57:10	a7e9eab1-ae52-41c5-ab83-1807bc4fcabd	ReferenceError: dynamicTotal is not defined

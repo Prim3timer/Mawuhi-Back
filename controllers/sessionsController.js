@@ -25,14 +25,20 @@ const grandTotal = fromFront.reduce((accummulator, item)=>{
     return  accummulator + item.total
 }, 0)
 
+const frontal = fromFront.map((fr)=> fr)
+console.log({frontal})
+
 const itemDets = req.body.map((item)=> {
     const {total, transQty, id} = item
     return {transQty, id}
 })
 
 
+const cartItems = await Item.find()
 
+// console.log({foundUser})
 console.log({grandTotal})
+
 
 
 try {
@@ -45,7 +51,7 @@ try {
         line_items: req.body.map((item)=> {
             console.log({item})
             const storeItem = storeItems.find((things) => things._id == item.id)
-            const dynQty = item.unitMeasure === 'Kilogram (Kg)'  || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? (item.transQty * 1000) : item.unitMeasure === 'Litre (L)' ? (item.transQty * 100) : item.transQty
+            const dynQty = item.unitMeasure === 'Kilogram (Kg)'  || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? (item.transQty * 1000) : item.unitMeasure === 'Litre (L)'  || item.unitMeasure === 'Pound (lbs)' ? (item.transQty * 1000) : item.transQty
             
             console.log({transQty: dynQty})
             console.log({unitMeasure: item.unitMeasure})
@@ -55,7 +61,8 @@ try {
                     product_data: {
                         name: storeItem.name
                     },
-                    unit_amount: item.unitMeasure === 'Kilogram (Kg)' || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? (storeItem.price * 100) / 1000 :  item.unitMeasure === 'Litre (L)' ? (storeItem.price * 100) / 100 :  storeItem.price * 100
+                    unit_amount: item.unitMeasure === 'Kilogram (Kg)' || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)'  || item.unitMeasure === 'Pound (lbs)' || item.unitMeasure === 'Litre (L)' ? (storeItem.price * 100) / 1000 :   storeItem.price * 100
+                    // unit_amount: storeItem.price * 100
                 },
                 
                 quantity: dynQty,
@@ -75,6 +82,7 @@ try {
                 metadata: {
                     userId,
                     grandTotal: JSON.stringify(grandTotal * 100)                
+                    // grandTotal: item.unitMeasure === 'Kilogram (Kg)'  || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? (item.transQty * 1000) : item.unitMeasure === 'Litre (L)'  || item.unitMeasure === 'Pound (lbs)' ? (item.transQty * 100) : item.transQty
                 }
                 
             })  
@@ -114,7 +122,7 @@ try {
 
 //    console.log(JSON.stringify(await result)) 
 const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
-console.log({data: lineItems.data})
+console.log({data: lineItems.data[0].price})
 // neededProps are unit_amount(price), description(name), quantity, sub total
 const cartItems = await Item.find()
 // console.log({cartItems})
@@ -123,17 +131,20 @@ const cartItems = await Item.find()
 const neededProps = lineItems.data.map((item)=> {
     const {amount_subtotal, amount_total, price, quantity,  description} = item
     const {unit_amount} = price
+
     const prod = cartItems.find((cartItem) => cartItem.name === description)
     const dynamicQty = prod.unitMeasure === 'Kilogram (Kg)' || prod.unitMeasure === 'Kilowatthour (KWh)' 
-                    || prod.unitMeasure === 'Kilowatt (KW)' ? quantity / 1000 : prod.unitMeasure === 'Litre (L)' ?
-                    quantity / 100 : quantity
-    
-    const dynamicTotal = prod.unitMeasure === 'Kilogram (Kg)' || prod.unitMeasure === 'Kilowatthour (KWh)' 
-                    || prod.unitMeasure === 'Kilowatt (KW)' ? amount_subtotal / 1000 : prod.unitMeasure === 'Litre (L)' ?
-                    amount_subtotal / 100 : amount_subtotal
-                if (prod){
+                    || prod.unitMeasure === 'Kilowatt (KW)'  || prod.unitMeasure === 'Pound (lbs)' ||  prod.unitMeasure === 'Litre (L)' ? quantity / 1000  : quantity
 
-                    return {total: dynamicTotal, price: unit_amount, qty: dynamicQty, name: description}
+                    const dynamicPrice = prod.unitMeasure === 'Kilogram (Kg)' || prod.unitMeasure === 'Kilowatthour (KWh)' 
+                    || prod.unitMeasure === 'Kilowatt (KW)' || prod.unitMeasure === 'Pound (lbs)' || prod.unitMeasure === 'Litre (L)' ? unit_amount * 10 :  unit_amount / 100
+    
+    // const dynamicTotal = prod.unitMeasure === 'Kilogram (Kg)' || prod.unitMeasure === 'Kilowatthour (KWh)' 
+    //                 || prod.unitMeasure === 'Kilowatt (KW)' ? amount_subtotal / 100 : amount_subtotal / 100
+        const adjustedSubtotal = amount_subtotal / 100
+    if (prod){
+
+                    return {total: adjustedSubtotal, price: dynamicPrice, qty: dynamicQty, name: description}
                 }
 
   })
@@ -144,8 +155,8 @@ if (lineItems){
         cartItems.map(async (prod) => {
             if (item.description === prod.name){
                 const dynamicQty = prod.unitMeasure === 'Kilogram (Kg)' || prod.unitMeasure === 'Kilowatthour (KWh)' 
-                        || prod.unitMeasure === 'Kilowatt (KW)' ? item.quantity / 1000 : prod.unitMeasure === 'Litre (L)' ?
-                        item.quantity / 100 : item.quantity
+                        || prod.unitMeasure === 'Kilowatt (KW)' ||  prod.unitMeasure === 'Litre (L)' || prod.unitMeasure === 'Pound (lbs)' ? item.quantity / 1000  
+                        : item.quantity
                await Item.updateOne({name: item.description},
                     {qty: prod.qty - dynamicQty, 
                         date: req.body.date
