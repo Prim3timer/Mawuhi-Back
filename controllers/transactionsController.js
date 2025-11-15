@@ -63,7 +63,7 @@ const createNewTransaction = asyncHandler(async (req, res) => {
 const makePayment = async (req, res) => {
 console.log({reqBody: req.body})
 const theArray = req.body.goods
-// console.log({theArray})
+// console.log({theArray})  
 // for the receipt generation, i'll need the:
 // id, transQty, price from each item and
 // finally, the grandTotal
@@ -85,7 +85,7 @@ const theArray = req.body.goods
             line_items: req.body.goods.map((item)=> {
                 const storeItem = storeItems.find((things) => things._id == item._id)
                 // console.log({storeItem})
-                 const dynQty = item.unitMeasure === 'Kilogram (Kg)'  || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? (item.qty * 1000) : item.unitMeasure === 'Litre (L)' ? (item.qty * 100) : item.qty
+                 const dynQty = item.unitMeasure === 'Kilogram (Kg)'  || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? (item.transQty * 1000) : item.unitMeasure === 'Litre (L)'  || item.unitMeasure === 'Pound (lbs)' ? (item.transQty * 1000) : item.transQty
               
                 return {
                     price_data:{ 
@@ -93,7 +93,7 @@ const theArray = req.body.goods
                         product_data: {
                             name: storeItem.name
                         },
-                        unit_amount: item.unitMeasure === 'Kilogram (Kg)' || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? (storeItem.price * 100) / 1000 :  item.unitMeasure === 'Litre (L)' ? (storeItem.price * 100) / 100 :  storeItem.price * 100
+                        unit_amount: item.unitMeasure === 'Kilogram (Kg)' || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)'  || item.unitMeasure === 'Pound (lbs)' || item.unitMeasure === 'Litre (L)' ? (storeItem.price * 100) / 1000 :   storeItem.price * 100
                     },
                     quantity: dynQty
                 }
