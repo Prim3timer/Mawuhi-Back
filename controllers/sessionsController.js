@@ -220,7 +220,7 @@ const getSessionId = asyncHandler(async (req, res) => {
    console.log({sessionId})
      const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
     const responseSession = await User.find().exec()
-    console.log({responseSession})
+    // console.log({responseSession})
 
      const userId = sessions2.metadata.userId
 
@@ -229,6 +229,11 @@ const getSessionId = asyncHandler(async (req, res) => {
     res.json(response.sessionId)
 
 })
+const checkLink = () => {
+    console.log('checking link')
+}
 
-module.exports = {makePayment, thanksAlert, getSessionId
+
+
+module.exports = {makePayment, thanksAlert, getSessionId, checkLink
 }

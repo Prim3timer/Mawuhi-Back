@@ -13,7 +13,7 @@ router.route('/:id')
 
 router.route('/create-checkout-session').post(transactionsController.makePayment)
 
-router.route('cart/:sessionId').post(sessionsController.thanksAlert)
+router.route('/sessions/:sessionId').post(sessionsController.thanksAlert)
 
 
 // router.route('/sales').get(transactionsController.getSales)

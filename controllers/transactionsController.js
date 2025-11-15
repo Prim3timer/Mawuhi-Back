@@ -63,7 +63,7 @@ const createNewTransaction = asyncHandler(async (req, res) => {
 const makePayment = async (req, res) => {
 console.log({reqBody: req.body})
 const theArray = req.body.goods
-console.log({theArray})
+// console.log({theArray})
 // for the receipt generation, i'll need the:
 // id, transQty, price from each item and
 // finally, the grandTotal
@@ -152,12 +152,15 @@ const deleteTransaction = asyncHandler(async (req, res) => {
 })
 
 
-
+const checkLink = () => {
+    console.log('checking link')
+}
 
 
 
 
 module.exports = {
+    checkLink,  
     getAllTransactions,
     createNewTransaction,
     getSales,
