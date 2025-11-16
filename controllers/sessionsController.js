@@ -203,7 +203,7 @@ if (lineItems){
       const transaction = await Transaction.create(transactionObject)
       
         if (transaction) { //created 
-        res.status(201).json({ message: `New transaction created`})
+        res.status(201).json({ message: `transaction complete`})
     } else {
         res.status(400).json({ message: 'Invalid transaction data received' })
     }
