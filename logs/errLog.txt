@@ -852,3 +852,6 @@
 2025 11 15	13:47:36	aa4eb9ef-cdee-489d-9665-9c34420eb649	ReferenceError: dynamicTotal is not defined
 2025 11 15	13:56:11	ca28050d-56fc-4e92-a84f-cb1a1583868f	ReferenceError: dynamicTotal is not defined
 2025 11 15	13:57:10	a7e9eab1-ae52-41c5-ab83-1807bc4fcabd	ReferenceError: dynamicTotal is not defined
+2025 11 16	20:59:41	e6a7fd1b-5894-430c-af20-d3594dd1b36a	TypeError: Cannot set properties of null (setting 'refreshToken')
+2025 11 16	21:48:23	91987e9a-9255-419a-abb5-3b97bb769683	TypeError: Cannot set properties of null (setting 'refreshToken')
+2025 11 16	22:12:30	a9c30165-9927-40d4-8ddf-090842b63cb3	TypeError: Cannot set properties of null (setting 'refreshToken')
