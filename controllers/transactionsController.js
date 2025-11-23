@@ -85,11 +85,11 @@ const theArray = req.body.goods
             line_items: req.body.goods.map((item)=> {
                 const storeItem = storeItems.find((things) => things._id == item._id)
                 // console.log({storeItem})
-                 const dynQty = item.unitMeasure === 'Kilogram (kg)'  || item.unitMeasure === 'Kilowatthour (kWh)' || item.unitMeasure === 'Kilowatt (kW)' ? (item.qty * 1000) : item.unitMeasure === 'Litre (L)'  || item.unitMeasure === 'Pound (lbs)' ? (item.qty * 1000) : item.qty
+                 const dynQty = item.unitMeasure === 'Kilogram (kg)'  || item.unitMeasure === 'Kilowatthour (kWh)' || item.unitMeasure === 'Kilowatt (kW)' || item.unitMeasure === 'Litre (L)'  || item.unitMeasure === 'Pound (lbs)' ? (item.qty * 1000) : item.qty
               
                 return {
                     price_data:{ 
-                        currency: 'ngn',
+                        currency: 'usd',
                         product_data: {
                             name: storeItem.name
                         },

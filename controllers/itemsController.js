@@ -4,15 +4,31 @@ const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt');
 const {format, yearsToDays} = require('date-fns');
 const { default: nodemon } = require('nodemon');
+const fsPromises = require('fs').promises
+const path = require('path')
+
+
+
+
+// const writer = async () => {
+//     const newData = await fsPromises.readFile(path.join(__dirname, '..', 'images', 'credit.jpg' ), 'utf-8')
+//     console.log(newData)
+// }
+
+// writer()
+
+
+
 
 const getAllItems = asyncHandler(async (req, res) => {
     const items = await Item.find().lean()
-
+     const newData = await fsPromises.readFile(path.join(__dirname, '..', 'images', 'credit.jpg' ), 'utf8')
+    console.log(newData)
     if (!items?.length) {
         return res.status(400).json({ message: 'No items found' })
     }
 
-    res.json({items})
+    res.json({items, newData})
 })
 
 const createNewItem = asyncHandler(async (req, res) => {
@@ -139,6 +155,8 @@ getAnItem = async (req, res)=> {
     const item = await Item.findById({_id: id})
     res.send(item)
 }
+
+
 
 
 

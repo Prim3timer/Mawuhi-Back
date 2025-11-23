@@ -51,13 +51,13 @@ try {
         line_items: req.body.map((item)=> {
             console.log({item})
             const storeItem = storeItems.find((things) => things._id == item.id)
-            const dynQty = item.unitMeasure === 'Kilogram (kg)'  || item.unitMeasure === 'Kilowatthour (kWh)' || item.unitMeasure === 'Kilowatt (kW)' ? (item.transQty * 1000) : item.unitMeasure === 'Litre (L)'  || item.unitMeasure === 'Pound (lbs)' ? (item.transQty * 1000) : item.transQty
+            const dynQty = item.unitMeasure === 'Kilogram (kg)'  || item.unitMeasure === 'Kilowatthour (kWh)' || item.unitMeasure === 'Kilowatt (kW)' || item.unitMeasure === 'Litre (L)'  || item.unitMeasure === 'Pound (lbs)' ? (item.transQty * 1000) : item.transQty
             
             console.log({transQty: dynQty})
             console.log({unitMeasure: item.unitMeasure})
             return {
                 price_data:{ 
-                    currency: 'ngn',
+                    currency: 'usd',
                     product_data: {
                         name: storeItem.name
                     },
