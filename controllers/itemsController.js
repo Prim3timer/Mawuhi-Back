@@ -23,7 +23,7 @@ const path = require('path')
 const getAllItems = asyncHandler(async (req, res) => {
     const items = await Item.find().lean()
     //  const newData = await fsPromises.readFile(path.join(__dirname, '..', 'images', 'credit.jpg' ), 'utf8')
-    console.log(newData)
+    // console.log(newData)
     if (!items?.length) {
         return res.status(400).json({ message: 'No items found' })
     }

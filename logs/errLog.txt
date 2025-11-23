@@ -855,3 +855,5 @@
 2025 11 16	20:59:41	e6a7fd1b-5894-430c-af20-d3594dd1b36a	TypeError: Cannot set properties of null (setting 'refreshToken')
 2025 11 16	21:48:23	91987e9a-9255-419a-abb5-3b97bb769683	TypeError: Cannot set properties of null (setting 'refreshToken')
 2025 11 16	22:12:30	a9c30165-9927-40d4-8ddf-090842b63cb3	TypeError: Cannot set properties of null (setting 'refreshToken')
+2025 11 23	13:43:58	f1679c7c-81bf-47a7-806c-6b6a994fa495	ReferenceError: newData is not defined
+2025 11 23	13:44:02	0ae43fea-1be1-4f56-a7d6-c5ce7fc80fb4	ReferenceError: newData is not defined
