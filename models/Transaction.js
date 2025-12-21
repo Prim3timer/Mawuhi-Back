@@ -28,6 +28,12 @@ title: {
             type: Number,
             required: true
         },
+        last4: {
+            type: Number,
+        },
+        address: {
+            type: Object,
+        },
         date: {type: String,
           required: true
         }

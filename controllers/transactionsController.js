@@ -156,6 +156,15 @@ const checkLink = () => {
     console.log('checking link')
 }
 
+const statusUdate = asyncHandler(async (req, res)=> {
+    const id = req.params.id
+    const updateTans = await Transaction.findOneAndUpdate({_id: id},
+        {completed: true}
+    )
+    res.json(updateTans)
+    
+})
+
 
 
 
@@ -165,6 +174,7 @@ module.exports = {
     createNewTransaction,
     getSales,
     deleteTransaction,
-    makePayment
+    makePayment, 
+    statusUdate
 
 }

@@ -857,3 +857,7 @@
 2025 11 16	22:12:30	a9c30165-9927-40d4-8ddf-090842b63cb3	TypeError: Cannot set properties of null (setting 'refreshToken')
 2025 11 23	13:43:58	f1679c7c-81bf-47a7-806c-6b6a994fa495	ReferenceError: newData is not defined
 2025 11 23	13:44:02	0ae43fea-1be1-4f56-a7d6-c5ce7fc80fb4	ReferenceError: newData is not defined
+2025 12 17	00:37:45	ceb955a7-2be0-4683-ad8c-ba8f03692284	Error: read ECONNRESET
+2025 12 17	00:37:47	8d3b8056-1e43-469f-ab5c-9f7f6ea829aa	Error: read ECONNRESET
+2025 12 18	23:14:56	ad8c445f-a191-45c3-9dce-6a7db24cd7b0	TypeError: Cannot read properties of undefined (reading 'card')
+2025 12 18	23:43:37	7fc19075-e8b9-48e7-9077-b919785dd944	ReferenceError: address is not defined

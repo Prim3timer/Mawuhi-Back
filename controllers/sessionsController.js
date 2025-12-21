@@ -34,13 +34,6 @@ const itemDets = req.body.map((item)=> {
 })
 
 
-const cartItems = await Item.find()
-
-// console.log({foundUser})
-console.log({grandTotal})
-
-
-
 try {
     const storeItems = await Item.find()
     // const userId = userId
@@ -52,9 +45,7 @@ try {
             console.log({item})
             const storeItem = storeItems.find((things) => things._id == item.id)
             const dynQty = item.unitMeasure === 'Kilogram (kg)'  || item.unitMeasure === 'Kilowatthour (kWh)' || item.unitMeasure === 'Kilowatt (kW)' || item.unitMeasure === 'Litre (L)'  || item.unitMeasure === 'Pound (lbs)' ? (item.transQty * 1000) : item.transQty
-            
-            console.log({transQty: dynQty})
-            console.log({unitMeasure: item.unitMeasure})
+ 
             return {
                 price_data:{ 
                     currency: 'usd',
@@ -69,12 +60,9 @@ try {
             }
             
         }),
-        // shipping_address_collection: {
-            //     allowed_countries: ['US', 'NG']
-            // },
-            // customer: [
-                //     req.body[0].userId
-                // ],
+        shipping_address_collection: {
+                allowed_countries: ['US', 'NG']
+            },
                 
                 success_url: `${process.env.CLIENT_URL}/cart/thanks?session_id={CHECKOUT_SESSION_ID}`,
                 cancel_url:`${process.env.CLIENT_URL}/shopping`,
@@ -82,7 +70,6 @@ try {
                 metadata: {
                     userId,
                     grandTotal: JSON.stringify(grandTotal * 100)                
-                    // grandTotal: item.unitMeasure === 'Kilogram (Kg)'  || item.unitMeasure === 'Kilowatthour (KWh)' || item.unitMeasure === 'Kilowatt (KW)' ? (item.transQty * 1000) : item.unitMeasure === 'Litre (L)'  || item.unitMeasure === 'Pound (lbs)' ? (item.transQty * 100) : item.transQty
                 }
                 
             })  
@@ -102,8 +89,7 @@ try {
   
   const sessions = await stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']})
   const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
-  // console.log({invoice: JSON.parse(sessions2.metadata.itemDets)})
-  // console.log({metadata: sessions2.metadata})
+
   const userId = sessions2.metadata.userId
   console.log({userId})
   console.log({reqQuery: req.query})
@@ -116,10 +102,10 @@ try {
 //         stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']}),
 //         stripe.checkout.sessions.listLineItems(sessionId)
 //   ])
-//    console.log(JSON.stringify(await result)) 
+  const address = sessions2.collected_information.shipping_details.address
 
 const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
-console.log({data: lineItems.data[0].price})
+console.log({data: lineItems.data})
 // neededProps properties are unit_amount(price), description(name), quantity, sub total
 const cartItems = await Item.find()
 
@@ -168,15 +154,9 @@ if (lineItems){
         }
     })
 
-    console.log({receiptArray})
-
     const grandT = receiptArray.reduce((accummulator, total) => {
         return accummulator + total.total
     }, 0)
-
-    console.log({grandT})
-
-    // console.log({cartItems})
   const currentUser = await User.findById(userId)
   console.log({currentUser})
 
@@ -187,7 +167,9 @@ if (lineItems){
           goods: receiptArray,
           completed,
           date: req.body.date, 
-          grandTotal: grandT
+          grandTotal: grandT,
+          last4: sessions.payment_intent.payment_method.card.last4,
+            address
       }
       const transaction = await Transaction.create(transactionObject)
       
@@ -203,21 +185,19 @@ if (lineItems){
 
 })
 
-
+// for making sure a transaction is not dublicated as it results in double intventory update.
 const getSessionId = asyncHandler(async (req, res) => {
    const {sessionId} = req.params
    console.log({sessionId})
      const sessions2 = await stripe.checkout.sessions.retrieve(sessionId)
-    const responseSession = await User.find().exec()
-    // console.log({responseSession})
-
      const userId = sessions2.metadata.userId
-
+// change the session with the lates one.
    const response = await  User.findOneAndUpdate({_id: userId},
     {sessionId})
     res.json(response.sessionId)
-
 })
+
+
 const checkLink = () => {
     console.log('checking link')
 }

@@ -15,6 +15,8 @@ router.route('/create-checkout-session').post(transactionsController.makePayment
 
 router.route('/sessions/:sessionId').post(sessionsController.thanksAlert)
 
+router.route('/status-update/:id').put(transactionsController.statusUdate)
+
 
 // router.route('/sales').get(transactionsController.getSales)
 
