@@ -102,7 +102,9 @@ try {
 //         stripe.checkout.sessions.retrieve(sessionId, {expand: ['payment_intent.payment_method']}),
 //         stripe.checkout.sessions.listLineItems(sessionId)
 //   ])
-  const address = sessions2.collected_information.shipping_details.address
+// const addressColletor = sessions2.collected_information.shipping_details.address
+const { collected_imformation} = sessions2
+const address =  collected_imformation ?  collected_information.shipping_details.address : ''
 
 const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
 console.log({data: lineItems.data})
