@@ -25,14 +25,6 @@ const grandTotal = fromFront.reduce((accummulator, item)=>{
     return  accummulator + item.total
 }, 0)
 
-const frontal = fromFront.map((fr)=> fr)
-console.log({frontal})
-
-const itemDets = req.body.map((item)=> {
-    const {total, transQty, id} = item
-    return {transQty, id}
-})
-
 
 try {
     const storeItems = await Item.find()
@@ -103,8 +95,8 @@ try {
 //         stripe.checkout.sessions.listLineItems(sessionId)
 //   ])
 // const addressColletor = sessions2.collected_information.shipping_details.address
-const { collected_imformation} = sessions2
-const address =  collected_imformation ?  collected_information.shipping_details.address : ''
+const { collected_information} = sessions2
+const address =  collected_information ?  collected_information.shipping_details.address : ''
 
 const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
 console.log({data: lineItems.data})

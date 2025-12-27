@@ -866,3 +866,12 @@
 2025 12 25	23:12:59	c31fb576-b320-412f-8b11-a7b0b5e2b554	TypeError: Cannot read properties of null (reading 'shipping_details')
 2025 12 25	23:16:46	eff18dd0-575a-4be1-a2e1-4e03550295c7	TypeError: Cannot read properties of null (reading 'shipping_details')
 2025 12 25	23:17:55	d0f0c675-4413-4be8-8db2-41c74d555c48	TypeError: Cannot read properties of null (reading 'shipping_details')
+2025 12 26	17:38:00	feccf43f-1a0f-4278-b7cc-d6aa873748b5	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 12 26	17:38:19	e0eb82aa-aca6-4689-a1be-425d87b1edf1	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 12 26	17:40:43	cfcf8e19-0281-437c-a883-32581b64cc07	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 12 26	17:41:49	4fc19e9a-c90f-4b66-b96e-7c60f4758a86	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 12 26	17:43:49	107c6016-6ad6-4b8c-9277-df58b54380f2	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 12 26	17:45:21	f0c8b9da-0a7f-4c72-abe4-0f179b64f1c8	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 12 26	17:47:17	d5457a6f-b850-4c47-8a30-48b120971486	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 12 26	17:49:09	784df6ae-3a29-491e-8125-1dff9ac79f64	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 12 26	17:49:23	677bbe42-3a76-4b4c-936d-030f95d2fb63	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"

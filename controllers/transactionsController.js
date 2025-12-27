@@ -157,9 +157,11 @@ const checkLink = () => {
 }
 
 const statusUdate = asyncHandler(async (req, res)=> {
-    const id = req.params.id
+    console.log({reqBody: req.body})
+    const status = req.body.status
+    const id = req.params.id 
     const updateTans = await Transaction.findOneAndUpdate({_id: id},
-        {completed: true}
+        {completed: !status}
     )
     res.json(updateTans)
     
