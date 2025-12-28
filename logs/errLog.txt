@@ -875,3 +875,6 @@
 2025 12 26	17:47:17	d5457a6f-b850-4c47-8a30-48b120971486	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
 2025 12 26	17:49:09	784df6ae-3a29-491e-8125-1dff9ac79f64	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
 2025 12 26	17:49:23	677bbe42-3a76-4b4c-936d-030f95d2fb63	CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Transaction"
+2025 12 27	10:04:20	1d13ddd5-34a8-45f0-a787-6df9af3a4788	TypeError: Cannot read properties of undefined (reading 'email')
+2025 12 27	19:55:24	90b67475-42e1-49ab-9cfd-7dcbdc04a36c	TypeError: Cannot read properties of undefined (reading 'name')
+2025 12 27	22:08:00	860cb389-af35-45ae-b2da-2240c96d7a17	TypeError: Cannot set properties of null (setting 'refreshToken')

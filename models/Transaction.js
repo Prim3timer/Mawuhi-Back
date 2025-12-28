@@ -36,6 +36,12 @@ title: {
         },
         date: {type: String,
           required: true
+        },
+        name: {
+            type: String
+        },
+        email: {
+            type: String
         }
     },
 )

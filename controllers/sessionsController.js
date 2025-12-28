@@ -95,11 +95,14 @@ try {
 //         stripe.checkout.sessions.listLineItems(sessionId)
 //   ])
 // const addressColletor = sessions2.collected_information.shipping_details.address
+const {payment_intent} = sessions
 const { collected_information} = sessions2
 const address =  collected_information ?  collected_information.shipping_details.address : ''
+const name =  collected_information ?  collected_information.shipping_details.name : ''
+const email =  payment_intent ?  payment_intent.payment_method.billing_details.email : ''
 
 const lineItems = await  stripe.checkout.sessions.listLineItems(sessionId)
-console.log({data: lineItems.data})
+console.log({name: sessions.payment_intent.payment_method.billing_details.email})
 // neededProps properties are unit_amount(price), description(name), quantity, sub total
 const cartItems = await Item.find()
 
@@ -152,7 +155,7 @@ if (lineItems){
         return accummulator + total.total
     }, 0)
   const currentUser = await User.findById(userId)
-  console.log({currentUser})
+//   console.log({paymentIntent: sessions.payment_intent})
 
   const completed = false
       const transactionObject = {
@@ -163,7 +166,9 @@ if (lineItems){
           date: req.body.date, 
           grandTotal: grandT,
           last4: sessions.payment_intent.payment_method.card.last4,
-            address
+            address,
+            name,
+            email   
       }
       const transaction = await Transaction.create(transactionObject)
       
