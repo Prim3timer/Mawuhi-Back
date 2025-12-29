@@ -6,6 +6,7 @@ const {format, yearsToDays} = require('date-fns');
 const { default: nodemon } = require('nodemon');
 const fsPromises = require('fs').promises
 const path = require('path')
+const multer = require('multer')
 
 
 
@@ -17,7 +18,23 @@ const path = require('path')
 
 // writer()
 
-
+const storage = multer.diskStorage({
+    destination: async (req, file, cb) => {
+        const {name} = req.query
+        const files = req.files
+        console.log({files})
+        console.log({name})
+        // console.log({fileO: req.files})
+            if (!fs.existsSync(path.join(__dirname, 'public', 'images', `./${req.query.name}`))){
+            await fs.promises.mkdir(path.join(__dirname, 'public', 'images', `./${req.query.name}`))
+            cb(null, `./public/images/${req.query.name}`)
+            console.log(`./${req.query.name} created`) 
+        } else cb(null, `./public/images/${req.query.name}`)
+    },
+    filename: (req, file, cb) => {
+         cb(null, file.originalname)
+    }
+})
 
 
 const getAllItems = asyncHandler(async (req, res) => {
@@ -32,11 +49,10 @@ const getAllItems = asyncHandler(async (req, res) => {
 })
 
 const createNewItem = asyncHandler(async (req, res) => {
-    const { name, unitMeasure, price, image  } = req.body
+    const { name, unitMeasure, price, image, now  } = req.body
     const items = await Item.find()
     const qty = 0
-    const now = new Date()
-    const date = format(now, 'dd/MM/yyyy\tHH:mm:ss')
+    const date = now
     const img = image
     // Confirm data
     if (!name || !unitMeasure || !price) {
@@ -89,15 +105,15 @@ const updateItem = asyncHandler(async (req, res) => {
 let updateInventoryyy = async (req, res) =>{
     const {id} = req.params
     try {
-        const name = req.body.name
-        const now = new Date()
+        const {name, date} = req.body
+       
       
         const currentInventory = await Item.findOneAndUpdate({
           _id: id   }, 
            {
           name: req.body.name,
           qty: req.body.qty,
-          date:  format(now, 'dd/MM/yyyy\tHH:mm:ss')
+          date
       
       }, {new: true})
          await currentInventory.save()
