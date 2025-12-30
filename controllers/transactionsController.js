@@ -22,7 +22,7 @@ const getSales = asyncHandler(async (req, res)=> {
 
 
 const createNewTransaction = asyncHandler(async (req, res) => {
-    var {cashier, cashierID, goods, date,completed, grandTotal} = req.body
+    var {cashier, cashierID, goods, date,status, grandTotal} = req.body
 
 
     // Confirm data
@@ -43,7 +43,7 @@ const createNewTransaction = asyncHandler(async (req, res) => {
         cashier,
         cashierID,
         goods,
-        completed,
+        status,
         date, 
         grandTotal: grandTotal
     }
@@ -159,9 +159,10 @@ const checkLink = () => {
 const statusUdate = asyncHandler(async (req, res)=> {
     console.log({reqBody: req.body  })
     const status = req.body.status
+    console.log({status})
     const id = req.params.id 
     const updateTans = await Transaction.findOneAndUpdate({_id: id},
-        {completed: !status}
+        {status}
     )
     res.json(updateTans)
     

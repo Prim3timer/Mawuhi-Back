@@ -8,33 +8,27 @@ const fsPromises = require('fs').promises
 const path = require('path')
 const multer = require('multer')
 
+// const storage = multer.diskStorage({
+//     destination: async (req, file, cb) => {
+//         const {name} = req.query
+//         const files = req.files
+//         console.log({files})
+//         console.log({name})
+//         // console.log({fileO: req.files})
+//             if (!fs.existsSync(path.join(__dirname, 'public', 'images', `./${req.query.name}`))){
+//             await fs.promises.mkdir(path.join(__dirname, 'public', 'images', `./${req.query.name}`))
+//             cb(null, `./public/images/${req.query.name}`)
+//             console.log(`./${req.query.name} created`) 
+//         } else cb(null, `./public/images/${req.query.name}`)
+//     },
+//     filename: (req, file, cb) => {
+//          cb(null, file.originalname)
+//     }
+// })
 
-
-
-// const writer = async () => {
-//     const newData = await fsPromises.readFile(path.join(__dirname, '..', 'images', 'credit.jpg' ), 'utf-8')
-//     console.log(newData)
-// }
-
-// writer()
-
-const storage = multer.diskStorage({
-    destination: async (req, file, cb) => {
-        const {name} = req.query
-        const files = req.files
-        console.log({files})
-        console.log({name})
-        // console.log({fileO: req.files})
-            if (!fs.existsSync(path.join(__dirname, 'public', 'images', `./${req.query.name}`))){
-            await fs.promises.mkdir(path.join(__dirname, 'public', 'images', `./${req.query.name}`))
-            cb(null, `./public/images/${req.query.name}`)
-            console.log(`./${req.query.name} created`) 
-        } else cb(null, `./public/images/${req.query.name}`)
-    },
-    filename: (req, file, cb) => {
-         cb(null, file.originalname)
-    }
-})
+// const upload = multer({
+//     storage
+// })
 
 
 const getAllItems = asyncHandler(async (req, res) => {
@@ -48,8 +42,9 @@ const getAllItems = asyncHandler(async (req, res) => {
     res.json({items})
 })
 
-const createNewItem = asyncHandler(async (req, res) => {
+const createNewItem = asyncHandler( async (req, res) => {
     const { name, unitMeasure, price, image, now  } = req.body
+    console.log(image)
     const items = await Item.find()
     const qty = 0
     const date = now
@@ -186,6 +181,7 @@ module.exports = {
     getAnItem,
     updateInventoryyy,
     updateInventoryy,
+    // upload
 }
 
 

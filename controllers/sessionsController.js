@@ -18,8 +18,6 @@ const fromFront = req.body
     // id, transQty, price from each item and   
     // finally, the grandTotal
 const userId = fromFront.shift()
-// console.log({userId})
-
 // console.log({requestBody: req.body})
 const grandTotal = fromFront.reduce((accummulator, item)=>{
     return  accummulator + item.total
@@ -40,7 +38,7 @@ try {
  
             return {
                 price_data:{ 
-                    currency: 'usd',
+                    currency: 'ngn',
                     product_data: {
                         name: storeItem.name
                     },
@@ -155,14 +153,11 @@ if (lineItems){
         return accummulator + total.total
     }, 0)
   const currentUser = await User.findById(userId)
-//   console.log({paymentIntent: sessions.payment_intent})
 
-  const completed = false
       const transactionObject = {
           cashier: currentUser.username,
           cashierID: currentUser._id,
           goods: receiptArray,
-          completed,
           date: req.body.date, 
           grandTotal: grandT,
           last4: sessions.payment_intent.payment_method.card.last4,

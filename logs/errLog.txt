@@ -878,3 +878,6 @@
 2025 12 27	10:04:20	1d13ddd5-34a8-45f0-a787-6df9af3a4788	TypeError: Cannot read properties of undefined (reading 'email')
 2025 12 27	19:55:24	90b67475-42e1-49ab-9cfd-7dcbdc04a36c	TypeError: Cannot read properties of undefined (reading 'name')
 2025 12 27	22:08:00	860cb389-af35-45ae-b2da-2240c96d7a17	TypeError: Cannot set properties of null (setting 'refreshToken')
+2025 12 29	16:20:05	a888c08f-99e8-4a4f-a91a-e0e473663cbe	ReferenceError: files is not defined
+2025 12 29	20:21:38	591ffd79-f021-45fe-83ae-68259a6263b5	TypeError: Cannot destructure property 'name' of 'req.body.newItem' as it is undefined.
+2025 12 30	07:56:27	66375fc0-f2fa-43c8-9bb0-4d6d65932daa	ValidationError: Item validation failed: price: Cast to Number failed for value "4000`" (type string) at path "price"
