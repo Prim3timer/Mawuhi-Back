@@ -881,3 +881,4 @@
 2025 12 29	16:20:05	a888c08f-99e8-4a4f-a91a-e0e473663cbe	ReferenceError: files is not defined
 2025 12 29	20:21:38	591ffd79-f021-45fe-83ae-68259a6263b5	TypeError: Cannot destructure property 'name' of 'req.body.newItem' as it is undefined.
 2025 12 30	07:56:27	66375fc0-f2fa-43c8-9bb0-4d6d65932daa	ValidationError: Item validation failed: price: Cast to Number failed for value "4000`" (type string) at path "price"
+2026 01 02	23:25:02	febdaf73-58aa-41b2-9b9e-09acdaa5aef9	TypeError: Cannot set properties of null (setting 'refreshToken')
