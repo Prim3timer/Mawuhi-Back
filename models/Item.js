@@ -8,22 +8,22 @@ const itemSchema = new Schema(
         
         name: {
             type: String,
-            required: true
+            // required: true
         },
         unitMeasure: {
             type: String,
-            required: true
+            // required: true
         },
         price: {
             type: Number,
-            requred: true
+            // requred: true
         },
         qty: {
             type: Number,
-            required: true
+            // required: true
         },
         img: {
-            type: String,
+            type: Array,
             
         },
         date: {type: String, required: true}

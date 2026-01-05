@@ -42,9 +42,34 @@ const getAllItems = asyncHandler(async (req, res) => {
     res.json({items})
 })
 
-const createNewItem = asyncHandler( async (req, res) => {
+
+const storage = multer.diskStorage({
+    destination: async (req, file, cb) => {
+        const {name} = req.params
+        const files = req.files
+        console.log({files})
+        console.log({name})
+        // console.log({fileO: req.files})
+            if (!fs.existsSync(path.join(__dirname, 'public', 'images', `./${name}`))){
+            await fs.promises.mkdir(path.join(__dirname, 'public', 'images', `./${name}`))
+            cb(null, `./public/images/${name}`)
+            console.log(`./${req.query.name} created`) 
+        } else cb(null, `./public/images/${name}`)
+    },
+    filename: (req, file, cb) => {
+         cb(null, file.originalname)
+    }
+})
+
+// const upload = multer({
+//     storage
+// })
+
+// const upload = multer().array('images', 5)
+
+
+const createNewItem = asyncHandler(async (req, res) => {
     const { name, unitMeasure, price, image, now  } = req.body
-    console.log(image)
     const items = await Item.find()
     const qty = 0
     const date = now
@@ -70,12 +95,15 @@ const createNewItem = asyncHandler( async (req, res) => {
     const item = await Item.create(itemObject)
 
     if (item) { //created 
+        
         res.status(201).json({ message: `New item ${name} created` })
+        
     } else {
         res.status(400).json({ message: 'Invalid item data received' })
     }
+ 
+ 
 })
-
 
 
 const updateItem = asyncHandler(async (req, res) => {
