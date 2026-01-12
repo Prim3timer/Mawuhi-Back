@@ -4,7 +4,7 @@ const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt');
 const {format, yearsToDays} = require('date-fns');
 const { default: nodemon } = require('nodemon');
-const fsPromises = require('fs').promises
+const fs = require('fs')
 const path = require('path')
 const multer = require('multer')
 
@@ -43,23 +43,23 @@ const getAllItems = asyncHandler(async (req, res) => {
 })
 
 
-const storage = multer.diskStorage({
-    destination: async (req, file, cb) => {
-        const {name} = req.params
-        const files = req.files
-        console.log({files})
-        console.log({name})
-        // console.log({fileO: req.files})
-            if (!fs.existsSync(path.join(__dirname, 'public', 'images', `./${name}`))){
-            await fs.promises.mkdir(path.join(__dirname, 'public', 'images', `./${name}`))
-            cb(null, `./public/images/${name}`)
-            console.log(`./${req.query.name} created`) 
-        } else cb(null, `./public/images/${name}`)
-    },
-    filename: (req, file, cb) => {
-         cb(null, file.originalname)
-    }
-})
+// const storage = multer.diskStorage({
+//     destination: async (req, file, cb) => {
+//         const {name} = req.params
+//         const files = req.files
+//         console.log({files})
+//         console.log({name})
+//         // console.log({fileO: req.files})
+//             if (!fs.existsSync(path.join(__dirname, 'public', 'images', `./${name}`))){
+//             await fs.promises.mkdir(path.join(__dirname, 'public', 'images', `./${name}`))
+//             cb(null, `./public/images/${name}`)
+//             console.log(`./${req.query.name} created`) 
+//         } else cb(null, `./public/images/${name}`)
+//     },
+//     filename: (req, file, cb) => {
+//          cb(null, file.originalname)
+//     }
+// })
 
 // const upload = multer({
 //     storage
@@ -106,22 +106,55 @@ const createNewItem = asyncHandler(async (req, res) => {
 })
 
 
+
+const storage = multer.diskStorage({
+    destination: async (req, file, cb, next) => {
+            // const { name, unitMeasure, price, image, now  } = req.body
+        const name = req.params.name
+        const files = req.file
+        console.log({file})
+        console.log({name})
+        // console.log({fileO: req.files})
+            if (!fs.existsSync(path.join(__dirname, '..', 'public', 'images', `./${name}`))){
+            await fs.promises.mkdir(path.join(__dirname, '..', 'public', 'images', `./${name}`))
+            cb(null, `./public/images/${name}`)
+            console.log(`${name} created`) 
+        } else cb(null, `./public/images/${name}`)
+    },
+    filename: (req, file, cb) => {
+         cb(null, file.originalname)
+    }
+})
+
+const upload = multer({
+    storage
+})
+
+
+const updateImage = asyncHandler( upload.single('image'), async (req, res) => {
+    console.log('hello singles')
+    console.log({filename: req.file.originalname})
+})
+
 const updateItem = asyncHandler(async (req, res) => {
     const {name, unitMeasure, price, img} = req.body
+    // console.log({body: req.file})
+    console.log({newItem: req.query.newItem})
 
-    const id = req.params.id
-     const currentItem = await Item.findOneAndUpdate({
-        _id: id}, 
-         {
-        name: name || '',
-        unitMeasure: unitMeasure || '',
-        price: price || '',
-        img: img || ''
-    })
+    // const id = req.params.id
+    //  const currentItem = await Item.findOneAndUpdate({
+    //     _id: id}, 
+    //      {
+    //     name: name || '',
+    //     unitMeasure: unitMeasure || '',
+    //     price: price || '',
+    //     img: img || ''
+    // })
 
 
 
-    res.json(`'${currentItem.name}' updated`)
+    // res.json(`'${currentItem.name}' updated`)
+    res.json(`updated`)
 })
 
 
@@ -209,6 +242,7 @@ module.exports = {
     getAnItem,
     updateInventoryyy,
     updateInventoryy,
+    updateImage
     // upload
 }
 

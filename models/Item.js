@@ -26,6 +26,9 @@ const itemSchema = new Schema(
             type: Array,
             
         },
+        description: {
+            type: String
+        },
         date: {type: String, required: true}
     }
 )

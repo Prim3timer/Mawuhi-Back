@@ -36,6 +36,9 @@ router.route('/')
 .post(itemsController.createNewItem)
 
 
+// router.route('/pic/:name')
+// .post(itemsController.updateImage)
+
 
 router.route('/delete/:id').delete(itemsController.deleteItem)  
 router.route('/:id')

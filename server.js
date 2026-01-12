@@ -32,7 +32,7 @@ const storage = multer.diskStorage({
     destination: async (req, file, cb) => {
             // const { name, unitMeasure, price, image, now  } = req.body
         const {name} = req.params
-        const files = req.files
+        const files = file
         console.log({files})
         console.log({name})
         // console.log({fileO: req.files})
@@ -57,8 +57,8 @@ app.post('/item/pic/upload/:name', upload.array('images', 5), async (req, res)=>
     console.log({reqParams: req.files})  
     const {name} = req.params
     console.log({name})
-    const fileNames = req.files.map((file) => {
-        return file.originalname
+    const fileNames = req.files.map((file, index) => {
+        return {id: index + 1, name: file.originalname}
     })
     console.log(fileNames)
     const response = await Item.find({name})
@@ -67,6 +67,26 @@ app.post('/item/pic/upload/:name', upload.array('images', 5), async (req, res)=>
         console.log({id: response[0]._id})
         await Item.findOneAndUpdate({_id: response[0]._id},
             {img: fileNames}
+        )
+    }
+    res.send('uploaded')
+})
+
+
+app.post('/items/pic/:name', upload.single('image'), async (req, res)=> {
+    console.log({file: req.file})  
+    const {name} = req.params
+    const id = req.query.id
+    const fiveArray = req.query.fiveArray
+    const index = req.query.index
+    console.log({name, id, fiveArray, index})
+console.log('hello world')
+    // console.log(fileNames)
+    const response = await Item.find({_id: id})
+    if (response){
+//    response[0].img.splice(Number(index -1), 1, newItem)
+        await Item.findOneAndUpdate({_id: response[0]._id},
+            {img: JSON.parse(fiveArray)}
         )
     }
     res.send('uploaded')
