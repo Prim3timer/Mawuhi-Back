@@ -36,7 +36,7 @@ router.route('/')
 .post(itemsController.createNewItem)
 
 
-// router.route('/pic/:name')
+// router.route('/pic/:id')
 // .post(itemsController.updateImage)
 
 

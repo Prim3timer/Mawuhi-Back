@@ -73,23 +73,53 @@ app.post('/item/pic/upload/:name', upload.array('images', 5), async (req, res)=>
 })
 
 
-app.post('/items/pic/:name', upload.single('image'), async (req, res)=> {
+app.patch('/items/pic/:name', upload.single('image'), async (req, res)=> {
     console.log({file: req.file})  
     const {name} = req.params
+    const initialPic = req.query.initialPic
     const id = req.query.id
     const fiveArray = req.query.fiveArray
-    const index = req.query.index
-    console.log({name, id, fiveArray, index})
+    // const index = req.query.index
+    const jsonized = JSON.parse(fiveArray)
+    console.log({id, jsonized, name, initialPic})
+
+
 console.log('hello world')
     // console.log(fileNames)
     const response = await Item.find({_id: id})
     if (response){
+        console.log({response})
 //    response[0].img.splice(Number(index -1), 1, newItem)
-        await Item.findOneAndUpdate({_id: response[0]._id},
-            {img: JSON.parse(fiveArray)}
+        await Item.findOneAndUpdate({_id: id},
+            {img: jsonized}
         )
     }
     res.send('uploaded')
+})
+
+app.delete('/delete-pic/:initialPic', async (req, res) => {
+    const initialPic = req.params.initialPic
+    const name = req.query.name
+    const id = req.query.id
+    const item = await Item.findById(id)
+    const currentPics = item.img.map((image) => {
+        if (image.name === initialPic){
+            return {...image, name: 'no image'}
+        }
+        return image
+    })
+    console.log({initialPic, name, item, id, currentPics})
+    console.log('hello pick')
+    await Item.findByIdAndUpdate({_id: id},
+        {img: currentPics}
+    )
+    //    const data = await fs.promises.readdir(path.join(__dirname, 'public', 'images', name))
+    //       console.log({content: data.length})
+    //          if (data.length){
+
+    //     await fs.promises.unlink(path.join(__dirname, 'public', 'images', name, initialPic))
+       
+    // }
 })
 
 app.use(cookieParser());    

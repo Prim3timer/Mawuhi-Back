@@ -69,11 +69,12 @@ const getAllItems = asyncHandler(async (req, res) => {
 
 
 const createNewItem = asyncHandler(async (req, res) => {
-    const { name, unitMeasure, price, image, now  } = req.body
+    const { name, unitMeasure, price, image, now, description } = req.body
     const items = await Item.find()
     const qty = 0
     const date = now
     const img = image
+    console.log({description})
     // Confirm data
     if (!name || !unitMeasure || !price) {
         return res.status(400).json({ message: 'All fields are required' })
@@ -89,7 +90,7 @@ const createNewItem = asyncHandler(async (req, res) => {
     }
 
 
-    const itemObject = {name, unitMeasure, price, qty, date, img }
+    const itemObject = {name, unitMeasure, price, qty, date, img, description}
 
     // Create and store new item 
     const item = await Item.create(itemObject)
