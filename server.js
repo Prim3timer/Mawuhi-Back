@@ -55,18 +55,27 @@ const upload = multer({
 
 app.post('/item/pic/upload/:name', upload.array('images', 5), async (req, res)=> {
     console.log({reqParams: req.files})  
+
+              let fiver = []
+    let i = 0;
+    while (i < 5){
+        fiver.push({id: i + 1, name: 'no image'})
+        i++
+    }
     const {name} = req.params
     console.log({name})
     const fileNames = req.files.map((file, index) => {
+        fiver.splice(index, 1, {id: index + 1, name: file.originalname})
         return {id: index + 1, name: file.originalname}
+
     })
-    console.log(fileNames)
+    console.log({fiver})
     const response = await Item.find({name})
     console.log({response})
     if (response){
         console.log({id: response[0]._id})
         await Item.findOneAndUpdate({_id: response[0]._id},
-            {img: fileNames}
+            {img: fiver}
         )
     }
     res.send('uploaded')
@@ -96,32 +105,40 @@ console.log('hello world')
                 img: jsonized}
         )
     }
-    res.send('uploaded')
+    res.send('image successfully uploaded')
 })
 
-
+// for deleting a single image from the collage
 app.delete('/delete-pic/:initialPic', async (req, res) => {
     const initialPic = req.params.initialPic
     const name = req.query.name
     const id = req.query.id
     const item = await Item.findById(id)
-    const currentPics = item.img.map((image) => {
-        if (image.name === initialPic){
-            return {...image, name: 'no image'}
-        }
-        return image
-    })
-    console.log({initialPic, name, item, id, currentPics})
-    console.log('hello pick')
-    await Item.findByIdAndUpdate({_id: id},
-        {img: currentPics}
-    )
-       const data = await fs.promises.readdir(path.join(__dirname, 'public', 'images', name))
-          console.log({content: data.length})
-             if (data.length){
 
-        await fs.promises.unlink(path.join(__dirname, 'public', 'images', name, initialPic))
-       
+    try {
+        
+        const currentPics = item.img.map((image) => {
+            if (image.name === initialPic){
+                return {...image, name: 'no image'}
+            }
+            return image
+        })
+        console.log({currentPics})
+        // console.log({initialPic, name, item, id, currentPics})
+        console.log('hello pick')
+        await Item.findOneAndUpdate({_id: id},
+            {img: currentPics}
+        )
+           const data = await fs.promises.readdir(path.join(__dirname, 'public', 'images', name))
+              console.log({content: data.length})
+                 if (fs.existsSync(path.join(__dirname, 'public', 'images', name, initialPic))){
+    
+            await fs.promises.unlink(path.join(__dirname, 'public', 'images', name, initialPic))
+            res.send('file successfully deleted')
+           
+        }
+    } catch (error) {
+            res.json({message: error.message})
     }
 })
 

@@ -8,27 +8,6 @@ const fs = require('fs')
 const path = require('path')
 const multer = require('multer')
 
-// const storage = multer.diskStorage({
-//     destination: async (req, file, cb) => {
-//         const {name} = req.query
-//         const files = req.files
-//         console.log({files})
-//         console.log({name})
-//         // console.log({fileO: req.files})
-//             if (!fs.existsSync(path.join(__dirname, 'public', 'images', `./${req.query.name}`))){
-//             await fs.promises.mkdir(path.join(__dirname, 'public', 'images', `./${req.query.name}`))
-//             cb(null, `./public/images/${req.query.name}`)
-//             console.log(`./${req.query.name} created`) 
-//         } else cb(null, `./public/images/${req.query.name}`)
-//     },
-//     filename: (req, file, cb) => {
-//          cb(null, file.originalname)
-//     }
-// })
-
-// const upload = multer({
-//     storage
-// })
 
 
 const getAllItems = asyncHandler(async (req, res) => {
@@ -43,33 +22,9 @@ const getAllItems = asyncHandler(async (req, res) => {
 })
 
 
-// const storage = multer.diskStorage({
-//     destination: async (req, file, cb) => {
-//         const {name} = req.params
-//         const files = req.files
-//         console.log({files})
-//         console.log({name})
-//         // console.log({fileO: req.files})
-//             if (!fs.existsSync(path.join(__dirname, 'public', 'images', `./${name}`))){
-//             await fs.promises.mkdir(path.join(__dirname, 'public', 'images', `./${name}`))
-//             cb(null, `./public/images/${name}`)
-//             console.log(`./${req.query.name} created`) 
-//         } else cb(null, `./public/images/${name}`)
-//     },
-//     filename: (req, file, cb) => {
-//          cb(null, file.originalname)
-//     }
-// })
-
-// const upload = multer({
-//     storage
-// })
-
-// const upload = multer().array('images', 5)
-
-
 const createNewItem = asyncHandler(async (req, res) => {
     const { name, unitMeasure, price, image, now, description } = req.body
+    console.log({image})
     const items = await Item.find()
     const qty = 0
     const date = now
@@ -215,7 +170,7 @@ const updateItemTexts = asyncHandler( async (req, res) => {
                 name,
                 unitMeasure,
                 price,
-                qty: quantity,
+                qty: quantity   ,
                 description,
                 date
             }

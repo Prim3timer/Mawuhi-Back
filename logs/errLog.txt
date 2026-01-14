@@ -5,3 +5,4 @@
 2026 01 13	12:06:50	c5fb9c1e-648b-4001-821b-d091d730eb78	Error: ENOENT: no such file or directory, scandir 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\controllers\public\images\Box'
 2026 01 13	12:11:29	a55e17b5-a0aa-47fb-ada7-e51b6d12e9e4	TypeError: path is not a function
 2026 01 13	19:17:08	fc74207d-5ec8-45f7-b309-ac7a70649b73	Error: read ECONNRESET
+2026 01 14	00:24:47	05982aab-2df0-480d-8028-10d8db2fadfd	Error: read ECONNRESET
