@@ -160,9 +160,10 @@ let updateInventoryy = async (req, res) =>{
 const updateItemTexts = asyncHandler( async (req, res) => {
     const obj = req.params.obj
     const id = req.query.id
+    const firstName = req.query.firstName
     const newItem = JSON.parse(obj)
     const { name, unitMeasure, price, quantity, description, date} = newItem
-    console.log({newItem, id})
+    console.log({newItem, id, name, firstName})
     const currentItem = await Item.findById(id)
     if (currentItem){
         await Item.findByIdAndUpdate({_id: id},
@@ -176,6 +177,9 @@ const updateItemTexts = asyncHandler( async (req, res) => {
             }
         )
     }
+
+    await fs.promises.rename(path.join(__dirname, '..', 'public', 'images', `./${firstName}`),
+path.join(__dirname, '..', 'public', 'images', `./${name}`))
     res.json({message: `${currentItem.name} successfuly updated`})
 })
 

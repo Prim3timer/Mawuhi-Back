@@ -6,3 +6,11 @@
 2026 01 13	12:11:29	a55e17b5-a0aa-47fb-ada7-e51b6d12e9e4	TypeError: path is not a function
 2026 01 13	19:17:08	fc74207d-5ec8-45f7-b309-ac7a70649b73	Error: read ECONNRESET
 2026 01 14	00:24:47	05982aab-2df0-480d-8028-10d8db2fadfd	Error: read ECONNRESET
+2026 01 14	09:18:29	e3ea9d69-c5de-439b-987a-f7f0eb564267	ReferenceError: currentItem is not defined
+2026 01 14	09:23:49	015af293-086a-4643-910c-1664f03da876	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Box)}' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Boxer'
+2026 01 14	09:28:05	cbb69271-a5b5-474f-b073-9230093c3914	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Whiskey)}' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Whitney'
+2026 01 14	09:31:07	3d90e163-4532-4548-b2b4-2364aef59f0f	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Whitney)}' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Wine'
+2026 01 14	09:33:53	ea8f7ba9-94c6-4e01-aa0a-89ba45ccdf2f	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Whitney)}' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Wine'
+2026 01 14	09:35:38	0df04c73-6b91-4752-bae2-cc7e0754dbd5	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Wine)}' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Wiser'
+2026 01 14	09:39:20	058d40d2-f3a2-4aac-8d1d-af2a62078030	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Wiser' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Will'
+2026 01 14	09:40:08	16c90a97-0ccc-4d3e-867f-6e3460e67bde	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Boxer' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Box'
