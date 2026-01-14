@@ -90,12 +90,15 @@ console.log('hello world')
     if (response){
         console.log({response})
 //    response[0].img.splice(Number(index -1), 1, newItem)
-        await Item.findOneAndUpdate({_id: id},
-            {img: jsonized}
+        const respponse2 = await Item.findOneAndUpdate({_id: id},
+            {
+                
+                img: jsonized}
         )
     }
     res.send('uploaded')
 })
+
 
 app.delete('/delete-pic/:initialPic', async (req, res) => {
     const initialPic = req.params.initialPic
@@ -113,13 +116,13 @@ app.delete('/delete-pic/:initialPic', async (req, res) => {
     await Item.findByIdAndUpdate({_id: id},
         {img: currentPics}
     )
-    //    const data = await fs.promises.readdir(path.join(__dirname, 'public', 'images', name))
-    //       console.log({content: data.length})
-    //          if (data.length){
+       const data = await fs.promises.readdir(path.join(__dirname, 'public', 'images', name))
+          console.log({content: data.length})
+             if (data.length){
 
-    //     await fs.promises.unlink(path.join(__dirname, 'public', 'images', name, initialPic))
+        await fs.promises.unlink(path.join(__dirname, 'public', 'images', name, initialPic))
        
-    // }
+    }
 })
 
 app.use(cookieParser());    

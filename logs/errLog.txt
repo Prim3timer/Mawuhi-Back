@@ -1,2 +1,7 @@
 2026 01 07	00:44:03	40f9f2e1-7b89-4b22-923a-acdee1c3c897	TypeError: Cannot set properties of null (setting 'refreshToken')
 2026 01 11	18:16:38	7f6646f5-380f-44cb-8677-3426bf3dedba	Error: ENOENT: no such file or directory, open 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\public\images\Plane\20190406_203306.jpg'
+2026 01 13	11:33:50	d6acf2f6-1585-481b-bbc0-34796a3f6d3e	TypeError: The "cb" argument must be of type function. Received undefined
+2026 01 13	11:35:13	11a20074-8473-4c5b-a645-406d62743381	Error: ENOENT: no such file or directory, rmdir 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\controllers\public\images'
+2026 01 13	12:06:50	c5fb9c1e-648b-4001-821b-d091d730eb78	Error: ENOENT: no such file or directory, scandir 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\controllers\public\images\Box'
+2026 01 13	12:11:29	a55e17b5-a0aa-47fb-ada7-e51b6d12e9e4	TypeError: path is not a function
+2026 01 13	19:17:08	fc74207d-5ec8-45f7-b309-ac7a70649b73	Error: read ECONNRESET

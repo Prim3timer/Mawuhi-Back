@@ -50,6 +50,9 @@ router.route('/inventory/:id')
 router.route('/dynam')
 .put(itemsController.updateInventoryy)
 
+router.route('/texts/:obj')
+.patch(itemsController.updateItemTexts)
+
 
 
 module.exports = router

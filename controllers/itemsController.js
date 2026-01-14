@@ -201,8 +201,33 @@ let updateInventoryy = async (req, res) =>{
  
 }
 
+
+const updateItemTexts = asyncHandler( async (req, res) => {
+    const obj = req.params.obj
+    const id = req.query.id
+    const newItem = JSON.parse(obj)
+    const { name, unitMeasure, price, quantity, description, date} = newItem
+    console.log({newItem, id})
+    const currentItem = await Item.findById(id)
+    if (currentItem){
+        await Item.findByIdAndUpdate({_id: id},
+            {
+                name,
+                unitMeasure,
+                price,
+                qty: quantity,
+                description,
+                date
+            }
+        )
+    }
+    res.json({message: `${currentItem.name} successfuly updated`})
+})
+
 const deleteItem = asyncHandler(async (req, res) => {
     const { id } = req.params
+    const name = req.query.name
+    console.log({name})
 
     // Confirm data
     if (!id) {
@@ -218,8 +243,19 @@ const deleteItem = asyncHandler(async (req, res) => {
 
     const result = await item.deleteOne()
 
+    
     const reply = `Item '${item.name}' with ID ${item._id} deleted`
+ if (fs.existsSync(path.join(__dirname, '..', 'public', 'images', `./${name}`))){
 
+     const data = await fs.promises.readdir(path.join(__dirname, '..', 'public', 'images', name))
+     console.log({content: data.length})
+     if (data.length){ 
+         data.map( async (file)=> {
+          await fs.promises.unlink(path.join(__dirname, '..', 'public', 'images', name, file))
+         })
+        } 
+        await fs.promises.rmdir(path.join(__dirname, '..', 'public', 'images', name))
+    }
     res.json(reply)
 })
 
@@ -243,7 +279,8 @@ module.exports = {
     getAnItem,
     updateInventoryyy,
     updateInventoryy,
-    updateImage
+    updateImage,
+    updateItemTexts
     // upload
 }
 
