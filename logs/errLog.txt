@@ -14,3 +14,4 @@
 2026 01 14	09:35:38	0df04c73-6b91-4752-bae2-cc7e0754dbd5	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Wine)}' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Wiser'
 2026 01 14	09:39:20	058d40d2-f3a2-4aac-8d1d-af2a62078030	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Wiser' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Will'
 2026 01 14	09:40:08	16c90a97-0ccc-4d3e-867f-6e3460e67bde	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Boxer' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Box'
+2026 01 15	12:29:07	c29d4959-d998-45e7-8ce9-cf00a31bc703	TypeError: Cannot set properties of null (setting 'refreshToken')
