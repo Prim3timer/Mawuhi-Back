@@ -171,15 +171,15 @@ const updateItemTexts = asyncHandler( async (req, res) => {
                 name,
                 unitMeasure,
                 price,
-                qty: quantity   ,
+                qty: quantity,
                 description,
                 date
             }
         )
     }
 
-    await fs.promises.rename(path.join(__dirname, '..', 'public', 'images', `./${firstName}`),
-path.join(__dirname, '..', 'public', 'images', `./${name}`))
+    await fs.promises.rename(path.join(__dirname, '..', 'public', 'images', firstName),
+path.join(__dirname, '..', 'public', 'images', name))
     res.json({message: `${currentItem.name} successfuly updated`})
 })
 

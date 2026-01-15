@@ -81,7 +81,7 @@ app.post('/item/pic/upload/:name', upload.array('images', 5), async (req, res)=>
     res.send('uploaded')
 })
 
-
+// for adding a single image to the collage
 app.patch('/items/pic/:name', upload.single('image'), async (req, res)=> {
     console.log({file: req.file})  
     const {name} = req.params
