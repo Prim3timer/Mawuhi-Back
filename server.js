@@ -23,9 +23,7 @@ const PORT = process.env.PORT || 3500
 connectDB()
     
 app.use(logger)
-app.use(cors({
-    origin: 'https://mawuhi.onrender.com'
-}))
+
 app.use(cors(corsOptions))
 
 app.use(express.json())
