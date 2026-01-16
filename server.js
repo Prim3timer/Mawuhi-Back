@@ -53,7 +53,7 @@ const upload = multer({
 
 
 
-app.post('/item/pic/upload/:name', upload.array('images', 5), async (req, res)=> {
+app.post('/items/pic/upload/:name', upload.array('images', 5), async (req, res)=> {
     console.log({reqParams: req.files})  
 
               let fiver = []
