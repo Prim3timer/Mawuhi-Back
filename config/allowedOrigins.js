@@ -5,8 +5,7 @@ const allowedOrigins = [
     'https://mawuhi.onrender.com',
     // 'https://prim3timer.github.io/Retailer',
     'https://prim3timer.github.io',
-    'https://checkout.stripe.com'
-
+    'https://checkout.stripe.com',
 ]
 
 module.exports = allowedOrigins

@@ -15,3 +15,6 @@
 2026 01 14	09:39:20	058d40d2-f3a2-4aac-8d1d-af2a62078030	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Wiser' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Will'
 2026 01 14	09:40:08	16c90a97-0ccc-4d3e-867f-6e3460e67bde	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Boxer' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Box'
 2026 01 15	12:29:07	c29d4959-d998-45e7-8ce9-cf00a31bc703	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 01 16	08:19:42	b3b9030f-1fdd-4b73-8cde-533364acc4b1	TypeError: Cannot read properties of undefined (reading 'originalname')
+2026 01 16	08:35:38	4703bd34-c2d2-4cd4-9ef8-7652605f87c4	TypeError: Cannot read properties of undefined (reading 'originalname')
+2026 01 16	09:23:50	385bbfe5-3981-4bac-9540-622fa3f457ee	TypeError: Cannot read properties of undefined (reading 'originalname')
