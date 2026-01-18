@@ -135,7 +135,7 @@ app.delete('/delete-pic/:initialPic', async (req, res) => {
                  if (fs.existsSync(path.join(__dirname, 'public', 'images', name, initialPic))){
     
             await fs.promises.unlink(path.join(__dirname, 'public', 'images', name, initialPic))
-            res.send('file successfully deleted')
+            res.send('file deleted')
            
         }
     } catch (error) {

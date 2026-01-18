@@ -18,3 +18,7 @@
 2026 01 16	08:19:42	b3b9030f-1fdd-4b73-8cde-533364acc4b1	TypeError: Cannot read properties of undefined (reading 'originalname')
 2026 01 16	08:35:38	4703bd34-c2d2-4cd4-9ef8-7652605f87c4	TypeError: Cannot read properties of undefined (reading 'originalname')
 2026 01 16	09:23:50	385bbfe5-3981-4bac-9540-622fa3f457ee	TypeError: Cannot read properties of undefined (reading 'originalname')
+2026 01 16	11:04:38	26d86b5d-1ee0-4435-94b1-23e1d5e60c3d	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Diamond Rind' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Diamond Rind'
+2026 01 16	11:05:22	a449af89-4579-43ed-a519-88809478bae5	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Kyle' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Kyle'
+2026 01 16	11:14:36	310620c5-4be0-4ecc-88cd-80a6c4efddec	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Diamond Rind' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Diamond Rind'
+2026 01 18	12:39:54	2b37d2af-1ac4-444b-a436-bb4c21a38a5a	Error: read ECONNRESET
