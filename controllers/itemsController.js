@@ -183,7 +183,7 @@ path.join(__dirname, '..', 'public', 'images', name))
     res.json({message: `${currentItem.name} successfuly updated`})
 })
 
-const deleteItem = asyncHandler(async (req, res) => {
+const   deleteItem = asyncHandler(async (req, res) => {
     const { id } = req.params
     const name = req.query.name
     console.log({name})
