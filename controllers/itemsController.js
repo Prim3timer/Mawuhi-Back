@@ -23,10 +23,9 @@ const getAllItems = asyncHandler(async (req, res) => {
 
 
 const createNewItem = asyncHandler(async (req, res) => {
-    const { name, unitMeasure, price, image, now, description } = req.body
-    console.log({image})
+    const { name, unitMeasure, price, image, now, description, qty } = req.body
+    console.log({qty})
     const items = await Item.find()
-    const qty = 0
     const date = now
     const img = image
     console.log({description})
@@ -170,16 +169,18 @@ const updateItemTexts = asyncHandler( async (req, res) => {
             {
                 name,
                 unitMeasure,
-                price,
-                qty: quantity,
+                price: Number(price),
+                qty: Number(quantity),
                 description,
                 date
             }
         )
     }
-
+if (firstName !== name ){
     await fs.promises.rename(path.join(__dirname, '..', 'public', 'images', firstName),
 path.join(__dirname, '..', 'public', 'images', name))
+
+}
     res.json({message: `${currentItem.name} successfuly updated`})
 })
 
