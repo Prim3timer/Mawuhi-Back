@@ -51,3 +51,8 @@
 2026 01 25	19:40:29	17b4697d-6b0d-462e-8246-1652eaa10043	TypeError: Cannot read properties of undefined (reading 'UserInfo')
 2026 01 25	19:44:03	19e532b9-9ca7-49d9-8117-4e86260a4e8d	TypeError: Cannot read properties of null (reading 'refreshToken')
 2026 01 25	19:45:34	148fdadf-c05f-4282-b93f-2310264a6bb9	TypeError: Cannot read properties of null (reading 'refreshToken')
+2026 01 25	20:33:50	b7ce6cad-8d8b-4a2d-9423-405279aacf2c	TypeError: Cannot read properties of null (reading 'refreshToken')
+2026 01 25	20:33:50	a8401dd3-d89e-4ba7-9ea2-678f20fe2058	TypeError: Cannot read properties of null (reading 'refreshToken')
+2026 01 25	20:33:54	c9396a9d-25f1-4bb8-8d37-a91a3388dae9	TypeError: Cannot read properties of null (reading 'refreshToken')
+2026 01 25	20:55:04	b40465c2-4140-4cb1-827d-9c83d636f13d	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 01 25	21:04:57	8603012c-66c8-4ef4-9a8f-529e67d44b80	TypeError: Cannot set properties of null (setting 'refreshToken')
