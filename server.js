@@ -27,7 +27,7 @@ app.use(logger)
 app.use(cors(corsOptions))
 
 app.use(express.json())
-
+app.use('/', express.static(path.join(__dirname, 'public')))
 
 const storage = multer.diskStorage({
     destination: async (req, file, cb) => {
@@ -146,7 +146,7 @@ app.delete('/delete-pic/:initialPic', async (req, res) => {
 
 app.use(cookieParser());
 
-app.use('/', express.static(path.join(__dirname, 'public')))
+
 
 
 app.use('/', require('./routes/root'))
