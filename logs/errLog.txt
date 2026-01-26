@@ -48,3 +48,6 @@
 2026 01 20	18:18:39	6ca5303e-80f3-4e6b-848d-826785db3b5f	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
 2026 01 20	21:23:15	2cfb9185-e44f-4f5d-b3c1-dc0152c12196	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
 2026 01 21	22:22:38	4c46848e-a4e3-4359-bad5-e6e52e90974c	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 01 25	19:40:29	17b4697d-6b0d-462e-8246-1652eaa10043	TypeError: Cannot read properties of undefined (reading 'UserInfo')
+2026 01 25	19:44:03	19e532b9-9ca7-49d9-8117-4e86260a4e8d	TypeError: Cannot read properties of null (reading 'refreshToken')
+2026 01 25	19:45:34	148fdadf-c05f-4282-b93f-2310264a6bb9	TypeError: Cannot read properties of null (reading 'refreshToken')
