@@ -7,9 +7,9 @@ const { json } = require('express')
 const express = require('express')
 const app = express()
 // Rhinohorn1#
+const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 // const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
-// const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
-const stripe = require('stripe')(process.env.STRIPE_REAL_LIVE_KEY)
+// const stripe = require('stripe')(process.env.STRIPE_REAL_LIVE_KEY)
 
 
 const makePayment = async (req, res) => {
