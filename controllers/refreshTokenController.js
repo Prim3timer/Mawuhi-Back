@@ -11,8 +11,9 @@ const handleRefreshToken = asyncHandler(async (req, res) => {
     //else, set the refresh token variable to that cookie
     const refreshToken = cookies.jwt;
     // find by refresh token
+    console.log({ refreshToken })
     const foundUser = await User.findOne({ refreshToken }).exec();
-    // console.log({ foundUserRefreshT: foundUser.refreshToken })
+    console.log({ foundUser })
     const users = await User.find().exec()
     if (!foundUser) return res.sendStatus(403); //Forbidden 
     // we will use the jwt dependency to verify the refresh token
