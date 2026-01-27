@@ -1,28 +1,28 @@
 const Transaction = require('../models/Transaction')
 const Item = require('../models/Item')
 const asyncHandler = require('express-async-handler')
-const {format} = require('date-fns')
-const stripe =  require('stripe')(process.env.STRIPE_PRIVATE_KEY)
+const { format } = require('date-fns')
+const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 
-const getAllTransactions = asyncHandler(async (req, res)=> {
+const getAllTransactions = asyncHandler(async (req, res) => {
     const transactions = await Transaction.find()
-    if (!transactions?.length){
-        return res.status(400).json({message: 'no transactions found'})
+    if (!transactions?.length) {
+        return res.status(400).json({ message: 'no transactions found' })
     }
-   res.json(transactions)
+    res.json(transactions)
 })
 
-const getSales = asyncHandler(async (req, res)=> {
+const getSales = asyncHandler(async (req, res) => {
     const transactions = await Transaction.find()
-    if (!transactions?.length){
-        return res.status(400).json({message: 'no transactions found'})
+    if (!transactions?.length) {
+        return res.status(400).json({ message: 'no transactions found' })
     }
-  res.json(transactions)
+    res.json(transactions)
 })
 
 
 const createNewTransaction = asyncHandler(async (req, res) => {
-    var {cashier, cashierID, goods, date,status, grandTotal} = req.body
+    var { cashier, cashierID, goods, date, status, grandTotal } = req.body
 
 
     // Confirm data
@@ -44,7 +44,7 @@ const createNewTransaction = asyncHandler(async (req, res) => {
         cashierID,
         goods,
         status,
-        date, 
+        date,
         grandTotal: grandTotal
     }
 
@@ -61,43 +61,45 @@ const createNewTransaction = asyncHandler(async (req, res) => {
 
 
 const makePayment = async (req, res) => {
-console.log({reqBody: req.body})
-const theArray = req.body.goods
-// console.log({theArray})  
-// for the receipt generation, i'll need the:
-// id, transQty, price from each item and
-// finally, the grandTotal
+    console.log({ reqBody: req.body })
+    const theArray = req.body.goods
+    // console.log({theArray})  
+    // for the receipt generation, i'll need the:
+    // id, transQty, price from each item and
+    // finally, the grandTotal
 
 
     try {
         const storeItems = await Item.find()
-       const userId = req.body.cashierID
-    console.log({line_items: theArray.map((item)=> {
-        const {total, qty, _id} = item
-        return {total, qty, _id}
-    })})
-    
+        const userId = req.body.cashierID
+        console.log({
+            line_items: theArray.map((item) => {
+                const { total, qty, _id } = item
+                return { total, qty, _id }
+            })
+        })
+
 
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             mode: 'payment',
-    
-            line_items: req.body.goods.map((item)=> {
+
+            line_items: req.body.goods.map((item) => {
                 const storeItem = storeItems.find((things) => things._id == item._id)
                 // console.log({storeItem})
-                 const dynQty = item.unitMeasure === 'Kilogram (kg)'  || item.unitMeasure === 'Kilowatthour (kWh)' || item.unitMeasure === 'Kilowatt (kW)' || item.unitMeasure === 'Litre (L)'  || item.unitMeasure === 'Pound (lbs)' ? (item.qty * 1000) : item.qty
-              
+                const dynQty = item.unitMeasure === 'Kilogram (kg)' || item.unitMeasure === 'Kilowatthour (kWh)' || item.unitMeasure === 'Kilowatt (kW)' || item.unitMeasure === 'Litre (L)' || item.unitMeasure === 'Pound (lbs)' ? (item.qty * 1000) : item.qty
+
                 return {
-                    price_data:{ 
+                    price_data: {
                         currency: 'usd',
                         product_data: {
                             name: storeItem.name
                         },
-                        unit_amount: item.unitMeasure === 'Kilogram (kg)' || item.unitMeasure === 'Kilowatthour (kWh)' || item.unitMeasure === 'Kilowatt (kW)'  || item.unitMeasure === 'Pound (lbs)' || item.unitMeasure === 'Litre (L)' ? (storeItem.price * 100) / 1000 :   storeItem.price * 100
+                        unit_amount: item.unitMeasure === 'Kilogram (kg)' || item.unitMeasure === 'Kilowatthour (kWh)' || item.unitMeasure === 'Kilowatt (kW)' || item.unitMeasure === 'Pound (lbs)' || item.unitMeasure === 'Litre (L)' ? (storeItem.price * 100) / 1000 : storeItem.price * 100
                     },
                     quantity: dynQty
                 }
-                
+
             }),
             // shipping_address_collection: {
             //     allowed_countries: ['US', 'NG']
@@ -105,27 +107,27 @@ const theArray = req.body.goods
             // customer: [
             //     req.body[0].userId
             // ],
-                    
-            success_url: `${process.env.CLIENT_URL}/transactions?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url:`${process.env.CLIENT_URL}/shopping`,
-            
-              metadata: {
+
+            success_url: `${process.env.CLIENT_URL}/#transactions?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url: `${process.env.CLIENT_URL}/shopping`,
+
+            metadata: {
                 userId,
                 grandTotal: JSON.stringify(req.body.grandTotal * 100),
                 cashier: req.body.cashier
             }
-        })  
-       
+        })
+
         // const {url} = session
         // console.log({session})
-        res.status(200).json({session, userId})
+        res.status(200).json({ session, userId })
     } catch (error) {
-        res.status(500).json({message: error.message}) 
+        res.status(500).json({ message: error.message })
     }
     // finally{
-        
+
     // }
-    
+
 }
 
 
@@ -156,28 +158,28 @@ const checkLink = () => {
     console.log('checking link')
 }
 
-const statusUdate = asyncHandler(async (req, res)=> {
-    console.log({reqBody: req.body  })
+const statusUdate = asyncHandler(async (req, res) => {
+    console.log({ reqBody: req.body })
     const status = req.body.status
-    console.log({status})
-    const id = req.params.id 
-    const updateTans = await Transaction.findOneAndUpdate({_id: id},
-        {status}
+    console.log({ status })
+    const id = req.params.id
+    const updateTans = await Transaction.findOneAndUpdate({ _id: id },
+        { status }
     )
     res.json(updateTans)
-    
+
 })
 
 
 
 
 module.exports = {
-    checkLink,  
+    checkLink,
     getAllTransactions,
     createNewTransaction,
     getSales,
     deleteTransaction,
-    makePayment, 
+    makePayment,
     statusUdate
 
 }
